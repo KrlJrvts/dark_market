@@ -19,8 +19,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Dark Market',
       home: Scaffold(
-        appBar: AppBar(title: const Text('Dark Market')),
+
         body: const Center(child: Text('Firebase wired up ✅')),
+
+        appBar: AppBar(title: const Text('Dark Market')),
       ),
     );
   }
