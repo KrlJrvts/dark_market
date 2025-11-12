@@ -7,6 +7,7 @@ class Auction {
   final int buyout;
   final String? imageUrl;
   final DateTime createdAt;
+  final bool isClosed;
 
   Auction({
     required this.id,
@@ -17,6 +18,7 @@ class Auction {
     this.highestBid,
     this.highestBidId,
     this.imageUrl,
+    this.isClosed = false,
   });
 
   Map<String, dynamic> toMap() => {
@@ -27,6 +29,7 @@ class Auction {
     'buyout': buyout,
     'imageUrl': imageUrl,
     'createdAt': createdAt.toIso8601String(),
+    'isClosed': isClosed,
   };
 
   factory Auction.fromDoc(String id, Map<String, dynamic> data) => Auction(
@@ -39,5 +42,6 @@ class Auction {
     imageUrl: data['imageUrl'] as String?,
     createdAt:
     DateTime.tryParse(data['createdAt'] ?? '') ?? DateTime.now(),
+    isClosed: (data['isClosed'] as bool?) ?? false,
   );
 }
