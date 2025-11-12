@@ -11,8 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.1.2
-  google_fonts: ^6.2.1
+  provider: ^6.1.5+1
+  google_fonts: ^6.3.2
   go_router: ^17.0.0         # Navigator 2.0 router
   firebase_core: ^4.2.1
   firebase_auth: ^6.1.2
