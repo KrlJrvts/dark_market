@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static const Color black = Color(0xFF0B0B0C);
-  static const Color surface = Color(0xFF121316);
+  static const Color surface = Color(0xFF1A1C1F);
   static const Color neonGreen = Color(0xFF9BFF3D);
   static const Color neonPurple = Color(0xFFB041FF);
   static const Color outline = Color(0xFF52FF00);
@@ -24,7 +24,7 @@ class AppTheme {
       onSurface: Colors.white,
     ),
     textTheme: GoogleFonts.shareTechMonoTextTheme().apply(
-      bodyColor: Colors.white, displayColor: Colors.white,
+      bodyColor: neonGreen, displayColor: neonPurple,
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
