@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579081219085",
+    "project_id": "dark-market-kaarel",
+    "storage_bucket": "dark-market-kaarel.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579081219085:android:10c5399df4eaed96aa7944",
+        "android_client_info": {
+          "package_name": "com.example.dark_market"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_caICUAnqf3T1nWmqqu8FBj93Wbc7fN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579081219085:android:456f7c6166ed8a3baa7944",
+        "android_client_info": {
+          "package_name": "ee.kajarv.dark_market.dark_market"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_caICUAnqf3T1nWmqqu8FBj93Wbc7fN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

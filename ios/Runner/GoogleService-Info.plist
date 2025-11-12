@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB-FEvdvs8y4VqBI_-HG5SCeuTnVWeeidk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>579081219085</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ee.kajarv.darkmarket.darkMarket</string>
+	<key>PROJECT_ID</key>
+	<string>dark-market-kaarel</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dark-market-kaarel.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:579081219085:ios:2279bb362e483bedaa7944</string>
+</dict>
+</plist>
