@@ -1,11 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../data/services/auth_service.dart';
+import '../data/services/auth_failure.dart';
 
 class AuthProvider extends ChangeNotifier {
   final AuthService _authService;
   User? user;
-  String? _error;
+  String? errorMessage;
+  String? errorCode;
   bool loading = false;
 
   AuthProvider(this._authService) {
@@ -15,33 +17,47 @@ class AuthProvider extends ChangeNotifier {
     });
   }
 
-  String? get error => _error;
+  void clearError() {
+    if (errorMessage != null || errorCode != null) {
+      errorMessage = null;
+      errorCode = null;
+      notifyListeners();
+    }
+  }
 
-  Future<void> signIn(String email, String password) async {
-    loading = true;
-    _error = null;
-    notifyListeners();
+  /// returns true on success (signed in), false on failure
+  Future<bool> signIn(String email, String password) async {
+    loading = true; errorMessage = null; errorCode = null; notifyListeners();
     try {
       await _authService.signIn(email, password);
+      return true;
     } catch (e) {
-      _error = e.toString();
+      if (e is AuthFailure) { errorCode = e.code; errorMessage = e.message; }
+      else { errorMessage = e.toString(); }
+      return false;
+    } finally {
+      loading = false; notifyListeners();
     }
-    loading = false;
-    notifyListeners();
   }
 
-  Future<void> signUp(String email, String password) async {
-    loading = true;
-    _error = null;
-    notifyListeners();
+  /// returns true on success (created+signed in), false on failure
+  Future<bool> signUp(String email, String password) async {
+    loading = true; errorMessage = null; errorCode = null; notifyListeners();
     try {
       await _authService.signUp(email, password);
+      return true;
     } catch (e) {
-      _error = e.toString();
+      if (e is AuthFailure) { errorCode = e.code; errorMessage = e.message; }
+      else { errorMessage = e.toString(); }
+      return false;
+    } finally {
+      loading = false; notifyListeners();
     }
-    loading = false;
-    notifyListeners();
   }
 
-  Future<void> signOut() => _authService.signOut();
+  Future<void> signOut() async {
+    await _authService.signOut();
+    user = null;
+    notifyListeners();
+  }
 }
