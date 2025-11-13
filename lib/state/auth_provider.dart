@@ -9,17 +9,18 @@ class AuthProvider extends ChangeNotifier {
   bool loading = false;
 
   AuthProvider(this._authService) {
-    _authService.authChanges.listen((user) {
-      user = user;
+    _authService.authChanges.listen((u) {
+      user = u;
       notifyListeners();
     });
   }
+
+  String? get error => _error;
 
   Future<void> signIn(String email, String password) async {
     loading = true;
     _error = null;
     notifyListeners();
-
     try {
       await _authService.signIn(email, password);
     } catch (e) {
@@ -32,6 +33,7 @@ class AuthProvider extends ChangeNotifier {
   Future<void> signUp(String email, String password) async {
     loading = true;
     _error = null;
+    notifyListeners();
     try {
       await _authService.signUp(email, password);
     } catch (e) {
@@ -40,5 +42,6 @@ class AuthProvider extends ChangeNotifier {
     loading = false;
     notifyListeners();
   }
+
   Future<void> signOut() => _authService.signOut();
 }
