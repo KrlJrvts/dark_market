@@ -30,6 +30,10 @@ class AuthService {
       throw Exception(_mapError(e));
     }
   }
+  Future<void> signOut() async {
+    await _auth.signOut();
+  }
+
 
   String _mapError(FirebaseAuthException e) {
     switch (e.code) {
