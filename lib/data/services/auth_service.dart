@@ -33,6 +33,36 @@ class AuthService {
 
   Future<void> signOut() => _auth.signOut();
 
+  // 👇 NEW: update display name (simple, no extra checks)
+  Future<void> updateDisplayName(String name) async {
+    final user = _auth.currentUser;
+    if (user == null) throw Exception('Not signed in');
+    await user.updateDisplayName(name.trim());
+    await user.reload();
+  }
+
+  // 👇 NEW: update profile photo URL (picture is optional – URL may be null/empty)
+  Future<void> updatePhotoUrl(String? url) async {
+    final user = _auth.currentUser;
+    if (user == null) throw Exception('Not signed in');
+    await user.updatePhotoURL(url);
+    await user.reload();
+  }
+
+  // 👇 NEW: change password (only called if user actually wants to change it)
+  Future<void> updatePassword(String newPassword) async {
+    final user = _auth.currentUser;
+    if (user == null) throw Exception('Not signed in');
+    await user.updatePassword(newPassword);
+  }
+
+  // 👇 NEW: delete account
+  Future<void> deleteAccount() async {
+    final user = _auth.currentUser;
+    if (user == null) throw Exception('Not signed in');
+    await user.delete();
+  }
+
   String _mapError(FirebaseAuthException e) {
     switch (e.code) {
       case 'email-already-in-use': return 'This email already has an account.';

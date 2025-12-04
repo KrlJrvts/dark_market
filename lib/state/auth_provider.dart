@@ -60,4 +60,62 @@ class AuthProvider extends ChangeNotifier {
     user = null;
     notifyListeners();
   }
+
+  Future<bool> updateName(String name) async {
+    loading = true; errorMessage = null; errorCode = null; notifyListeners();
+    try {
+      await _authService.updateDisplayName(name);
+      user = FirebaseAuth.instance.currentUser;
+      notifyListeners();
+      return true;
+    } catch (e) {
+      errorMessage = e.toString();
+      return false;
+    } finally {
+      loading = false; notifyListeners();
+    }
+  }
+
+  // url is optional – if you never upload, you simply never call this
+  Future<bool> updatePhoto(String? url) async {
+    loading = true; errorMessage = null; errorCode = null; notifyListeners();
+    try {
+      await _authService.updatePhotoUrl(url);
+      user = FirebaseAuth.instance.currentUser;
+      notifyListeners();
+      return true;
+    } catch (e) {
+      errorMessage = e.toString();
+      return false;
+    } finally {
+      loading = false; notifyListeners();
+    }
+  }
+
+  Future<bool> updatePassword(String newPassword) async {
+    loading = true; errorMessage = null; errorCode = null; notifyListeners();
+    try {
+      await _authService.updatePassword(newPassword);
+      return true;
+    } catch (e) {
+      errorMessage = e.toString();
+      return false;
+    } finally {
+      loading = false; notifyListeners();
+    }
+  }
+
+  Future<bool> deleteAccount() async {
+    loading = true; errorMessage = null; errorCode = null; notifyListeners();
+    try {
+      await _authService.deleteAccount();
+      user = null;
+      return true;
+    } catch (e) {
+      errorMessage = e.toString();
+      return false;
+    } finally {
+      loading = false; notifyListeners();
+    }
+  }
 }

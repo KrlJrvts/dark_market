@@ -29,6 +29,7 @@ class ViewAuctionScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // IMAGE
             if (a.imageUrl != null)
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
@@ -44,35 +45,61 @@ class ViewAuctionScreen extends StatelessWidget {
                 alignment: Alignment.center,
                 child: const Icon(Icons.image, size: 64),
               ),
+
             const SizedBox(height: 12),
-            Text('Highest bid:  ${a.highestBid} €'),
+
+            // DETAILS
+            Text('Highest bid:  ${a.highestBid ?? 0} €'),
             const SizedBox(height: 4),
             Text('Buy out:      ${a.buyout} €'),
+
+
+
             const SizedBox(height: 12),
-            NeonButton(label: 'Buy out now', onPressed: () {}),
-            const SizedBox(height: 8),
-            TextField(
-              controller: controller,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(labelText: 'Place your bid'),
-            ),
-            const SizedBox(height: 8),
+
+            // BUYOUT BUTTON
             NeonButton(
-              label: 'Bid',
-              onPressed: () async {
-                final v = int.tryParse(controller.text);
-                if (v == null) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                        content: Text('Get together and learn numbers!')),
-                  );
-                  return;
-                }
+              label: a.isClosed ? 'Sold' : 'Buy out now',
+              onPressed: a.isClosed
+                  ? null
+                  : () async {
                 final auth = context.read<AuthProvider>();
-                final bidderId = auth.user!.uid; // TODO: replace with real user id
-                await p.placeBid(a.id, bidderId, v);
+                final bidderId = auth.user!.uid;
+
+                await p.placeBid(a.id, bidderId, a.buyout);
               },
             ),
+
+            const SizedBox(height: 8),
+
+
+            if (!a.isClosed) ...[
+              TextField(
+                controller: controller,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(labelText: 'Place your bid'),
+              ),
+              const SizedBox(height: 8),
+              NeonButton(
+                label: 'Bid',
+                onPressed: () async {
+                  final v = int.tryParse(controller.text);
+                  if (v == null) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Get together and learn numbers!'),
+                      ),
+                    );
+                    return;
+                  }
+
+                  final auth = context.read<AuthProvider>();
+                  final bidderId = auth.user!.uid;
+
+                  await p.placeBid(a.id, bidderId, v);
+                },
+              ),
+            ],
           ],
         ),
       ),

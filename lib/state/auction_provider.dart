@@ -16,9 +16,17 @@ class AuctionProvider extends ChangeNotifier {
   bool loading = false;
   String? error;
 
+  // ---------------------------------------------------------
+  // STREAM SUBSCRIPTION
+  // ---------------------------------------------------------
+  StreamSubscription<List<Auction>>? _subscription;
+
+  /// Start watching realtime Firestore updates
   void bindStream() {
-    _auctionService.watchAll().listen(
-      (data) {
+    _subscription?.cancel(); // Prevent duplicate listeners
+
+    _subscription = _auctionService.watchAll().listen(
+          (data) {
         auctions = data;
         notifyListeners();
       },
@@ -29,6 +37,21 @@ class AuctionProvider extends ChangeNotifier {
     );
   }
 
+  /// Stop watching the stream (e.g. logout or closing app)
+  void cancelStream() {
+    _subscription?.cancel();
+    _subscription = null;
+  }
+
+  @override
+  void dispose() {
+    _subscription?.cancel(); // VERY IMPORTANT
+    super.dispose();
+  }
+
+  // ---------------------------------------------------------
+  // CREATE AUCTION
+  // ---------------------------------------------------------
   Future<void> createAuction({
     required String title,
     required String sellerId,
@@ -40,6 +63,7 @@ class AuctionProvider extends ChangeNotifier {
     loading = true;
     error = null;
     notifyListeners();
+
     try {
       String? url;
       if (imageFile != null || imageBytes != null) {
@@ -51,6 +75,7 @@ class AuctionProvider extends ChangeNotifier {
       }
 
       final now = DateTime.now();
+
       final auctionItem = Auction(
         id: '',
         title: title,
@@ -59,15 +84,21 @@ class AuctionProvider extends ChangeNotifier {
         highestBidId: '',
         buyout: buyout,
         createdAt: now,
+        imageUrl: url,
       );
-      final id = await _auctionService.add(auctionItem);
+
+      await _auctionService.add(auctionItem);
     } catch (e) {
       error = 'Failed to create: $e';
     }
+
     loading = false;
     notifyListeners();
   }
 
+  // ---------------------------------------------------------
+  // BIDDING
+  // ---------------------------------------------------------
   Future<void> placeBid(String id, String bidderId, int amount) =>
       _auctionService.placeBid(
         auctionId: id,
