@@ -2,8 +2,9 @@ class Auction {
   final String id;
   final String title;
   final String sellerId;
+  final String? sellerName;  // <-- ADD THIS
   final int? highestBid;
-  final String? highestBidId; // who made the highest bid
+  final String? highestBidId;
   final int buyout;
   final String? imageUrl;
   final DateTime createdAt;
@@ -13,6 +14,7 @@ class Auction {
     required this.id,
     required this.title,
     required this.sellerId,
+    this.sellerName,  // <-- ADD THIS
     required this.buyout,
     required this.createdAt,
     this.highestBid,
@@ -24,6 +26,7 @@ class Auction {
   Map<String, dynamic> toMap() => {
     'title': title,
     'sellerId': sellerId,
+    'sellerName': sellerName,  // <-- ADD THIS
     'highestBid': highestBid,
     'highestBidId': highestBidId,
     'buyout': buyout,
@@ -36,12 +39,12 @@ class Auction {
     id: id,
     title: data['title'] ?? '',
     sellerId: data['sellerId'] ?? '',
+    sellerName: data['sellerName'] as String?,  // <-- ADD THIS
     highestBid: data['highestBid'] != null ? data['highestBid'] as int : null,
     highestBidId: data['highestBidId'] != null ? data['highestBidId'] as String : null,
     buyout: data['buyout'] ?? 0,
     imageUrl: data['imageUrl'] as String?,
-    createdAt:
-    DateTime.tryParse(data['createdAt'] ?? '') ?? DateTime.now(),
+    createdAt: DateTime.tryParse(data['createdAt'] ?? '') ?? DateTime.now(),
     isClosed: (data['isClosed'] as bool?) ?? false,
   );
 }

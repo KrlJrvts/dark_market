@@ -55,6 +55,7 @@ class AuctionProvider extends ChangeNotifier {
   Future<void> createAuction({
     required String title,
     required String sellerId,
+    String? sellerName,  // <-- ADD THIS PARAMETER
     required int startPrice,
     required int buyout,
     File? imageFile,
@@ -80,6 +81,7 @@ class AuctionProvider extends ChangeNotifier {
         id: '',
         title: title,
         sellerId: sellerId,
+        sellerName: sellerName,  // <-- ADD THIS
         highestBid: startPrice,
         highestBidId: '',
         buyout: buyout,

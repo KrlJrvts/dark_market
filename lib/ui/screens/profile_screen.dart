@@ -6,7 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 import '../../state/auction_provider.dart';
 import '../../state/auth_provider.dart';
-import '../widgets/neon_button.dart';
+import '../../theme/app_theme.dart';
+import '../widgets/dark_bottom_nav_bar.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -20,13 +21,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
-  File? _localImageFile; // just for preview if user selects image
+  File? _localImageFile;
+
+  // Design colors
+  static const Color brightGreen = Color(0xFF39FF14);
+  static const Color magentaPink = Color(0xFFFF00FF);
+  static const Color darkBackground = Color(0xFF0A0A0A);
 
   @override
   void initState() {
     super.initState();
     final auth = context.read<AuthProvider>();
-    // user is guaranteed to exist here, because you don't show this page otherwise
     _nameController.text = auth.user?.displayName ?? '';
   }
 
@@ -45,163 +50,266 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Future<void> _pickImage() async {
-    // OPTIONAL – user never has to do this
     final picker = ImagePicker();
     final picked = await picker.pickImage(source: ImageSource.gallery);
-    if (picked == null) return; // user cancelled – nothing required
+    if (picked == null) return;
 
     final file = File(picked.path);
     setState(() {
       _localImageFile = file;
     });
-
-    // OPTIONAL: later you can upload and call auth.updatePhoto(url)
-    // For now, just local preview is enough to match your drawing.
   }
 
   @override
   Widget build(BuildContext context) {
     final auth = context.watch<AuthProvider>();
-    final user = auth.user; // user already has account to see this page
+    final user = auth.user;
 
     if (user == null) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
+      return Scaffold(
+        backgroundColor: AppTheme.black,
+        body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Edit Profile')),
-      body: Center(
-        child: SingleChildScrollView(
+      backgroundColor: AppTheme.black,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        title: const Text(
+          'Edit profile',
+          style: TextStyle(
+            color: brightGreen,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+            letterSpacing: 1.2,
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Container(
+          // GREEN FRAME AROUND ALL PAGE ELEMENTS
+          width: double.infinity,
           padding: const EdgeInsets.all(16),
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 360),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const SizedBox(height: 24),
-
-                // Email (read‑only info that user already has account)
-                Text(
-                  user.email ?? 'Unknown user',
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 16),
-
-                // Name field
-                TextField(
-                  controller: _nameController,
-                  decoration: const InputDecoration(labelText: 'Name'),
-                ),
-                const SizedBox(height: 16),
-
-                // Optional avatar/photo area
-                GestureDetector(
-                  onTap: _pickImage, // user may ignore this completely
-                  child: Container(
-                    height: 160,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: Colors.greenAccent, width: 2),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(6),
-                      child: _localImageFile != null
-                          ? Image.file(_localImageFile!, fit: BoxFit.cover)
-                          : (user.photoURL != null
-                          ? Image.network(user.photoURL!, fit: BoxFit.cover)
-                          : const Center(
-                        child: Icon(Icons.person, size: 64),
-                      )),
-                    ),
+          decoration: BoxDecoration(
+            color: darkBackground,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: brightGreen,
+              width: 2,
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Name field
+              TextField(
+                controller: _nameController,
+                style: const TextStyle(color: brightGreen, fontSize: 18),
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  hintText: 'Name',
+                  hintStyle: TextStyle(
+                    color: brightGreen.withOpacity(0.7),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: brightGreen, width: 2),
                   ),
                 ),
+              ),
 
-                const SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-                // Password fields (optional – only used if filled)
-                TextField(
-                  controller: _passwordController,
-                  obscureText: true,
-                  decoration:
-                  const InputDecoration(labelText: 'New password (optional)'),
+              // Image picker area - mystery box style
+              GestureDetector(
+                onTap: _pickImage,
+                child: Container(
+                  height: 200,
+                  decoration: BoxDecoration(
+                    color: darkBackground,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: brightGreen, width: 2),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: _localImageFile != null
+                        ? Image.file(_localImageFile!, fit: BoxFit.cover, width: double.infinity)
+                        : (user.photoURL != null
+                        ? Image.network(user.photoURL!, fit: BoxFit.cover, width: double.infinity)
+                        : _buildImagePlaceholder()),
+                  ),
                 ),
-                const SizedBox(height: 8),
-                TextField(
-                  controller: _confirmPasswordController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                      labelText: 'Confirm new password (optional)'),
+              ),
+
+              const SizedBox(height: 16),
+
+              // New password field
+              TextField(
+                controller: _passwordController,
+                obscureText: true,
+                style: const TextStyle(color: brightGreen, fontSize: 18),
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  hintText: 'New password',
+                  hintStyle: TextStyle(
+                    color: brightGreen.withOpacity(0.7),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                  ),
                 ),
+              ),
 
-                const SizedBox(height: 24),
+              const SizedBox(height: 16),
 
-                NeonButton(
-                  label: 'Update',
+              // Confirm new password field
+              TextField(
+                controller: _confirmPasswordController,
+                obscureText: true,
+                style: const TextStyle(color: brightGreen, fontSize: 18),
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  hintText: 'Confirm new password',
+                  hintStyle: TextStyle(
+                    color: brightGreen.withOpacity(0.7),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 24),
+
+              // Update button - bright green
+              SizedBox(
+                height: 56,
+                child: ElevatedButton(
                   onPressed: auth.loading
                       ? null
                       : () async {
                     final name = _nameController.text.trim();
                     final pass = _passwordController.text.trim();
-                    final confirm =
-                    _confirmPasswordController.text.trim();
+                    final confirm = _confirmPasswordController.text.trim();
 
-                    // 1) Update name only if changed and non‑empty
                     if (name.isNotEmpty && name != user.displayName) {
                       final ok = await auth.updateName(name);
                       if (!ok) {
-                        _showSnack(
-                            auth.errorMessage ?? 'Failed to update name');
+                        _showSnack(auth.errorMessage ?? 'Failed to update name');
                         return;
                       }
                     }
 
-                    // 2) Update password only if user actually typed something
                     if (pass.isNotEmpty || confirm.isNotEmpty) {
                       if (pass != confirm) {
-                        _showSnack(
-                            'New password and confirmation do not match');
+                        _showSnack('New password and confirmation do not match');
                         return;
                       }
                       if (pass.length < 6) {
-                        _showSnack(
-                            'Password must be at least 6 characters');
+                        _showSnack('Password must be at least 6 characters');
                         return;
                       }
                       final ok = await auth.updatePassword(pass);
                       if (!ok) {
-                        _showSnack(auth.errorMessage ??
-                            'Failed to change password');
+                        _showSnack(auth.errorMessage ?? 'Failed to change password');
                         return;
                       }
                     }
 
                     _showSnack('Profile updated');
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: brightGreen,
+                    foregroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: Text(
+                    auth.loading ? 'Updating…' : 'Update',
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
+              ),
 
-                const SizedBox(height: 12),
+              const SizedBox(height: 12),
 
-                NeonButton(
-                  label: 'Delete account',
+              // Delete button - magenta pink
+              SizedBox(
+                height: 56,
+                child: ElevatedButton(
                   onPressed: auth.loading
                       ? null
                       : () async {
                     final confirm = await showDialog<bool>(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('Delete account'),
+                        backgroundColor: darkBackground,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                          side: const BorderSide(color: brightGreen, width: 2),
+                        ),
+                        title: const Text(
+                          'Delete account',
+                          style: TextStyle(color: brightGreen),
+                        ),
                         content: const Text(
-                            'Are you sure? This cannot be undone.'),
+                          'Are you sure? This cannot be undone.',
+                          style: TextStyle(color: Colors.white70),
+                        ),
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.pop(context, false),
-                            child: const Text('Cancel'),
+                            child: const Text(
+                              'Cancel',
+                              style: TextStyle(color: Colors.grey),
+                            ),
                           ),
                           TextButton(
                             onPressed: () => Navigator.pop(context, true),
-                            child: const Text('Delete'),
+                            child: const Text(
+                              'Delete',
+                              style: TextStyle(color: magentaPink),
+                            ),
                           ),
                         ],
                       ),
@@ -211,33 +319,61 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                     final ok = await auth.deleteAccount();
                     if (!ok) {
-                      _showSnack(auth.errorMessage ??
-                          'Failed to delete account');
+                      _showSnack(auth.errorMessage ?? 'Failed to delete account');
                       return;
                     }
 
                     if (!mounted) return;
-                    // After delete, send user back to login (they no longer have a session)
-                    Navigator.of(context)
-                        .pushNamedAndRemoveUntil('/', (route) => false);
-                  },
-                ),
-                const SizedBox(height: 12),
-                NeonButton(
-                  label: 'Sign out',
-                  onPressed: () async {
-                    // Cancel Firestore listeners BEFORE signing out
-                    final auctionProvider = context.read<AuctionProvider>();
-                    auctionProvider.cancelStream();
-
-                    await auth.signOut();
-                    if (!mounted) return;
                     context.go('/');
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: magentaPink,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: const Text(
+                    'Delete',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
+        ),
+      ),
+      bottomNavigationBar: const DarkBottomNavBar(currentIndex: 2),
+    );
+  }
+
+  // Placeholder with mystery box style
+  Widget _buildImagePlaceholder() {
+    return Container(
+      color: darkBackground,
+      child: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.help_outline,
+              size: 80,
+              color: Colors.blueGrey,
+            ),
+            SizedBox(height: 8),
+            Text(
+              'Tap to select photo',
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 14,
+              ),
+            ),
+          ],
         ),
       ),
     );
