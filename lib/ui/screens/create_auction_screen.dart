@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 import '../../state/auth_provider.dart';
 import '../../state/auction_provider.dart';
-import '../../theme/app_theme.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
 
 class CreateAuctionScreen extends StatefulWidget {
@@ -21,11 +20,6 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
   final _buyout = TextEditingController();
   File? _image;
 
-  // Design colors
-  static const Color brightGreen = Color(0xFF39FF14);
-  static const Color magentaPink = Color(0xFFFF00FF);
-  static const Color darkBackground = Color(0xFF0A0A0A);
-
   Future<void> _pickImage() async {
     final picker = ImagePicker();
     final x = await picker.pickImage(source: ImageSource.camera, maxWidth: 1280, imageQuality: 85);
@@ -39,22 +33,16 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
   Widget build(BuildContext context) {
     final auth = context.watch<AuthProvider>();
     final auctions = context.watch<AuctionProvider>();
+    final scheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      backgroundColor: AppTheme.black,
+      backgroundColor: scheme.background,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: const Text(
-          'Create auction',
-          style: TextStyle(
-            color: brightGreen,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.2,
-          ),
-        ),
+        title: Text('Create auction', style: Theme.of(context).appBarTheme.titleTextStyle),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -63,16 +51,14 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
           child: ListView(
             children: [
               const SizedBox(height: 8),
-
-              // Name field
               TextFormField(
                 controller: _title,
-                style: const TextStyle(color: brightGreen),
+                style: TextStyle(color: scheme.secondary),
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   hintText: 'Name',
                   hintStyle: TextStyle(
-                    color: brightGreen.withOpacity(0.7),
+                    color: scheme.secondary.withOpacity(0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -81,57 +67,51 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                   contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                    borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                    borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: scheme.error, width: 2),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: scheme.error, width: 2),
                   ),
                 ),
                 validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
               ),
-
               const SizedBox(height: 16),
-
-              // Image picker area - large mystery box style
               GestureDetector(
                 onTap: _pickImage,
                 child: Container(
                   height: 200,
                   decoration: BoxDecoration(
-                    color: darkBackground,
+                    color: scheme.surfaceVariant,
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: brightGreen, width: 2),
+                    border: Border.all(color: scheme.secondary, width: 2),
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(6),
-                    child: _image == null
-                        ? _buildImagePlaceholder()
-                        : Image.file(_image!, fit: BoxFit.cover, width: double.infinity),
+                    child: _image != null
+                        ? Image.file(_image!, fit: BoxFit.cover, width: double.infinity)
+                        : _buildPlaceholder(scheme, textTheme),
                   ),
                 ),
               ),
-
               const SizedBox(height: 16),
-
-              // Starting price field
               TextFormField(
                 controller: _startPrice,
                 keyboardType: TextInputType.number,
-                style: const TextStyle(color: brightGreen),
+                style: TextStyle(color: scheme.secondary),
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
-                  hintText: 'Starting price',
+                  hintText: 'Start price',
                   hintStyle: TextStyle(
-                    color: brightGreen.withOpacity(0.7),
+                    color: scheme.secondary.withOpacity(0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -140,36 +120,33 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                   contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                    borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                    borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: scheme.error, width: 2),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: scheme.error, width: 2),
                   ),
                 ),
-                validator: (v) => int.tryParse(v ?? '') == null ? 'Enter a number' : null,
+                validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
               ),
-
               const SizedBox(height: 16),
-
-              // Buy out price field
               TextFormField(
                 controller: _buyout,
                 keyboardType: TextInputType.number,
-                style: const TextStyle(color: brightGreen),
+                style: TextStyle(color: scheme.secondary),
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
-                  hintText: 'Buy out price',
+                  hintText: 'Buyout price (optional)',
                   hintStyle: TextStyle(
-                    color: brightGreen.withOpacity(0.7),
+                    color: scheme.secondary.withOpacity(0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -178,78 +155,51 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                   contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                    borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: brightGreen, width: 2),
+                    borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: scheme.error, width: 2),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red, width: 2),
+                    borderSide: BorderSide(color: scheme.error, width: 2),
                   ),
                 ),
-                validator: (v) => int.tryParse(v ?? '') == null ? 'Enter a number' : null,
               ),
-
               const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () async {
+                  if (!_form.currentState!.validate()) return;
+                  if (_image == null) return;
 
-              // Place auction button - bright magenta/pink
-              SizedBox(
-                height: 56,
-                child: ElevatedButton(
-                  onPressed: auctions.loading
-                      ? null
-                      : () async {
-                    if (!_form.currentState!.validate()) return;
-                    final sellerId = auth.user?.uid ?? 'anon';
-                    final sellerName = auth.user?.displayName;  // <-- ADD THIS
+                  await auctions.createAuction(
+                    title: _title.text.trim(),
+                    sellerId: auth.user!.uid,
+                    sellerName: auth.user!.displayName,
+                    startPrice: int.parse(_startPrice.text.trim()),
+                    buyout: _buyout.text.trim().isEmpty ? 0 : int.parse(_buyout.text.trim()),
+                    imageFile: _image,
+                  );
 
-                    await context.read<AuctionProvider>().createAuction(
-                      title: _title.text.trim(),
-                      sellerId: sellerId,
-                      sellerName: sellerName,  // <-- ADD THIS
-                      startPrice: int.parse(_startPrice.text),
-                      buyout: int.parse(_buyout.text),
-                      imageFile: _image,
-                    );
-                    if (context.mounted) context.go('/home');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: magentaPink,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    elevation: 0,
-                  ),
-                  child: Text(
-                    auctions.loading ? 'Saving…' : 'Place auction',
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1,
-                    ),
-                  ),
+                  if (mounted) {
+                    context.go('/home');
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: scheme.secondary,
+                  foregroundColor: scheme.onSecondary,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  shadowColor: scheme.primary.withOpacity(0.6),
+                  elevation: 10,
                 ),
+                child: const Text('Create auction', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
-
-              // Error message
-              if (auctions.error != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 12),
-                  child: Text(
-                    auctions.error!,
-                    style: const TextStyle(color: Colors.red),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-
-              const SizedBox(height: 20),
             ],
           ),
         ),
@@ -258,27 +208,16 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
     );
   }
 
-  // Placeholder with mystery box style "?" icon
-  Widget _buildImagePlaceholder() {
+  Widget _buildPlaceholder(ColorScheme scheme, TextTheme textTheme) {
     return Container(
-      color: darkBackground,
-      child: const Center(
+      color: scheme.surfaceVariant,
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.help_outline,
-              size: 80,
-              color: Colors.blueGrey,
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Tap to take photo',
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 14,
-              ),
-            ),
+            Icon(Icons.camera_alt, color: scheme.secondary, size: 40),
+            const SizedBox(height: 8),
+            Text('Tap to add photo', style: textTheme.bodyMedium?.copyWith(color: scheme.secondary)),
           ],
         ),
       ),

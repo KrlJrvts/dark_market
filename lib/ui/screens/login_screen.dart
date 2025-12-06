@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 
 import '../../state/auction_provider.dart';
 import '../../state/auth_provider.dart';
-import '../../theme/app_theme.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -27,6 +26,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final auth = context.watch<AuthProvider>();
+    final scheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     Future<void> _doLogin() async {
       if (!_form.currentState!.validate()) return;
@@ -56,13 +57,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
     final showNoAccountHint = auth.errorCode == 'user-not-found';
 
-    // Colors from the design
-    const Color tealCyan = Color(0xFF00E5CC); // Teal/Cyan for borders and icons
-    const Color brightGreen = Color(0xFF39FF14); // Bright green for button
-    const Color purpleGlow = Color(0xFFB041FF); // Purple for title
-
     return Scaffold(
-      backgroundColor: AppTheme.black,
+      backgroundColor: scheme.background,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
@@ -72,198 +68,99 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 40),
-
-                  // Title with purple glow effect
                   Text(
                     'Dark',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Pacifico', // Use a cursive font, or GoogleFonts.pacifico()
+                    style: textTheme.displayMedium?.copyWith(
+                      fontFamily: 'Pacifico',
                       fontSize: 56,
-                      color: brightGreen,
+                      color: scheme.secondary,
                       shadows: [
-                        Shadow(
-                          color: purpleGlow.withOpacity(1.0),
-                          blurRadius: 200,
-                        ),
-                        Shadow(
-                          color: purpleGlow.withOpacity(0.8),
-                          blurRadius: 200,
-                        ),
+                        Shadow(color: scheme.primary.withOpacity(1.0), blurRadius: 200),
+                        Shadow(color: scheme.primary.withOpacity(0.8), blurRadius: 200),
                       ],
                     ),
                   ),
                   Text(
                     'Market',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: textTheme.displayMedium?.copyWith(
                       fontFamily: 'Pacifico',
                       fontSize: 56,
-                      color: brightGreen,
+                      color: scheme.secondary,
                       shadows: [
-                        Shadow(
-                          color: purpleGlow.withOpacity(1.0),
-                          blurRadius: 200,
-                        ),
-                        Shadow(
-                          color: purpleGlow.withOpacity(0.8),
-                          blurRadius: 200,
-                        ),
+                        Shadow(color: scheme.primary.withOpacity(1.0), blurRadius: 200),
+                        Shadow(color: scheme.primary.withOpacity(0.8), blurRadius: 200),
                       ],
                     ),
                   ),
-
-
-
-                  const SizedBox(height: 48),
-
-                  // Form
+                  const SizedBox(height: 36),
+                  Text(
+                    'Login to continue',
+                    style: textTheme.bodyLarge?.copyWith(
+                      fontSize: 18,
+                      color: scheme.secondary.withOpacity(0.8),
+                      letterSpacing: 0.8,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
                   Form(
                     key: _form,
                     child: Column(
                       children: [
-                        // Email field
                         TextFormField(
                           controller: _email,
-                          style: const TextStyle(color: tealCyan),
+                          style: TextStyle(color: scheme.secondary),
                           decoration: InputDecoration(
-                            hintText: 'Email Address',
-                            hintStyle: TextStyle(color: tealCyan.withOpacity(0.7)),
-                            prefixIcon: const Icon(Icons.mail_outline, color: tealCyan),
-                            filled: true,
-                            fillColor: Colors.transparent,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: tealCyan, width: 2),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: tealCyan, width: 2),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: Colors.red, width: 2),
-                            ),
-                            focusedErrorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: Colors.red, width: 2),
-                            ),
+                            prefixIcon: Icon(Icons.email, color: scheme.tertiary),
+                            hintText: 'Email',
                           ),
-                          validator: (v) => v != null && v.contains('@') ? null : 'Enter a valid email',
-                          onChanged: (_) => context.read<AuthProvider>().clearError(),
+                          validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
                         ),
-
                         const SizedBox(height: 16),
-
-                        // Password field
                         TextFormField(
                           controller: _password,
                           obscureText: true,
-                          style: const TextStyle(color: tealCyan),
+                          style: TextStyle(color: scheme.secondary),
                           decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.lock, color: scheme.tertiary),
                             hintText: 'Password',
-                            hintStyle: TextStyle(color: tealCyan.withOpacity(0.7)),
-                            prefixIcon: const Icon(Icons.lock_outline, color: tealCyan),
-                            filled: true,
-                            fillColor: Colors.transparent,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: tealCyan, width: 2),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: tealCyan, width: 2),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: Colors.red, width: 2),
-                            ),
-                            focusedErrorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: const BorderSide(color: Colors.red, width: 2),
-                            ),
                           ),
-                          validator: (v) => v != null && v.length >= 6 ? null : 'Min 6 chars',
-                          onChanged: (_) => context.read<AuthProvider>().clearError(),
-                        ),
-
-                        const SizedBox(height: 20),
-
-                        // Error messages
-                        if (auth.errorMessage != null)
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
-                            child: Text(auth.errorMessage!, style: const TextStyle(color: Colors.red)),
-                          ),
-
-                        if (showNoAccountHint) ...[
-                          const Padding(
-                            padding: EdgeInsets.only(bottom: 12),
-                            child: Text(
-                              'No account found for this email. You can create one now.',
-                              style: TextStyle(color: Colors.white70),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ],
-
-                        // Login button - bright green
-                        SizedBox(
-                          width: double.infinity,
-                          height: 50,
-                          child: ElevatedButton(
-                            onPressed: auth.loading ? null : _doLogin,
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: brightGreen,
-                              foregroundColor: Colors.black,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              elevation: 0,
-                            ),
-                            child: Text(
-                              auth.loading ? 'Logging in…' : 'Login',
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 2,
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(height: 16),
-
-                        // Create account link
-                        TextButton(
-                          onPressed: auth.loading ? null : _doSignup,
-                          child: const Text(
-                            'create account',
-                            style: TextStyle(
-                              color: tealCyan,
-                              fontSize: 14,
-                              letterSpacing: 1,
-                            ),
-                          ),
+                          validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                       ],
                     ),
                   ),
-
-                  const SizedBox(height: 60),
-
-                  // Tagline at bottom
-                  const Text(
-                    'When eBay is too mainstream',
-                    style: TextStyle(
-                      color: tealCyan,
-                      fontSize: 14,
-                      fontStyle: FontStyle.italic,
-                      letterSpacing: 0.5,
+                  const SizedBox(height: 16),
+                  if (showNoAccountHint)
+                    Text(
+                      'No account? Tap Sign up',
+                      style: TextStyle(color: scheme.secondary.withOpacity(0.8)),
+                    ),
+                  const SizedBox(height: 24),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: _doLogin,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: scheme.secondary,
+                        foregroundColor: scheme.onSecondary,
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shadowColor: scheme.primary.withOpacity(0.6),
+                        elevation: 10,
+                      ),
+                      child: const Text('Login', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                     ),
                   ),
-
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 12),
+                  TextButton(
+                    onPressed: _doSignup,
+                    child: Text(
+                      'Sign up',
+                      style: TextStyle(color: scheme.secondary, fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ],
               ),
             ),

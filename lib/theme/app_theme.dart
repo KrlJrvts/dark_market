@@ -2,52 +2,67 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static const Color black = Color(0xFF050507);
-  static const Color surface = Color(0xFF121317);
-  static const Color neonGreen = Color(0xFF9BFF3D);
-  static const Color neonPurple = Color(0xFFB041FF);
-  static const Color cyanGlow = Color(0xFF00FFF0);
-  static const Color outline = Color(0xFF52FF00);
+  // Base palette (kept private; consumed via ColorScheme)
+  static const Color _black = Color(0xFF050507);
+  static const Color _surface = Color(0xFF121317);
+  static const Color _neonGreen = Color(0xFF9BFF3D);
+  static const Color _neonPurple = Color(0xFFB041FF);
+  static const Color _magentaPink = Color(0xFFFF00FF);
+  static const Color _cyan = Color(0xFF00E5CC);
+  static const Color _danger = Color(0xFFFF0040);
+  static const Color _darkBg = Color(0xFF0A0A0A);
 
   static ThemeData theme = ThemeData(
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: black,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: neonPurple,
-      brightness: Brightness.dark,
-      primary: neonPurple,
-      secondary: neonGreen,
-      background: black,
-      surface: surface,
+    scaffoldBackgroundColor: _black,
+    colorScheme: ColorScheme.dark(
+      primary: _neonPurple,
       onPrimary: Colors.black,
+      secondary: _neonGreen,
       onSecondary: Colors.black,
-      onBackground: Colors.white,
+      tertiary: _magentaPink,
+      onTertiary: Colors.black,
+      surface: _surface,
       onSurface: Colors.white,
+      background: _black,
+      onBackground: Colors.white,
+      error: _danger,
+      onError: Colors.white,
+      outline: _neonGreen,
+      surfaceVariant: _darkBg,
     ),
     textTheme: GoogleFonts.shareTechMonoTextTheme().apply(
       bodyColor: Colors.white.withOpacity(0.9),
-      displayColor: neonGreen,
+      displayColor: _neonGreen,
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: surface,
-      hintStyle: TextStyle(color: neonGreen.withOpacity(0.4)),
+      fillColor: _surface,
+      hintStyle: TextStyle(color: _neonGreen.withOpacity(0.4)),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(color: neonGreen.withOpacity(0.6), width: 1.4),
+        borderSide: BorderSide(color: _neonGreen.withOpacity(0.6), width: 1.4),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: const BorderSide(color: neonPurple, width: 2),
+        borderSide: const BorderSide(color: _neonPurple, width: 2),
       ),
-      labelStyle: const TextStyle(color: neonGreen),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(color: _danger.withOpacity(0.9), width: 2),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(color: _danger.withOpacity(0.9), width: 2),
+      ),
+      labelStyle: const TextStyle(color: _neonGreen),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: neonPurple,
+        backgroundColor: _neonPurple,
         foregroundColor: Colors.white,
-        shadowColor: neonPurple.withOpacity(0.7),
+        shadowColor: _neonPurple.withOpacity(0.7),
         elevation: 8,
         minimumSize: const Size.fromHeight(44),
         shape: RoundedRectangleBorder(
@@ -56,29 +71,29 @@ class AppTheme {
       ),
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: neonPurple,
+      backgroundColor: _neonPurple,
       foregroundColor: Colors.white,
       elevation: 8,
-      splashColor: cyanGlow.withOpacity(0.3),
+      splashColor: _cyan.withOpacity(0.3),
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
       titleTextStyle: GoogleFonts.shareTechMono(
-        color: neonGreen,
+        color: _neonGreen,
         fontSize: 22,
         fontWeight: FontWeight.bold,
         letterSpacing: 1.2,
       ),
     ),
     cardTheme: CardThemeData(
-      color: surface,
-      shadowColor: neonPurple.withOpacity(0.4),
+      color: _surface,
+      shadowColor: _neonPurple.withOpacity(0.4),
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
-        side: BorderSide(color: outline.withOpacity(0.7), width: 1.4),
+        side: BorderSide(color: _neonGreen.withOpacity(0.7), width: 1.4),
       ),
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
     ),
