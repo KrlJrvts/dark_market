@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
         _email.text.trim(),
         _password.text.trim(),
       );
-      if (!mounted) return;
+      if (!context.mounted) return;
       if (ok) {
         context.read<AuctionProvider>().bindStream();
         context.go('/home');
@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
         _email.text.trim(),
         _password.text.trim(),
       );
-      if (!mounted) return;
+      if (!context.mounted) return;
       if (created) {
         context.read<AuctionProvider>().bindStream();
         context.go('/home');

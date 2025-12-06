@@ -64,7 +64,7 @@ class AuctionTile extends StatelessWidget {
                           width: 80,
                           height: 80,
                           fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => _buildPlaceholder(scheme),
+                          errorBuilder: (context, error, stackTrace) => _buildPlaceholder(scheme),
                         )
                             : _buildPlaceholder(scheme),
                       ),

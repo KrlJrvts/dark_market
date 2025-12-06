@@ -127,6 +127,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     return;
                   }
 
+                  // MOVED: Capture storageService BEFORE any async operations
+                  final storageService = context.read<StorageService>();
+
                   // Update name if provided
                   if (name.isNotEmpty) {
                     await auth.updateName(name);
@@ -139,14 +142,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   // Upload and update photo if selected
                   if (_localImageFile != null) {
-                    final storageService = context.read<StorageService>();
-                    final url = await storageService.uploadAuctionImage(
+                    final url = await storageService.uploadAuctionImage(  // Now using captured reference
                       file: _localImageFile,
                       userId: user.uid,
                     );
                     await auth.updatePhoto(url);
                   }
-                  if (!mounted) return;
+                  if (!context.mounted) return;
                   _showSnack('Profile updated');
                 },
               ),
@@ -155,6 +157,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 label: 'Delete account',
                 variant: ButtonVariant.tertiary,
                 onPressed: () async {
+                  // ADDED: Capture authProvider BEFORE any async operations
+                  final authProvider = context.read<AuthProvider>();
+
                   final confirmed = await showDialog<bool>(
                     context: context,
                     builder: (ctx) => AlertDialog(
@@ -177,13 +182,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   if (!confirmed) return;
 
-                  final ok = await context.read<AuthProvider>().deleteAccount();
-                  if (!mounted) return;
+                  final ok = await authProvider.deleteAccount();  // CHANGED: Use captured reference
+                  if (!context.mounted) return;
 
                   if (ok) {
                     context.go('/');
                   } else {
-                    final msg = context.read<AuthProvider>().errorMessage ??
+                    final msg = authProvider.errorMessage ??  // CHANGED: Use captured reference
                         'Failed to delete account';
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(msg)),

@@ -131,7 +131,7 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                       imageFile: _image,
                     );
 
-                    if (mounted) {
+                    if (context.mounted) {
                       context.go('/home');
                     }
                   },
