@@ -18,20 +18,23 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: Text('Active auctions', style: Theme.of(context).appBarTheme.titleTextStyle),
+        title: Text(
+          'Active auctions',
+          style: Theme.of(context).appBarTheme.titleTextStyle?.copyWith(
+            fontSize: 24,
+            fontStyle: FontStyle.italic
+          ),
+        ),
       ),
       body: p.error != null
           ? Center(
-        child: Text(
-          p.error!,
-          style: TextStyle(color: scheme.error),
-        ),
-      )
+              child: Text(p.error!, style: TextStyle(color: scheme.error)),
+            )
           : ListView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        itemCount: p.auctions.length,
-        itemBuilder: (_, i) => AuctionTile(auction: p.auctions[i]),
-      ),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              itemCount: p.auctions.length,
+              itemBuilder: (_, i) => AuctionTile(auction: p.auctions[i]),
+            ),
       bottomNavigationBar: const DarkBottomNavBar(currentIndex: 0),
     );
   }

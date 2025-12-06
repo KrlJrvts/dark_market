@@ -7,6 +7,10 @@ import 'package:go_router/go_router.dart';
 import '../../data/services/storage_service.dart';
 import '../../state/auth_provider.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
+import '../widgets/themed_text_field.dart';
+import '../widgets/primary_button.dart';
+import '../widgets/content_card.dart';
+import '../widgets/image_picker_box.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -38,9 +42,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void _showSnack(String message) {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
   }
 
   Future<void> _pickImage() async {
@@ -59,7 +63,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final auth = context.watch<AuthProvider>();
     final user = auth.user;
     final scheme = Theme.of(context).colorScheme;
-
 
     if (user == null) {
       return Scaffold(
@@ -84,132 +87,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: scheme.surfaceContainerLowest,
-            borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: scheme.secondary, width: 2),
-          ),
+        child: ContentCard(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              TextField(
+              ThemedTextField(
                 controller: _nameController,
-                style: TextStyle(color: scheme.secondary, fontSize: 18),
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  hintText: 'Name',
-                  hintStyle: TextStyle(
-                    color: scheme.secondary.withValues(alpha: 0.7),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  filled: true,
-                  fillColor: Colors.transparent,
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 16,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.primary, width: 2),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.tertiary, width: 2),
-                  ),
-                ),
+                hintText: 'Name',
               ),
               const SizedBox(height: 16),
-              GestureDetector(
+              ImagePickerBox(
+                imageFile: _localImageFile,
+                networkImageUrl: user.photoURL,
                 onTap: _pickImage,
-                child: Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                    color: scheme.surfaceContainerLowest,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: scheme.primary, width: 2),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(6),
-                    child: _localImageFile != null
-                        ? Image.file(
-                            _localImageFile!,
-                            fit: BoxFit.cover,
-                            width: double.infinity,
-                          )
-                        : (user.photoURL != null
-                              ? Image.network(
-                                  user.photoURL!,
-                                  fit: BoxFit.cover,
-                                  width: double.infinity,
-                                )
-                              : _buildImagePlaceholder(scheme)),
-                  ),
-                ),
+                placeholder: _buildImagePlaceholder(scheme),
               ),
               const SizedBox(height: 16),
-              TextField(
+              ThemedTextField(
                 controller: _passwordController,
+                hintText: 'New password',
                 obscureText: true,
-                style: TextStyle(color: scheme.tertiary, fontSize: 18),
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  hintText: 'New password',
-                  hintStyle: TextStyle(
-                    color: scheme.secondary.withValues(alpha: 0.7),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  filled: true,
-                  fillColor: Colors.transparent,
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 16,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.primary, width: 2),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.tertiary, width: 2),
-                  ),
-                ),
               ),
               const SizedBox(height: 16),
-              TextField(
+              ThemedTextField(
                 controller: _confirmPasswordController,
+                hintText: 'Confirm new password',
                 obscureText: true,
-                style: TextStyle(color: scheme.tertiary, fontSize: 18),
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  hintText: 'Confirm new password',
-                  hintStyle: TextStyle(
-                    color: scheme.secondary.withValues(alpha: 0.7),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  filled: true,
-                  fillColor: Colors.transparent,
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 16,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.primary, width: 2),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.tertiary, width: 2),
-                  ),
-                ),
               ),
               const SizedBox(height: 24),
-              ElevatedButton(
+              PrimaryButton(
+                label: 'Save changes',
                 onPressed: () async {
                   final name = _nameController.text.trim();
                   final pass = _passwordController.text.trim();
@@ -230,10 +137,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     await auth.updatePassword(pass);
                   }
 
-                  // For photo: you would need to upload the file first using StorageService
-                  // then call auth.updatePhoto(url)
-                  // Note: StorageService only has uploadAuctionImage, you may need to add
-                  // a method for profile images, or reuse it like:
+                  // Upload and update photo if selected
                   if (_localImageFile != null) {
                     final storageService = context.read<StorageService>();
                     final url = await storageService.uploadAuctionImage(
@@ -245,79 +149,48 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   if (!mounted) return;
                   _showSnack('Profile updated');
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: scheme.secondary,
-                  foregroundColor: scheme.onSecondary,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  shadowColor: scheme.tertiary.withValues(alpha: 0.6),
-                  elevation: 10,
-                ),
-                child: const Text(
-                  'Save changes',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
               ),
               const SizedBox(height: 48),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () async {
-                    final confirmed = await showDialog<bool>(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        title: const Text('Delete account?'),
-                        content: const Text(
-                            'This will permanently delete your account and data. This cannot be undone.'
-                        ),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.of(ctx).pop(false),
-                            child: const Text('Cancel'),
-                          ),
-                          TextButton(
-                            onPressed: () => Navigator.of(ctx).pop(true),
-                            child: const Text('Delete'),
-                          ),
-                        ],
+              PrimaryButton(
+                label: 'Delete account',
+                variant: ButtonVariant.tertiary,
+                onPressed: () async {
+                  final confirmed = await showDialog<bool>(
+                    context: context,
+                    builder: (ctx) => AlertDialog(
+                      title: const Text('Delete account?'),
+                      content: const Text(
+                        'This will permanently delete your account and data. This cannot be undone.',
                       ),
-                    ) ?? false;
-
-                    if (!confirmed) return;
-
-                    final ok = await context.read<AuthProvider>().deleteAccount();
-                    if (!mounted) return;
-
-                    if (ok) {
-                      context.go('/');
-                    } else {
-                      final msg = context.read<AuthProvider>().errorMessage ?? 'Failed to delete account';
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(msg)),
-                      );
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: scheme.tertiary,
-                    foregroundColor: scheme.onTertiary,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.of(ctx).pop(false),
+                          child: const Text('Cancel'),
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.of(ctx).pop(true),
+                          child: const Text('Delete'),
+                        ),
+                      ],
                     ),
-                    shadowColor: scheme.tertiary.withValues(alpha: 0.6),
-                    elevation: 10,
-                  ),
-                  child: const Text(
-                    'Delete account',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              )
+                  ) ?? false;
+
+                  if (!confirmed) return;
+
+                  final ok = await context.read<AuthProvider>().deleteAccount();
+                  if (!mounted) return;
+
+                  if (ok) {
+                    context.go('/');
+                  } else {
+                    final msg = context.read<AuthProvider>().errorMessage ??
+                        'Failed to delete account';
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(msg)),
+                    );
+                  }
+                },
+              ),
             ],
           ),
         ),

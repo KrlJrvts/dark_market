@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../state/auction_provider.dart';
 import '../../state/auth_provider.dart';
+import '../widgets/themed_text_field.dart';
+import '../widgets/primary_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -30,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final scheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
-    Future<void> _doLogin() async {
+    Future<void> doLogin() async {
       if (!_form.currentState!.validate()) return;
       final ok = await context.read<AuthProvider>().signIn(
         _email.text.trim(),
@@ -43,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }
 
-    Future<void> _doSignup() async {
+    Future<void> doSignup() async {
       if (!_form.currentState!.validate()) return;
       final created = await context.read<AuthProvider>().signUp(
         _email.text.trim(),
@@ -114,33 +116,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     key: _form,
                     child: Column(
                       children: [
-                        TextFormField(
+                        ThemedTextField(
                           controller: _email,
-                          style: TextStyle(color: scheme.secondary),
-                          decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.email,
-                              color: scheme.tertiary,
-                            ),
-                            hintText: 'Email',
+                          hintText: 'Email',
+                          prefixIcon: Icon(
+                            Icons.email,
+                            color: scheme.tertiary,
                           ),
                           validator: (v) =>
-                              (v == null || v.isEmpty) ? 'Required' : null,
+                          (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                         const SizedBox(height: 16),
-                        TextFormField(
+                        ThemedTextField(
                           controller: _password,
+                          hintText: 'Password',
                           obscureText: true,
-                          style: TextStyle(color: scheme.secondary),
-                          decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.lock,
-                              color: scheme.tertiary,
-                            ),
-                            hintText: 'Password',
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: scheme.tertiary,
                           ),
                           validator: (v) =>
-                              (v == null || v.isEmpty) ? 'Required' : null,
+                          (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                       ],
                     ),
@@ -154,33 +150,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   const SizedBox(height: 24),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: _doLogin,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: scheme.primary,
-                        foregroundColor: scheme.onTertiary,
-                        padding: const EdgeInsets.symmetric(vertical: 14),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        shadowColor: scheme.primary.withValues(alpha: 0.6),
-                        elevation: 10,
-                      ),
-                      child: const Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-
-                        ),
-                      ),
-                    ),
+                  PrimaryButton(
+                    label: 'Login',
+                    variant: ButtonVariant.primary,
+                    onPressed: doLogin,
                   ),
                   const SizedBox(height: 12),
                   TextButton(
-                    onPressed: _doSignup,
+                    onPressed: doSignup,
                     child: Text(
                       'Sign up',
                       style: TextStyle(

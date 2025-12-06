@@ -8,6 +8,10 @@ import 'package:go_router/go_router.dart';
 import '../../state/auth_provider.dart';
 import '../../state/auction_provider.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
+import '../widgets/themed_text_field.dart';
+import '../widgets/primary_button.dart';
+import '../widgets/content_card.dart';
+import '../widgets/image_picker_box.dart';
 
 class CreateAuctionScreen extends StatefulWidget {
   const CreateAuctionScreen({super.key});
@@ -53,7 +57,6 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
     final scheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
-
     return Scaffold(
       backgroundColor: scheme.surface,
       appBar: AppBar(
@@ -70,166 +73,38 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: scheme.surfaceContainerLowest,
-            borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: scheme.secondary, width: 2),
-          ),
+        child: ContentCard(
           child: Form(
             key: _form,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 8),
-                TextFormField(
+                ThemedTextField(
                   controller: _title,
-                  style: TextStyle(color: scheme.secondary, fontSize: 18),
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    hintText: 'Name',
-                    hintStyle: TextStyle(
-                      color: scheme.secondary.withValues(alpha: 0.7),
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    filled: true,
-                    fillColor: Colors.transparent,
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 16,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.primary, width: 2),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.tertiary, width: 2),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.error, width: 2),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.error, width: 2),
-                    ),
-                  ),
+                  hintText: 'Name',
                   validator: (v) =>
                   (v == null || v.isEmpty) ? 'Required' : null,
                 ),
                 const SizedBox(height: 16),
-                GestureDetector(
+                ImagePickerBox(
+                  imageFile: _image,
                   onTap: _pickImage,
-                  child: Container(
-                    height: 200,
-                    decoration: BoxDecoration(
-                      color: scheme.surfaceContainerLowest,
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: scheme.primary, width: 2),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(6),
-                      child: _image != null
-                          ? Image.file(
-                        _image!,
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                      )
-                          : _buildPlaceholder(scheme, textTheme),
-                    ),
-                  ),
+                  placeholder: _buildPlaceholder(scheme, textTheme),
                 ),
                 const SizedBox(height: 16),
-                TextFormField(
+                ThemedTextField(
                   controller: _startPrice,
+                  hintText: 'Start price',
                   keyboardType: TextInputType.number,
-                  style: TextStyle(color: scheme.secondary, fontSize: 18),
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    hintText: 'Start price',
-                    hintStyle: TextStyle(
-                      color: scheme.secondary.withValues(alpha: 0.7),
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    filled: true,
-                    fillColor: Colors.transparent,
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 16,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.primary, width: 2),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.tertiary, width: 2),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.error, width: 2),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.error, width: 2),
-                    ),
-                  ),
                   validator: (v) =>
                   (v == null || v.isEmpty) ? 'Required' : null,
                 ),
                 const SizedBox(height: 16),
-                TextFormField(
+                ThemedTextField(
                   controller: _buyout,
+                  hintText: 'Buyout price',
                   keyboardType: TextInputType.number,
-                  style: TextStyle(color: scheme.secondary, fontSize: 18),
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    hintText: 'Buyout price',
-                    hintStyle: TextStyle(
-                      color: scheme.secondary.withValues(alpha: 0.7),
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    filled: true,
-                    fillColor: Colors.transparent,
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 16,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.primary, width: 2),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.tertiary, width: 2),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.error, width: 2),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      borderSide:
-                      BorderSide(color: scheme.error, width: 2),
-                    ),
-                  ),
                   validator: (v) {
                     if (v == null || v.isEmpty) return 'Required';
                     final buyout = int.tryParse(v);
@@ -242,7 +117,8 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                   },
                 ),
                 const SizedBox(height: 24),
-                ElevatedButton(
+                PrimaryButton(
+                  label: 'Create auction',
                   onPressed: () async {
                     if (!_form.currentState!.validate()) return;
 
@@ -259,23 +135,6 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                       context.go('/home');
                     }
                   },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: scheme.secondary,
-                    foregroundColor: scheme.onSecondary,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    shadowColor: scheme.tertiary.withValues(alpha: 0.6),
-                    elevation: 10,
-                  ),
-                  child: const Text(
-                    'Create auction',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
                 ),
               ],
             ),
