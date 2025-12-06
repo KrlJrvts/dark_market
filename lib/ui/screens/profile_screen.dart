@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
-import '../../state/auction_provider.dart';
 import '../../state/auth_provider.dart';
 import '../../theme/app_theme.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
