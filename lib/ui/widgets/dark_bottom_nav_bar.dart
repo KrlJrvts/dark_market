@@ -12,20 +12,17 @@ class DarkBottomNavBar extends StatelessWidget {
     this.currentIndex = 0,
   });
 
-  // Colors matching your design
-  static const Color tealCyan = Color(0xFF00E5CC);
-  static const Color brightGreen = Color(0xFF39FF14);
-  static const Color darkBackground = Color(0xFF0A0A0A);
-
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Container(
       height: 70,
       decoration: BoxDecoration(
-        color: darkBackground,
+        color: scheme.surfaceContainerLowest,
         border: Border(
           top: BorderSide(
-            color: brightGreen.withOpacity(0.3),
+            color: scheme.secondary.withValues(alpha: 0.3),
             width: 1,
           ),
         ),
@@ -90,7 +87,7 @@ class _NavButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color brightGreen = Color(0xFF39FF14);
+    final scheme = Theme.of(context).colorScheme;
 
     return GestureDetector(
       onTap: onTap,
@@ -98,16 +95,16 @@ class _NavButton extends StatelessWidget {
         width: 50,
         height: 50,
         decoration: BoxDecoration(
-          color: isSelected ? brightGreen.withOpacity(0.1) : Colors.transparent,
+          color: isSelected ? scheme.secondary.withValues(alpha: 0.1) : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: brightGreen,
+            color: scheme.secondary,
             width: 2,
           ),
           boxShadow: isSelected
               ? [
             BoxShadow(
-              color: brightGreen.withOpacity(0.3),
+              color: scheme.secondary.withValues(alpha: 0.3),
               blurRadius: 8,
               spreadRadius: 1,
             ),
@@ -116,7 +113,7 @@ class _NavButton extends StatelessWidget {
         ),
         child: Icon(
           icon,
-          color: brightGreen,
+          color: scheme.secondary,
           size: 26,
         ),
       ),

@@ -7,25 +7,20 @@ class AuctionTile extends StatelessWidget {
 
   const AuctionTile({super.key, required this.auction});
 
-  // Design colors from the image
-  static const Color brightGreen = Color(0xFF39FF14);   // Border color
-  static const Color tealCyan = Color(0xFF00E5CC);      // Bell icon, highest bid, seller
-  static const Color magentaPurple = Color(0xFFB041FF); // Item title
-  static const Color magentaPink = Color(0xFFFF00FF);   // Buy now price
-  static const Color darkBackground = Color(0xFF0A0A0A);
-  static const Color soldRed = Color(0xFFFF0040);       // Bright red for SOLD text
-
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+
     return GestureDetector(
       onTap: () => context.push('/view/${auction.id}'),
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
         decoration: BoxDecoration(
-          color: darkBackground,
+          color: scheme.surfaceContainerLowest,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: auction.isClosed ? soldRed : brightGreen,
+            color: auction.isClosed ? scheme.error : scheme.secondary,
             width: 2,
           ),
         ),
@@ -37,14 +32,14 @@ class AuctionTile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Top row: Purple title + bell icon
+                  // Top row: Purple title
                   Row(
                     children: [
                       Expanded(
                         child: Text(
                           auction.title,
-                          style: const TextStyle(
-                            color: magentaPurple,
+                          style: textTheme.titleLarge?.copyWith(
+                            color: scheme.primary,
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                           ),
@@ -69,9 +64,9 @@ class AuctionTile extends StatelessWidget {
                           width: 80,
                           height: 80,
                           fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => _buildPlaceholder(),
+                          errorBuilder: (_, __, ___) => _buildPlaceholder(scheme),
                         )
-                            : _buildPlaceholder(),
+                            : _buildPlaceholder(scheme),
                       ),
 
                       const SizedBox(width: 16),
@@ -84,19 +79,19 @@ class AuctionTile extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const Text(
+                                Text(
                                   'Highest bid',
-                                  style: TextStyle(
-                                    color: Colors.white70,
+                                  style: textTheme.bodyLarge?.copyWith(
+                                    color: scheme.onSurface.withValues(alpha: 0.7),
                                     fontSize: 25,
                                     decoration: TextDecoration.underline,
-                                    decorationColor: Colors.white38,
+                                    decorationColor: scheme.onSurface.withValues(alpha: 0.38),
                                   ),
                                 ),
                                 Text(
                                   '${auction.highestBid ?? 0} €',
-                                  style: const TextStyle(
-                                    color: tealCyan,
+                                  style: textTheme.bodyLarge?.copyWith(
+                                    color: scheme.secondary,
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -110,17 +105,17 @@ class AuctionTile extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const Text(
+                                Text(
                                   'Buy now',
-                                  style: TextStyle(
-                                    color: Colors.white70,
+                                  style: textTheme.bodyLarge?.copyWith(
+                                    color: scheme.onSurface.withValues(alpha: 0.7),
                                     fontSize: 25,
                                   ),
                                 ),
                                 Text(
                                   '${auction.buyout} €',
-                                  style: const TextStyle(
-                                    color: magentaPink,
+                                  style: textTheme.bodyLarge?.copyWith(
+                                    color: scheme.tertiary,
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -138,18 +133,18 @@ class AuctionTile extends StatelessWidget {
                   // Bottom: Seller info
                   Row(
                     children: [
-                      const Text(
+                      Text(
                         'Seller: ',
-                        style: TextStyle(
-                          color: tealCyan,
+                        style: textTheme.bodyMedium?.copyWith(
+                          color: scheme.secondary,
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         _getSellerDisplayName(),
-                        style: const TextStyle(
-                          color: tealCyan,
+                        style: textTheme.bodyMedium?.copyWith(
+                          color: scheme.secondary,
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
@@ -165,7 +160,7 @@ class AuctionTile extends StatelessWidget {
               Positioned.fill(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.7),
+                    color: Colors.black.withValues(alpha: 0.7),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Center(
@@ -174,17 +169,17 @@ class AuctionTile extends StatelessWidget {
                       child: Text(
                         'SOLD',
                         style: TextStyle(
-                          color: soldRed,
+                          color: scheme.error,
                           fontSize: 48,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 8,
                           shadows: [
                             Shadow(
-                              color: soldRed.withOpacity(0.8),
+                              color: scheme.error.withValues(alpha: 0.8),
                               blurRadius: 20,
                             ),
                             Shadow(
-                              color: soldRed.withOpacity(0.5),
+                              color: scheme.error.withValues(alpha: 0.5),
                               blurRadius: 40,
                             ),
                           ],
@@ -201,19 +196,19 @@ class AuctionTile extends StatelessWidget {
   }
 
   // Big ? placeholder when no image
-  Widget _buildPlaceholder() {
+  Widget _buildPlaceholder(ColorScheme scheme) {
     return Container(
       width: 80,
       height: 80,
       decoration: BoxDecoration(
-        color: Colors.grey[900],
+        color: scheme.surface,
         borderRadius: BorderRadius.circular(4),
       ),
-      child: const Center(
+      child: Center(
         child: Text(
           '?',
           style: TextStyle(
-            color: Colors.grey,
+            color: scheme.onSurface.withValues(alpha: 0.5),
             fontSize: 48,
             fontWeight: FontWeight.bold,
           ),

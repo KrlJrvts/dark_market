@@ -24,25 +24,23 @@ class AppTheme {
       onTertiary: Colors.black,
       surface: _surface,
       onSurface: Colors.white,
-      background: _black,
-      onBackground: Colors.white,
       error: _danger,
       onError: Colors.white,
       outline: _neonGreen,
-      surfaceVariant: _darkBg,
+      surfaceContainerLowest: _darkBg,
     ),
     textTheme: GoogleFonts.shareTechMonoTextTheme().apply(
-      bodyColor: Colors.white.withOpacity(0.9),
+      bodyColor: Colors.white.withValues(alpha: 0.9),
       displayColor: _neonGreen,
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: _surface,
-      hintStyle: TextStyle(color: _neonGreen.withOpacity(0.4)),
+      hintStyle: TextStyle(color: _neonGreen.withValues(alpha: 0.4)),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(color: _neonGreen.withOpacity(0.6), width: 1.4),
+        borderSide: BorderSide(color: _neonGreen.withValues(alpha:0.6), width: 1.4),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
@@ -50,11 +48,11 @@ class AppTheme {
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(color: _danger.withOpacity(0.9), width: 2),
+        borderSide: BorderSide(color: _danger.withValues(alpha:0.9), width: 2),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(color: _danger.withOpacity(0.9), width: 2),
+        borderSide: BorderSide(color: _danger.withValues(alpha:0.9), width: 2),
       ),
       labelStyle: const TextStyle(color: _neonGreen),
     ),
@@ -62,7 +60,7 @@ class AppTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: _neonPurple,
         foregroundColor: Colors.white,
-        shadowColor: _neonPurple.withOpacity(0.7),
+        shadowColor: _neonPurple.withValues(alpha:0.7),
         elevation: 8,
         minimumSize: const Size.fromHeight(44),
         shape: RoundedRectangleBorder(
@@ -74,7 +72,7 @@ class AppTheme {
       backgroundColor: _neonPurple,
       foregroundColor: Colors.white,
       elevation: 8,
-      splashColor: _cyan.withOpacity(0.3),
+      splashColor: _cyan.withValues(alpha:0.3),
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
@@ -89,11 +87,11 @@ class AppTheme {
     ),
     cardTheme: CardThemeData(
       color: _surface,
-      shadowColor: _neonPurple.withOpacity(0.4),
+      shadowColor: _neonPurple.withValues(alpha:0.4),
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
-        side: BorderSide(color: _neonGreen.withOpacity(0.7), width: 1.4),
+        side: BorderSide(color: _neonGreen.withValues(alpha:0.7), width: 1.4),
       ),
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
     ),

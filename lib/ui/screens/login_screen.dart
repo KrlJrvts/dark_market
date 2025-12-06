@@ -7,6 +7,7 @@ import '../../state/auth_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -58,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final showNoAccountHint = auth.errorCode == 'user-not-found';
 
     return Scaffold(
-      backgroundColor: scheme.background,
+      backgroundColor: scheme.surface,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
@@ -74,10 +75,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: textTheme.displayMedium?.copyWith(
                       fontFamily: 'Pacifico',
                       fontSize: 56,
+                      fontWeight: FontWeight.w500,
                       color: scheme.secondary,
                       shadows: [
-                        Shadow(color: scheme.primary.withOpacity(1.0), blurRadius: 200),
-                        Shadow(color: scheme.primary.withOpacity(0.8), blurRadius: 200),
+                        Shadow(
+                          color: scheme.primary.withValues(alpha: 1.0),
+                          blurRadius: 200,
+                        ),
+                        Shadow(
+                          color: scheme.tertiary.withValues(alpha: 0.8),
+                          blurRadius: 300,
+                        ),
                       ],
                     ),
                   ),
@@ -87,23 +95,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: textTheme.displayMedium?.copyWith(
                       fontFamily: 'Pacifico',
                       fontSize: 56,
+                      fontWeight: FontWeight.w500,
                       color: scheme.secondary,
                       shadows: [
-                        Shadow(color: scheme.primary.withOpacity(1.0), blurRadius: 200),
-                        Shadow(color: scheme.primary.withOpacity(0.8), blurRadius: 200),
+                        Shadow(
+                          color: scheme.primary.withValues(alpha: 1.0),
+                          blurRadius: 200,
+                        ),
+                        Shadow(
+                          color: scheme.tertiary.withValues(alpha: 0.8),
+                          blurRadius: 300,
+                        ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 36),
-                  Text(
-                    'Login to continue',
-                    style: textTheme.bodyLarge?.copyWith(
-                      fontSize: 18,
-                      color: scheme.secondary.withOpacity(0.8),
-                      letterSpacing: 0.8,
-                    ),
-                  ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 72),
                   Form(
                     key: _form,
                     child: Column(
@@ -112,10 +118,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           controller: _email,
                           style: TextStyle(color: scheme.secondary),
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.email, color: scheme.tertiary),
+                            prefixIcon: Icon(
+                              Icons.email,
+                              color: scheme.tertiary,
+                            ),
                             hintText: 'Email',
                           ),
-                          validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+                          validator: (v) =>
+                              (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                         const SizedBox(height: 16),
                         TextFormField(
@@ -123,10 +133,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           obscureText: true,
                           style: TextStyle(color: scheme.secondary),
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.lock, color: scheme.tertiary),
+                            prefixIcon: Icon(
+                              Icons.lock,
+                              color: scheme.tertiary,
+                            ),
                             hintText: 'Password',
                           ),
-                          validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+                          validator: (v) =>
+                              (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                       ],
                     ),
@@ -135,7 +149,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (showNoAccountHint)
                     Text(
                       'No account? Tap Sign up',
-                      style: TextStyle(color: scheme.secondary.withOpacity(0.8)),
+                      style: TextStyle(
+                        color: scheme.secondary.withValues(alpha: 0.8),
+                      ),
                     ),
                   const SizedBox(height: 24),
                   SizedBox(
@@ -143,14 +159,23 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: ElevatedButton(
                       onPressed: _doLogin,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: scheme.secondary,
-                        foregroundColor: scheme.onSecondary,
+                        backgroundColor: scheme.primary,
+                        foregroundColor: scheme.onTertiary,
                         padding: const EdgeInsets.symmetric(vertical: 14),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                        shadowColor: scheme.primary.withOpacity(0.6),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        shadowColor: scheme.primary.withValues(alpha: 0.6),
                         elevation: 10,
                       ),
-                      child: const Text('Login', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -158,9 +183,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: _doSignup,
                     child: Text(
                       'Sign up',
-                      style: TextStyle(color: scheme.secondary, fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: scheme.secondary,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
+                  const SizedBox(height: 24),
+                  Text(
+                    'When eBay is too mainsteram',
+                    textAlign: TextAlign.center,
+                    style: textTheme.titleMedium?.copyWith(
+                      color: scheme.tertiary.withValues(alpha: 0.85),
+                      fontStyle: FontStyle.italic,
+                      letterSpacing: 0.6,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
                 ],
               ),
             ),

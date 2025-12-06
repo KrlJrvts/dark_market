@@ -59,17 +59,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final auth = context.watch<AuthProvider>();
     final user = auth.user;
     final scheme = Theme.of(context).colorScheme;
-    final textTheme = Theme.of(context).textTheme;
+
 
     if (user == null) {
       return Scaffold(
-        backgroundColor: scheme.background,
+        backgroundColor: scheme.surface,
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     return Scaffold(
-      backgroundColor: scheme.background,
+      backgroundColor: scheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -88,7 +88,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           width: double.infinity,
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: scheme.surfaceVariant,
+            color: scheme.surfaceContainerLowest,
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: scheme.secondary, width: 2),
           ),
@@ -102,7 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 decoration: InputDecoration(
                   hintText: 'Name',
                   hintStyle: TextStyle(
-                    color: scheme.secondary.withOpacity(0.7),
+                    color: scheme.secondary.withValues(alpha: 0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -114,11 +114,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.secondary, width: 2),
+                    borderSide: BorderSide(color: scheme.primary, width: 2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.secondary, width: 2),
+                    borderSide: BorderSide(color: scheme.tertiary, width: 2),
                   ),
                 ),
               ),
@@ -128,9 +128,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Container(
                   height: 200,
                   decoration: BoxDecoration(
-                    color: scheme.surfaceVariant,
+                    color: scheme.surfaceContainerLowest,
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: scheme.secondary, width: 2),
+                    border: Border.all(color: scheme.primary, width: 2),
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(6),
@@ -154,12 +154,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               TextField(
                 controller: _passwordController,
                 obscureText: true,
-                style: TextStyle(color: scheme.secondary, fontSize: 18),
+                style: TextStyle(color: scheme.tertiary, fontSize: 18),
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   hintText: 'New password',
                   hintStyle: TextStyle(
-                    color: scheme.secondary.withOpacity(0.7),
+                    color: scheme.secondary.withValues(alpha: 0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -171,11 +171,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.secondary, width: 2),
+                    borderSide: BorderSide(color: scheme.primary, width: 2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.secondary, width: 2),
+                    borderSide: BorderSide(color: scheme.tertiary, width: 2),
                   ),
                 ),
               ),
@@ -183,12 +183,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               TextField(
                 controller: _confirmPasswordController,
                 obscureText: true,
-                style: TextStyle(color: scheme.secondary, fontSize: 18),
+                style: TextStyle(color: scheme.tertiary, fontSize: 18),
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   hintText: 'Confirm new password',
                   hintStyle: TextStyle(
-                    color: scheme.secondary.withOpacity(0.7),
+                    color: scheme.secondary.withValues(alpha: 0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -200,11 +200,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.secondary, width: 2),
+                    borderSide: BorderSide(color: scheme.primary, width: 2),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: scheme.secondary, width: 2),
+                    borderSide: BorderSide(color: scheme.tertiary, width: 2),
                   ),
                 ),
               ),
@@ -252,7 +252,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  shadowColor: scheme.primary.withOpacity(0.6),
+                  shadowColor: scheme.tertiary.withValues(alpha: 0.6),
                   elevation: 10,
                 ),
                 child: const Text(
@@ -260,21 +260,64 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
-              const SizedBox(height: 12),
-              TextButton(
-                onPressed: () async {
-                  await context.read<AuthProvider>().signOut();
-                  if (!mounted) return;
-                  context.go('/');
-                },
-                child: Text(
-                  'Sign out',
-                  style: TextStyle(
-                    color: scheme.tertiary,
-                    fontWeight: FontWeight.bold,
+              const SizedBox(height: 48),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    final confirmed = await showDialog<bool>(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        title: const Text('Delete account?'),
+                        content: const Text(
+                            'This will permanently delete your account and data. This cannot be undone.'
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.of(ctx).pop(false),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.of(ctx).pop(true),
+                            child: const Text('Delete'),
+                          ),
+                        ],
+                      ),
+                    ) ?? false;
+
+                    if (!confirmed) return;
+
+                    final ok = await context.read<AuthProvider>().deleteAccount();
+                    if (!mounted) return;
+
+                    if (ok) {
+                      context.go('/');
+                    } else {
+                      final msg = context.read<AuthProvider>().errorMessage ?? 'Failed to delete account';
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text(msg)),
+                      );
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: scheme.tertiary,
+                    foregroundColor: scheme.onTertiary,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    shadowColor: scheme.tertiary.withValues(alpha: 0.6),
+                    elevation: 10,
+                  ),
+                  child: const Text(
+                    'Delete account',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),
@@ -285,7 +328,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildImagePlaceholder(ColorScheme scheme) {
     return Container(
-      color: scheme.surfaceVariant,
+      color: scheme.surfaceContainerLowest,
       child: Center(
         child: Icon(Icons.person, size: 64, color: scheme.secondary),
       ),

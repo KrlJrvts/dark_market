@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
 import '../../state/auction_provider.dart';
 import '../../data/models/auction.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
@@ -40,12 +41,15 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
     final scheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
+    // Check if auction is sold (closed or highest bid >= buyout)
+    final bool isSold = a.isClosed || (a.buyout > 0 && (a.highestBid ?? 0) >= a.buyout);
+
     if (_bidController.text.isEmpty) {
       _bidController.text = ((a.highestBid ?? 0) + 10).toString();
     }
 
     return Scaffold(
-      backgroundColor: scheme.background,
+      backgroundColor: scheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -61,7 +65,7 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
           width: double.infinity,
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: scheme.surfaceVariant,
+            color: scheme.surfaceContainerLowest,
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
               color: scheme.secondary,
@@ -79,6 +83,25 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              // SOLD badge
+              if (isSold)
+                Container(
+                  margin: const EdgeInsets.only(top: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.red.withValues(alpha: 0.2),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.red, width: 2),
+                  ),
+                  child: const Text(
+                    'SOLD',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               const SizedBox(height: 16),
               Container(
                 width: double.infinity,
@@ -95,7 +118,7 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                     fit: BoxFit.cover,
                   )
                       : Container(
-                    color: scheme.surfaceVariant,
+                    color: scheme.surfaceContainerLowest,
                     child: Center(
                       child: Icon(Icons.image_not_supported, color: scheme.secondary, size: 48),
                     ),
@@ -111,11 +134,11 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                       style: textTheme.bodyLarge?.copyWith(color: scheme.secondary, fontSize: 18),
                     ),
                   ),
-                  if (a.buyout != null && a.buyout! > 0)
+                  if (a.buyout > 0)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: scheme.tertiary.withOpacity(0.15),
+                        color: scheme.tertiary.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: scheme.tertiary, width: 1.5),
                       ),
@@ -132,13 +155,14 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
               const SizedBox(height: 16),
               TextField(
                 controller: _bidController,
+                enabled: !isSold,  // Disable when sold
                 keyboardType: TextInputType.number,
                 style: TextStyle(color: scheme.secondary, fontSize: 18),
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   hintText: 'Your bid',
                   hintStyle: TextStyle(
-                    color: scheme.secondary.withOpacity(0.7),
+                    color: scheme.secondary.withValues(alpha: 0.7),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -153,11 +177,15 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: scheme.secondary, width: 2),
                   ),
+                  disabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide(color: scheme.secondary.withValues(alpha: 0.5), width: 2),
+                  ),
                 ),
               ),
               const SizedBox(height: 16),
               ElevatedButton(
-                onPressed: () async {
+                onPressed: isSold ? null : () async {  // Disable when sold
                   final bid = int.tryParse(_bidController.text.trim());
                   if (bid == null) return;
                   await context.read<AuctionProvider>().placeBid(
@@ -171,19 +199,23 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                   foregroundColor: scheme.onSecondary,
                   padding: const EdgeInsets.symmetric(vertical: 14),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  shadowColor: scheme.primary.withOpacity(0.6),
+                  shadowColor: scheme.primary.withValues(alpha: 0.6),
                   elevation: 10,
                 ),
-                child: const Text('Place bid', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                child: Text(
+                  isSold ? 'Auction ended' : 'Place bid',  // Change text when sold
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
               ),
               const SizedBox(height: 12),
-              if (a.buyout != null && a.buyout! > 0)
+              // Hide buyout button when sold
+              if (a.buyout > 0 && !isSold)
                 ElevatedButton(
                   onPressed: () async {
                     await context.read<AuctionProvider>().placeBid(
-                      a.id,  // positional: String id
-                      context.read<AuthProvider>().user!.uid,  // positional: String bidderId
-                      a.buyout,  // positional: int amount
+                      a.id,
+                      context.read<AuthProvider>().user!.uid,
+                      a.buyout,
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -191,15 +223,15 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                     foregroundColor: scheme.onTertiary,
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    shadowColor: scheme.primary.withOpacity(0.6),
+                    shadowColor: scheme.primary.withValues(alpha: 0.6),
                     elevation: 10,
                   ),
                   child: const Text('Buyout now', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                 ),
               const SizedBox(height: 16),
               Text(
-                'Created: ${a.createdAt.toLocal()}',
-                style: textTheme.bodySmall?.copyWith(color: scheme.tertiary),
+                'Created: ${DateFormat('dd.MM.yyyy HH:mm').format(a.createdAt.toLocal())}',
+                style: textTheme.bodyMedium?.copyWith(color: scheme.tertiary),
               ),
             ],
           ),
