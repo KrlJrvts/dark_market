@@ -70,12 +70,13 @@ class DarkMarketAppState extends State<DarkMarketApp> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        Provider<StorageService>(create: (_) => StorageService()),  // ADD THIS LINE
         ChangeNotifierProvider(create: (_) => AuthProvider(AuthService())),
         ChangeNotifierProvider(
-          create: (_) {
+          create: (context) {
             final provider = AuctionProvider(
               AuctionService(),
-              StorageService(),
+              context.read<StorageService>(),  // Optionally reuse the same instance
             );
             provider.bindStream();
             return provider;
