@@ -21,6 +21,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final _nameController = TextEditingController();
+  final _currentPasswordController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
@@ -36,6 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void dispose() {
     _nameController.dispose();
+    _currentPasswordController.dispose();  // ADD THIS
     _passwordController.dispose();
     _confirmPasswordController.dispose();
     super.dispose();
@@ -101,6 +103,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               const SizedBox(height: 16),
               ThemedTextField(
+                controller: _currentPasswordController,
+                hintText: 'Current password',
+                obscureText: true,
+              ),
+              const SizedBox(height: 16),
+              ThemedTextField(
                 controller: _passwordController,
                 hintText: 'New password',
                 obscureText: true,
@@ -116,6 +124,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 label: 'Save changes',
                 onPressed: () async {
                   final name = _nameController.text.trim();
+                  final currentPass = _currentPasswordController.text.trim();  // ADD THIS
                   final pass = _passwordController.text.trim();
                   final confirm = _confirmPasswordController.text.trim();
 
@@ -124,30 +133,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     return;
                   }
 
-                  // MOVED: Capture storageService BEFORE any async operations
+                  // ADD: Validate current password is provided when changing password
+                  if (pass.isNotEmpty && currentPass.isEmpty) {
+                    _showSnack('Please enter your current password');
+                    return;
+                  }
+
                   final storageService = context.read<StorageService>();
 
-                  // Update name if provided
                   if (name.isNotEmpty) {
                     await auth.updateName(name);
                   }
 
-                  // Update password if provided
+                  // UPDATED: Pass current password for re-authentication
                   if (pass.isNotEmpty) {
-                    final passwordUpdated = await auth.updatePassword(pass);
+                    final passwordUpdated = await auth.updatePassword(
+                      pass,
+                      currentPassword: currentPass,  // PASS CURRENT PASSWORD
+                    );
                     if (!passwordUpdated) {
                       if (!context.mounted) return;
-                      _showSnack(
-                        auth.errorMessage ?? 'Failed to update password',
-                      );
-                      return; // Stop here if password update failed
+                      _showSnack(auth.errorMessage ?? 'Failed to update password');
+                      return;
                     }
+                    // Clear password fields on success
+                    _currentPasswordController.clear();
+                    _passwordController.clear();
+                    _confirmPasswordController.clear();
                   }
 
-                  // Upload and update photo if selected
                   if (_localImageFile != null) {
                     final url = await storageService.uploadAuctionImage(
-                      // Now using captured reference
                       file: _localImageFile,
                       userId: user.uid,
                     );

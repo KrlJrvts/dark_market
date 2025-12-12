@@ -92,13 +92,19 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  Future<bool> updatePassword(String newPassword) async {
+  Future<bool> updatePassword(String newPassword, {String? currentPassword}) async {
     loading = true; errorMessage = null; errorCode = null; notifyListeners();
     try {
-      await _authService.updatePassword(newPassword);
+      await _authService.updatePassword(newPassword, currentPassword: currentPassword);
       return true;
     } catch (e) {
-      errorMessage = e.toString();
+      if (e.toString().contains('wrong-password')) {
+        errorMessage = 'Current password is incorrect';
+      } else if (e.toString().contains('requires-recent-login')) {
+        errorMessage = 'Please enter your current password';
+      } else {
+        errorMessage = e.toString();
+      }
       return false;
     } finally {
       loading = false; notifyListeners();

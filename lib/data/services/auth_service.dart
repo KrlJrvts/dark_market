@@ -49,12 +49,32 @@ class AuthService {
     await user.reload();
   }
 
-  // 👇 NEW: change password (only called if user actually wants to change it)
-  Future<void> updatePassword(String newPassword) async {
+  /// Re-authenticate user with their current password
+  Future<void> reauthenticate(String currentPassword) async {
+    final user = _auth.currentUser;
+    if (user == null || user.email == null) throw Exception('Not signed in');
+
+    final credential = EmailAuthProvider.credential(
+      email: user.email!,
+      password: currentPassword,
+    );
+    await user.reauthenticateWithCredential(credential);
+  }
+
+
+  /// Change password with re-authentication
+  Future<void> updatePassword(String newPassword, {String? currentPassword}) async {
     final user = _auth.currentUser;
     if (user == null) throw Exception('Not signed in');
+
+    // Re-authenticate if current password provided
+    if (currentPassword != null && currentPassword.isNotEmpty) {
+      await reauthenticate(currentPassword);
+    }
+
     await user.updatePassword(newPassword);
   }
+
 
   // 👇 NEW: delete account
   Future<void> deleteAccount() async {
