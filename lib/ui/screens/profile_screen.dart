@@ -42,9 +42,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void _showSnack(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(message)),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
   }
 
   Future<void> _pickImage() async {
@@ -91,10 +91,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              ThemedTextField(
-                controller: _nameController,
-                hintText: 'Name',
-              ),
+              ThemedTextField(controller: _nameController, hintText: 'Name'),
               const SizedBox(height: 16),
               ImagePickerBox(
                 imageFile: _localImageFile,
@@ -137,12 +134,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   // Update password if provided
                   if (pass.isNotEmpty) {
-                    await auth.updatePassword(pass);
+                    final passwordUpdated = await auth.updatePassword(pass);
+                    if (!passwordUpdated) {
+                      if (!context.mounted) return;
+                      _showSnack(
+                        auth.errorMessage ?? 'Failed to update password',
+                      );
+                      return; // Stop here if password update failed
+                    }
                   }
 
                   // Upload and update photo if selected
                   if (_localImageFile != null) {
-                    final url = await storageService.uploadAuctionImage(  // Now using captured reference
+                    final url = await storageService.uploadAuctionImage(
+                      // Now using captured reference
                       file: _localImageFile,
                       userId: user.uid,
                     );
@@ -160,39 +165,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   // ADDED: Capture authProvider BEFORE any async operations
                   final authProvider = context.read<AuthProvider>();
 
-                  final confirmed = await showDialog<bool>(
-                    context: context,
-                    builder: (ctx) => AlertDialog(
-                      title: const Text('Delete account?'),
-                      content: const Text(
-                        'This will permanently delete your account and data. This cannot be undone.',
-                      ),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.of(ctx).pop(false),
-                          child: const Text('Cancel'),
+                  final confirmed =
+                      await showDialog<bool>(
+                        context: context,
+                        builder: (ctx) => AlertDialog(
+                          title: const Text('Delete account?'),
+                          content: const Text(
+                            'This will permanently delete your account and data. This cannot be undone.',
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.of(ctx).pop(false),
+                              child: const Text('Cancel'),
+                            ),
+                            TextButton(
+                              onPressed: () => Navigator.of(ctx).pop(true),
+                              child: const Text('Delete'),
+                            ),
+                          ],
                         ),
-                        TextButton(
-                          onPressed: () => Navigator.of(ctx).pop(true),
-                          child: const Text('Delete'),
-                        ),
-                      ],
-                    ),
-                  ) ?? false;
+                      ) ??
+                      false;
 
                   if (!confirmed) return;
 
-                  final ok = await authProvider.deleteAccount();  // CHANGED: Use captured reference
+                  final ok = await authProvider
+                      .deleteAccount(); // CHANGED: Use captured reference
                   if (!context.mounted) return;
 
                   if (ok) {
                     context.go('/');
                   } else {
-                    final msg = authProvider.errorMessage ??  // CHANGED: Use captured reference
+                    final msg =
+                        authProvider
+                            .errorMessage ?? // CHANGED: Use captured reference
                         'Failed to delete account';
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(msg)),
-                    );
+                    ScaffoldMessenger.of(
+                      context,
+                    ).showSnackBar(SnackBar(content: Text(msg)));
                   }
                 },
               ),
