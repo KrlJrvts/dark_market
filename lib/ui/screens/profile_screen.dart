@@ -30,11 +30,6 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    // Delay reading provider until after first build
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final authState = ref.read(authProvider);
-      _nameController.text = authState.user?.displayName ?? '';
-    });
   }
 
   @override
@@ -66,6 +61,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final authState = ref.watch(authProvider);
     final user = authState.user;
     final scheme = Theme.of(context).colorScheme;
+
+    // Update name controller when user data is available
+    if (user != null && user.displayName != null && _nameController.text.isEmpty) {
+      _nameController.text = user.displayName!;
+    }
 
     if (user == null) {
       return Scaffold(

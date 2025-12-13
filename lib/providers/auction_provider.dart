@@ -128,6 +128,21 @@ class Auctions extends _$Auctions {
     }
   }
 
+  /// Buy out an auction immediately at buyout price
+  Future<void> buyOut(String id, String buyerId) async {
+    try {
+      await _auctionService.buyOut(
+        auctionId: id,
+        buyerId: buyerId,
+      );
+    } catch (e) {
+      state = state.copyWith(
+        error: () => 'Failed to buy out: $e',
+      );
+      rethrow; // Rethrow so the UI can catch and display the error
+    }
+  }
+
   /// Get a specific auction by ID
   Auction? getAuctionById(String id) {
     try {

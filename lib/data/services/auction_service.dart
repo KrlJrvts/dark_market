@@ -53,4 +53,39 @@ class AuctionService {
       }
     });
   }
+
+  /// Buy out auction immediately at buyout price
+  Future<void> buyOut({
+    required String auctionId,
+    required String buyerId,
+  }) async {
+    final DocumentReference<Map<String, dynamic>> ref = _col.doc(auctionId);
+
+    await FirebaseFirestore.instance.runTransaction((transaction) async {
+      final snap = await transaction.get(ref);
+      final data = snap.data();
+
+      if (data == null) {
+        throw Exception('Auction not found');
+      }
+
+      // Guard: cannot buyout if already closed
+      if (data['isClosed'] == true) {
+        throw Exception('Auction already closed');
+      }
+
+      final int buyout = (data['buyout'] as int?) ?? 0;
+
+      if (buyout <= 0) {
+        throw Exception('Buyout not available for this auction');
+      }
+
+      // Set highest bid to buyout price and close the auction
+      transaction.update(ref, {
+        'highestBid': buyout,
+        'highestBidId': buyerId,
+        'isClosed': true,
+      });
+    });
+  }
 }

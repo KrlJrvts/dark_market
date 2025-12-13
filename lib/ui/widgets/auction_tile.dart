@@ -79,15 +79,19 @@ class AuctionTile extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  'Highest bid',
-                                  style: textTheme.bodyLarge?.copyWith(
-                                    color: scheme.onSurface.withValues(alpha: 0.7),
-                                    fontSize: 25,
-                                    decoration: TextDecoration.underline,
-                                    decorationColor: scheme.onSurface.withValues(alpha: 0.38),
+                                Flexible(
+                                  child: Text(
+                                    'Highest bid',
+                                    style: textTheme.bodyLarge?.copyWith(
+                                      color: scheme.onSurface.withValues(alpha: 0.7),
+                                      fontSize: 25,
+                                      decoration: TextDecoration.underline,
+                                      decorationColor: scheme.onSurface.withValues(alpha: 0.38),
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
+                                const SizedBox(width: 8),
                                 Text(
                                   '${auction.highestBid ?? 0} €',
                                   style: textTheme.bodyLarge?.copyWith(
@@ -105,13 +109,17 @@ class AuctionTile extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  'Buy now',
-                                  style: textTheme.bodyLarge?.copyWith(
-                                    color: scheme.onSurface.withValues(alpha: 0.7),
-                                    fontSize: 25,
+                                Flexible(
+                                  child: Text(
+                                    'Buy now',
+                                    style: textTheme.bodyLarge?.copyWith(
+                                      color: scheme.onSurface.withValues(alpha: 0.7),
+                                      fontSize: 25,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
+                                const SizedBox(width: 8),
                                 Text(
                                   '${auction.buyout} €',
                                   style: textTheme.bodyLarge?.copyWith(

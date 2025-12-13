@@ -176,7 +176,7 @@ class _AuctionByIdProviderElement extends AutoDisposeProviderElement<Auction?>
   String get id => (origin as AuctionByIdProvider).id;
 }
 
-String _$auctionsHash() => r'db62e8e4b7a1035d798f245572ac4793b9e1f691';
+String _$auctionsHash() => r'a828ef8d708c58478d211340d79f66a3202363cb';
 
 /// Provider for auction state that combines the stream with loading/error states
 ///

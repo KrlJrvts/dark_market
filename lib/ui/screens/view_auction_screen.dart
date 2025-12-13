@@ -37,6 +37,7 @@ class _ViewAuctionScreenState extends ConsumerState<ViewAuctionScreen> {
   Widget build(BuildContext context) {
     final auctionState = ref.watch(auctionsProvider);
     final auction = ref.watch(auctionByIdProvider(widget.id));
+    final authState = ref.watch(authProvider); // Watch auth state in build
 
     // Fallback if auction not found
     final Auction a = auction ?? (auctionState.auctions.isNotEmpty
@@ -155,7 +156,15 @@ class _ViewAuctionScreenState extends ConsumerState<ViewAuctionScreen> {
                 PrimaryButton(
                   label: 'Place bid',
                   onPressed: () async {
-                    final authState = ref.read(authProvider);
+                    // Use authState from build method (already watched above)
+                    // Check if user is logged in
+                    if (authState.user == null) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Please log in to place a bid')),
+                      );
+                      return;
+                    }
+
                     final amount = int.tryParse(_bidController.text.trim());
                     if (amount == null) {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -182,6 +191,69 @@ class _ViewAuctionScreenState extends ConsumerState<ViewAuctionScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Bid placed!')),
                       );
+                    }
+                  },
+                ),
+                const SizedBox(height: 12),
+                PrimaryButton(
+                  label: 'Buy Now',
+                  variant: ButtonVariant.tertiary,
+                  onPressed: () async {
+                    // Check if user is logged in
+                    if (authState.user == null) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Please log in to buy out')),
+                      );
+                      return;
+                    }
+
+                    // Show confirmation dialog
+                    final confirmed = await showDialog<bool>(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        title: const Text('Buy Out Confirmation'),
+                        content: Text(
+                          'Are you sure you want to buy "${a.title}" for €${a.buyout}?\n\nThis will immediately close the auction.',
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.of(ctx).pop(false),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.of(ctx).pop(true),
+                            child: const Text('Buy Now'),
+                          ),
+                        ],
+                      ),
+                    ) ?? false;
+
+                    if (!confirmed) return;
+
+                    // Buy out the auction immediately
+                    try {
+                      await ref.read(auctionsProvider.notifier).buyOut(
+                        widget.id,
+                        authState.user!.uid,
+                      );
+
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Purchase successful! 🎉 Auction closed.'),
+                            backgroundColor: Colors.green,
+                          ),
+                        );
+                      }
+                    } catch (e) {
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Failed to buy out: ${e.toString()}'),
+                            backgroundColor: Colors.red,
+                          ),
+                        );
+                      }
                     }
                   },
                 ),
