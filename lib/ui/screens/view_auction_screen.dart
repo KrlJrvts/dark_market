@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import '../../state/auction_provider.dart';
+import '../../providers/auction_provider.dart';
+import '../../providers/auth_provider.dart';
 import '../../data/models/auction.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
 import '../widgets/themed_text_field.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/content_card.dart';
-import '../../state/auth_provider.dart';
 
-class ViewAuctionScreen extends StatefulWidget {
+class ViewAuctionScreen extends ConsumerStatefulWidget {
   final String id;
 
   const ViewAuctionScreen({super.key, required this.id});
 
   @override
-  State<ViewAuctionScreen> createState() => _ViewAuctionScreenState();
+  ConsumerState<ViewAuctionScreen> createState() => _ViewAuctionScreenState();
 }
 
-class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
+class _ViewAuctionScreenState extends ConsumerState<ViewAuctionScreen> {
   late TextEditingController _bidController;
 
   @override
@@ -35,11 +35,19 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final p = context.watch<AuctionProvider>();
-    final Auction a = p.auctions.firstWhere(
-          (e) => e.id == widget.id,
-      orElse: () => p.auctions.first,
-    );
+    final auctionState = ref.watch(auctionsProvider);
+    final auction = ref.watch(auctionByIdProvider(widget.id));
+
+    // Fallback if auction not found
+    final Auction a = auction ?? (auctionState.auctions.isNotEmpty
+        ? auctionState.auctions.first
+        : Auction(
+            id: '',
+            title: 'Not found',
+            sellerId: '',
+            buyout: 0,
+            createdAt: DateTime.now(),
+          ));
 
     final scheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
@@ -79,128 +87,136 @@ class _ViewAuctionScreenState extends State<ViewAuctionScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              // SOLD badge
-              if (isSold)
-                Container(
-                  margin: const EdgeInsets.only(top: 8),
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.red.withValues(alpha: 0.2),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: Colors.red, width: 2),
-                  ),
-                  child: const Text(
-                    'SOLD',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              const SizedBox(height: 16),
-              Container(
-                width: double.infinity,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: scheme.surface,
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
-                  child: a.imageUrl != null
-                      ? Image.network(
+              const SizedBox(height: 8),
+              if (a.imageUrl != null)
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.network(
                     a.imageUrl!,
+                    height: 200,
+                    width: double.infinity,
                     fit: BoxFit.cover,
-                  )
-                      : Container(
-                    color: scheme.surfaceContainerLowest,
-                    child: Center(
-                      child: Icon(
-                        Icons.image_not_supported,
-                        color: scheme.secondary,
-                        size: 48,
-                      ),
+                    errorBuilder: (_, __, ___) => Container(
+                      height: 200,
+                      color: scheme.surfaceContainerLowest,
+                      child: Icon(Icons.broken_image, color: scheme.error),
                     ),
                   ),
                 ),
-              ),
               const SizedBox(height: 16),
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      'Highest bid: ${a.highestBid ?? 0} EUR',
-                      style: textTheme.bodyLarge?.copyWith(
-                        color: scheme.secondary,
-                        fontSize: 18,
-                      ),
-                    ),
+              _buildInfoRow('Seller', a.sellerName ?? 'Unknown', scheme, textTheme),
+              const SizedBox(height: 8),
+              _buildInfoRow(
+                'Current bid',
+                '€${a.highestBid ?? 0}',
+                scheme,
+                textTheme,
+              ),
+              const SizedBox(height: 8),
+              _buildInfoRow('Buyout', '€${a.buyout}', scheme, textTheme),
+              const SizedBox(height: 8),
+              _buildInfoRow(
+                'Posted',
+                DateFormat.yMd().add_Hm().format(a.createdAt),
+                scheme,
+                textTheme,
+              ),
+              if (isSold) ...[
+                const SizedBox(height: 16),
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: scheme.primaryContainer.withValues(alpha: 0.3),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  if (a.buyout > 0)
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: scheme.tertiary.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: scheme.tertiary, width: 1.5),
-                      ),
-                      child: Text(
-                        'Buyout: ${a.buyout} EUR',
-                        style: textTheme.bodyMedium?.copyWith(
-                          color: scheme.tertiary,
+                  child: Row(
+                    children: [
+                      Icon(Icons.check_circle, color: scheme.primary, size: 20),
+                      const SizedBox(width: 8),
+                      Text(
+                        'SOLD',
+                        style: textTheme.bodyLarge?.copyWith(
+                          color: scheme.primary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              ThemedTextField(
-                controller: _bidController,
-                hintText: 'Your bid',
-                enabled: !isSold,
-                keyboardType: TextInputType.number,
-              ),
-              const SizedBox(height: 16),
-              PrimaryButton(
-                label: isSold ? 'Auction ended' : 'Place bid',
-                onPressed: isSold
-                    ? null
-                    : () async {
-                  final bid = int.tryParse(_bidController.text.trim());
-                  if (bid == null) return;
-                  await context.read<AuctionProvider>().placeBid(
-                    a.id,
-                    context.read<AuthProvider>().user!.uid,
-                    bid,
-                  );
-                },
-              ),
-              const SizedBox(height: 12),
-              // Hide buyout button when sold
-              if (a.buyout > 0 && !isSold)
+                    ],
+                  ),
+                ),
+              ],
+              if (!isSold) ...[
+                const SizedBox(height: 24),
+                ThemedTextField(
+                  controller: _bidController,
+                  hintText: 'Your bid',
+                  keyboardType: TextInputType.number,
+                ),
+                const SizedBox(height: 16),
                 PrimaryButton(
-                  label: 'Buyout now',
-                  variant: ButtonVariant.tertiary,
+                  label: 'Place bid',
                   onPressed: () async {
-                    await context.read<AuctionProvider>().placeBid(
-                      a.id,
-                      context.read<AuthProvider>().user!.uid,
-                      a.buyout,
+                    final authState = ref.read(authProvider);
+                    final amount = int.tryParse(_bidController.text.trim());
+                    if (amount == null) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Enter valid amount')),
+                      );
+                      return;
+                    }
+                    if (amount <= (a.highestBid ?? 0)) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Bid must be > €${a.highestBid ?? 0}'),
+                        ),
+                      );
+                      return;
+                    }
+
+                    await ref.read(auctionsProvider.notifier).placeBid(
+                      widget.id,
+                      authState.user!.uid,
+                      amount,
                     );
+
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Bid placed!')),
+                      );
+                    }
                   },
                 ),
-              const SizedBox(height: 16),
-              Text(
-                'Created: ${DateFormat('dd.MM.yyyy HH:mm').format(a.createdAt.toLocal())}',
-                style: textTheme.bodyMedium?.copyWith(color: scheme.tertiary),
-              ),
+              ],
             ],
           ),
         ),
       ),
-      bottomNavigationBar: const DarkBottomNavBar(currentIndex: 0),
+      bottomNavigationBar: const DarkBottomNavBar(currentIndex: -1),
+    );
+  }
+
+  Widget _buildInfoRow(
+    String label,
+    String value,
+    ColorScheme scheme,
+    TextTheme textTheme,
+  ) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          label,
+          style: textTheme.bodyMedium?.copyWith(
+            color: scheme.secondary.withValues(alpha: 0.8),
+          ),
+        ),
+        Text(
+          value,
+          style: textTheme.bodyMedium?.copyWith(
+            color: scheme.secondary,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
     );
   }
 }

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
-import '../../state/auction_provider.dart';
-import '../../state/auth_provider.dart';
+import '../../providers/auth_provider.dart';
 
-class DarkBottomNavBar extends StatelessWidget {
+class DarkBottomNavBar extends ConsumerWidget {
   final int currentIndex;
 
   const DarkBottomNavBar({
@@ -13,7 +12,7 @@ class DarkBottomNavBar extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final scheme = Theme.of(context).colorScheme;
 
     return Container(
@@ -54,7 +53,7 @@ class DarkBottomNavBar extends StatelessWidget {
             _NavButton(
               icon: Icons.logout_outlined,
               isSelected: false,
-              onTap: () => _handleSignOut(context),
+              onTap: () => _handleSignOut(context, ref),
             ),
           ],
         ),
@@ -62,12 +61,10 @@ class DarkBottomNavBar extends StatelessWidget {
     );
   }
 
-  Future<void> _handleSignOut(BuildContext context) async {
-    // Cancel Firestore listeners BEFORE signing out
-    final auctionProvider = context.read<AuctionProvider>();
-    auctionProvider.cancelStream();
-
-    await context.read<AuthProvider>().signOut();
+  Future<void> _handleSignOut(BuildContext context, WidgetRef ref) async {
+    // With Riverpod, stream subscriptions are automatically managed
+    // No need to manually cancel streams
+    await ref.read(authProvider.notifier).signOut();
     if (context.mounted) {
       context.go('/');
     }

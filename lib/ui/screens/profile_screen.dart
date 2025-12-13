@@ -1,25 +1,25 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
-import '../../data/services/storage_service.dart';
-import '../../state/auth_provider.dart';
+import '../../providers/service_providers.dart';
+import '../../providers/auth_provider.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
 import '../widgets/themed_text_field.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/content_card.dart';
 import '../widgets/image_picker_box.dart';
 
-class ProfileScreen extends StatefulWidget {
+class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  ConsumerState<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   final _nameController = TextEditingController();
   final _currentPasswordController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -30,23 +30,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
     super.initState();
-    final auth = context.read<AuthProvider>();
-    _nameController.text = auth.user?.displayName ?? '';
+    // Delay reading provider until after first build
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final authState = ref.read(authProvider);
+      _nameController.text = authState.user?.displayName ?? '';
+    });
   }
 
   @override
   void dispose() {
     _nameController.dispose();
-    _currentPasswordController.dispose();  // ADD THIS
+    _currentPasswordController.dispose();
     _passwordController.dispose();
     _confirmPasswordController.dispose();
     super.dispose();
   }
 
   void _showSnack(String message) {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
   }
 
   Future<void> _pickImage() async {
@@ -62,8 +63,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = context.watch<AuthProvider>();
-    final user = auth.user;
+    final authState = ref.watch(authProvider);
+    final user = authState.user;
     final scheme = Theme.of(context).colorScheme;
 
     if (user == null) {
@@ -124,7 +125,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 label: 'Save changes',
                 onPressed: () async {
                   final name = _nameController.text.trim();
-                  final currentPass = _currentPasswordController.text.trim();  // ADD THIS
+                  final currentPass = _currentPasswordController.text.trim();
                   final pass = _passwordController.text.trim();
                   final confirm = _confirmPasswordController.text.trim();
 
@@ -133,27 +134,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     return;
                   }
 
-                  // ADD: Validate current password is provided when changing password
+                  // Validate current password is provided when changing password
                   if (pass.isNotEmpty && currentPass.isEmpty) {
                     _showSnack('Please enter your current password');
                     return;
                   }
 
-                  final storageService = context.read<StorageService>();
+                  final storageService = ref.read(storageServiceProvider);
+                  final authNotifier = ref.read(authProvider.notifier);
 
                   if (name.isNotEmpty) {
-                    await auth.updateName(name);
+                    await authNotifier.updateName(name);
                   }
 
-                  // UPDATED: Pass current password for re-authentication
+                  // Pass current password for re-authentication
                   if (pass.isNotEmpty) {
-                    final passwordUpdated = await auth.updatePassword(
+                    final passwordUpdated = await authNotifier.updatePassword(
                       pass,
-                      currentPassword: currentPass,  // PASS CURRENT PASSWORD
+                      currentPassword: currentPass,
                     );
                     if (!passwordUpdated) {
                       if (!context.mounted) return;
-                      _showSnack(auth.errorMessage ?? 'Failed to update password');
+                      final errorMsg = ref.read(authProvider).errorMessage;
+                      _showSnack(errorMsg ?? 'Failed to update password');
                       return;
                     }
                     // Clear password fields on success
@@ -167,7 +170,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       file: _localImageFile,
                       userId: user.uid,
                     );
-                    await auth.updatePhoto(url);
+                    await authNotifier.updatePhoto(url);
                   }
                   if (!context.mounted) return;
                   _showSnack('Profile updated');
@@ -178,11 +181,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 label: 'Delete account',
                 variant: ButtonVariant.tertiary,
                 onPressed: () async {
-                  // ADDED: Capture authProvider BEFORE any async operations
-                  final authProvider = context.read<AuthProvider>();
-
-                  final confirmed =
-                      await showDialog<bool>(
+                  final confirmed = await showDialog<bool>(
                         context: context,
                         builder: (ctx) => AlertDialog(
                           title: const Text('Delete account?'),
@@ -205,20 +204,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   if (!confirmed) return;
 
-                  final ok = await authProvider
-                      .deleteAccount(); // CHANGED: Use captured reference
+                  final ok = await ref.read(authProvider.notifier).deleteAccount();
                   if (!context.mounted) return;
 
                   if (ok) {
                     context.go('/');
                   } else {
-                    final msg =
-                        authProvider
-                            .errorMessage ?? // CHANGED: Use captured reference
+                    final msg = ref.read(authProvider).errorMessage ??
                         'Failed to delete account';
-                    ScaffoldMessenger.of(
-                      context,
-                    ).showSnackBar(SnackBar(content: Text(msg)));
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(msg)),
+                    );
                   }
                 },
               ),

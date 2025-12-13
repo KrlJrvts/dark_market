@@ -1,26 +1,26 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../state/auth_provider.dart';
-import '../../state/auction_provider.dart';
+import '../../providers/auth_provider.dart';
+import '../../providers/auction_provider.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
 import '../widgets/themed_text_field.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/content_card.dart';
 import '../widgets/image_picker_box.dart';
 
-class CreateAuctionScreen extends StatefulWidget {
+class CreateAuctionScreen extends ConsumerStatefulWidget {
   const CreateAuctionScreen({super.key});
 
   @override
-  State<CreateAuctionScreen> createState() => _CreateAuctionScreenState();
+  ConsumerState<CreateAuctionScreen> createState() => _CreateAuctionScreenState();
 }
 
-class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
+class _CreateAuctionScreenState extends ConsumerState<CreateAuctionScreen> {
   final _form = GlobalKey<FormState>();
   final _title = TextEditingController();
   final _startPrice = TextEditingController();
@@ -52,8 +52,7 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = context.watch<AuthProvider>();
-    final auctions = context.watch<AuctionProvider>();
+    final authState = ref.watch(authProvider);
     final scheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
@@ -122,10 +121,10 @@ class _CreateAuctionScreenState extends State<CreateAuctionScreen> {
                   onPressed: () async {
                     if (!_form.currentState!.validate()) return;
 
-                    await auctions.createAuction(
+                    await ref.read(auctionsProvider.notifier).createAuction(
                       title: _title.text.trim(),
-                      sellerId: auth.user!.uid,
-                      sellerName: auth.user!.displayName,
+                      sellerId: authState.user!.uid,
+                      sellerName: authState.user!.displayName,
                       startPrice: int.parse(_startPrice.text.trim()),
                       buyout: int.parse(_buyout.text.trim()),
                       imageFile: _image,

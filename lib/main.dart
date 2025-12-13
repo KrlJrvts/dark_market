@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:go_router/go_router.dart';
-import 'data/services/storage_service.dart';
 import 'firebase_options.dart';
-import 'theme/app_theme.dart'; // 👈 import your theme file
-
-import 'package:dark_market/data/services/auction_service.dart';
-import 'package:dark_market/data/services/auth_service.dart';
-
-import 'package:dark_market/state/auction_provider.dart';
-import 'package:dark_market/state/auth_provider.dart';
+import 'theme/app_theme.dart';
 
 import 'package:dark_market/ui/screens/login_screen.dart';
 import 'package:dark_market/ui/screens/home_screen.dart';
@@ -29,7 +22,12 @@ void main() async {
     );
   } catch (_) {}
 
-  runApp(const DarkMarketApp());
+  runApp(
+    // Wrap the entire app with ProviderScope for Riverpod
+    const ProviderScope(
+      child: DarkMarketApp(),
+    ),
+  );
 }
 
 class DarkMarketApp extends StatefulWidget {
@@ -58,7 +56,7 @@ class DarkMarketAppState extends State<DarkMarketApp> {
         GoRoute(
           path: '/view/:id',
           builder: (context, state) {
-            final id = state.pathParameters['id']!; // auction id from URL
+            final id = state.pathParameters['id']!;
             return ViewAuctionScreen(id: id);
           },
         ),
@@ -68,26 +66,10 @@ class DarkMarketAppState extends State<DarkMarketApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        Provider<StorageService>(create: (_) => StorageService()),  // ADD THIS LINE
-        ChangeNotifierProvider(create: (_) => AuthProvider(AuthService())),
-        ChangeNotifierProvider(
-          create: (context) {
-            final provider = AuctionProvider(
-              AuctionService(),
-              context.read<StorageService>(),  // Optionally reuse the same instance
-            );
-            provider.bindStream();
-            return provider;
-          },
-        ),
-      ],
-      child: MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.theme,
-        routerConfig: _goRouter,
-      ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.theme,
+      routerConfig: _goRouter,
     );
   }
 }

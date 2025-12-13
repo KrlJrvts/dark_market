@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../state/auction_provider.dart';
-import '../../state/auth_provider.dart';
+import '../../providers/auth_provider.dart';
 import '../widgets/themed_text_field.dart';
 import '../widgets/primary_button.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  ConsumerState<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends ConsumerState<LoginScreen> {
   final _form = GlobalKey<FormState>();
   final _email = TextEditingController();
   final _password = TextEditingController();
@@ -28,37 +27,35 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = context.watch<AuthProvider>();
+    final authState = ref.watch(authProvider);
     final scheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
     Future<void> doLogin() async {
       if (!_form.currentState!.validate()) return;
-      final ok = await context.read<AuthProvider>().signIn(
+      final ok = await ref.read(authProvider.notifier).signIn(
         _email.text.trim(),
         _password.text.trim(),
       );
       if (!context.mounted) return;
       if (ok) {
-        context.read<AuctionProvider>().bindStream();
         context.go('/home');
       }
     }
 
     Future<void> doSignup() async {
       if (!_form.currentState!.validate()) return;
-      final created = await context.read<AuthProvider>().signUp(
+      final created = await ref.read(authProvider.notifier).signUp(
         _email.text.trim(),
         _password.text.trim(),
       );
       if (!context.mounted) return;
       if (created) {
-        context.read<AuctionProvider>().bindStream();
         context.go('/home');
       }
     }
 
-    final showNoAccountHint = auth.errorCode == 'user-not-found';
+    final showNoAccountHint = authState.errorCode == 'user-not-found';
 
     return Scaffold(
       backgroundColor: scheme.surface,
@@ -111,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 72),
+                  const SizedBox(height: 60),
                   Form(
                     key: _form,
                     child: Column(
@@ -119,65 +116,49 @@ class _LoginScreenState extends State<LoginScreen> {
                         ThemedTextField(
                           controller: _email,
                           hintText: 'Email',
-                          prefixIcon: Icon(
-                            Icons.email,
-                            color: scheme.tertiary,
-                          ),
+                          keyboardType: TextInputType.emailAddress,
                           validator: (v) =>
-                          (v == null || v.isEmpty) ? 'Required' : null,
+                              (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                         const SizedBox(height: 16),
                         ThemedTextField(
                           controller: _password,
                           hintText: 'Password',
                           obscureText: true,
-                          prefixIcon: Icon(
-                            Icons.lock,
-                            color: scheme.tertiary,
-                          ),
                           validator: (v) =>
-                          (v == null || v.isEmpty) ? 'Required' : null,
+                              (v == null || v.isEmpty) ? 'Required' : null,
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  if (showNoAccountHint)
-                    Text(
-                      'No account? Tap Sign up',
-                      style: TextStyle(
-                        color: scheme.secondary.withValues(alpha: 0.8),
-                      ),
-                    ),
                   const SizedBox(height: 24),
                   PrimaryButton(
                     label: 'Login',
-                    variant: ButtonVariant.primary,
                     onPressed: doLogin,
                   ),
                   const SizedBox(height: 12),
-                  TextButton(
-                    onPressed: doSignup,
-                    child: Text(
-                      'Sign up',
+                  if (authState.errorMessage != null) ...[
+                    Text(
+                      authState.errorMessage!,
                       style: TextStyle(
-                        color: scheme.secondary,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        color: scheme.error,
+                        fontSize: 14,
                       ),
+                      textAlign: TextAlign.center,
                     ),
-                  ),
-                  const SizedBox(height: 24),
-                  Text(
-                    'When eBay is too mainsteram',
-                    textAlign: TextAlign.center,
-                    style: textTheme.titleMedium?.copyWith(
-                      color: scheme.tertiary.withValues(alpha: 0.85),
-                      fontStyle: FontStyle.italic,
-                      letterSpacing: 0.6,
+                    const SizedBox(height: 8),
+                  ],
+                  if (showNoAccountHint) ...[
+                    Text(
+                      'No account yet?',
+                      style: TextStyle(color: scheme.secondary),
                     ),
-                  ),
-                  const SizedBox(height: 16),
+                    const SizedBox(height: 8),
+                    PrimaryButton(
+                      label: 'Sign up',
+                      onPressed: doSignup,
+                    ),
+                  ],
                 ],
               ),
             ),

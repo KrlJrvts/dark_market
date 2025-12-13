@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../../state/auction_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../providers/auction_provider.dart';
 import '../widgets/auction_tile.dart';
 import '../widgets/dark_bottom_nav_bar.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final p = context.watch<AuctionProvider>();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final auctionState = ref.watch(auctionsProvider);
     final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
@@ -26,14 +26,14 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: p.error != null
+      body: auctionState.error != null
           ? Center(
-              child: Text(p.error!, style: TextStyle(color: scheme.error)),
+              child: Text(auctionState.error!, style: TextStyle(color: scheme.error)),
             )
           : ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              itemCount: p.auctions.length,
-              itemBuilder: (_, i) => AuctionTile(auction: p.auctions[i]),
+              itemCount: auctionState.auctions.length,
+              itemBuilder: (_, i) => AuctionTile(auction: auctionState.auctions[i]),
             ),
       bottomNavigationBar: const DarkBottomNavBar(currentIndex: 0),
     );
