@@ -1,0 +1,3201 @@
+./build/firebase_core/intermediates/lint_publish_jar/global:
+prepareLintJarForPublish
+./build/firebase_core/intermediates/lint_publish_jar/global/prepareLintJarForPublish:
+./build/firebase_core/intermediates/local_only_symbol_list:
+debug
+./build/firebase_core/intermediates/local_only_symbol_list/debug:
+parseDebugLocalResources
+./build/firebase_core/intermediates/local_only_symbol_list/debug/parseDebugLocalResources:
+R-def.txt
+./build/firebase_core/intermediates/manifest_merge_blame_file:
+debug
+./build/firebase_core/intermediates/manifest_merge_blame_file/debug:
+processDebugManifest
+./build/firebase_core/intermediates/manifest_merge_blame_file/debug/processDebugManifest:
+manifest-merger-blame-debug-report.txt
+./build/firebase_core/intermediates/merged_consumer_proguard_file:
+debug
+./build/firebase_core/intermediates/merged_consumer_proguard_file/debug:
+mergeDebugConsumerProguardFiles
+./build/firebase_core/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles:
+./build/firebase_core/intermediates/merged_java_res:
+debug
+./build/firebase_core/intermediates/merged_java_res/debug:
+mergeDebugJavaResource
+./build/firebase_core/intermediates/merged_java_res/debug/mergeDebugJavaResource:
+feature-firebase_core.jar
+./build/firebase_core/intermediates/merged_jni_libs:
+debug
+./build/firebase_core/intermediates/merged_jni_libs/debug:
+mergeDebugJniLibFolders
+./build/firebase_core/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders:
+out
+./build/firebase_core/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders/out:
+./build/firebase_core/intermediates/merged_manifest:
+debug
+./build/firebase_core/intermediates/merged_manifest/debug:
+processDebugManifest
+./build/firebase_core/intermediates/merged_manifest/debug/processDebugManifest:
+AndroidManifest.xml
+./build/firebase_core/intermediates/merged_shaders:
+debug
+./build/firebase_core/intermediates/merged_shaders/debug:
+mergeDebugShaders
+./build/firebase_core/intermediates/merged_shaders/debug/mergeDebugShaders:
+out
+./build/firebase_core/intermediates/merged_shaders/debug/mergeDebugShaders/out:
+./build/firebase_core/intermediates/navigation_json:
+debug
+./build/firebase_core/intermediates/navigation_json/debug:
+extractDeepLinksDebug
+./build/firebase_core/intermediates/navigation_json/debug/extractDeepLinksDebug:
+navigation.json
+./build/firebase_core/intermediates/navigation_json_for_aar:
+debug
+./build/firebase_core/intermediates/navigation_json_for_aar/debug:
+extractDeepLinksForAarDebug
+./build/firebase_core/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug:
+./build/firebase_core/intermediates/nested_resources_validation_report:
+debug
+./build/firebase_core/intermediates/nested_resources_validation_report/debug:
+generateDebugResources
+./build/firebase_core/intermediates/nested_resources_validation_report/debug/generateDebugResources:
+nestedResourcesValidationReport.txt
+./build/firebase_core/intermediates/packaged_res:
+debug
+./build/firebase_core/intermediates/packaged_res/debug:
+packageDebugResources
+./build/firebase_core/intermediates/packaged_res/debug/packageDebugResources:
+./build/firebase_core/intermediates/public_res:
+debug
+./build/firebase_core/intermediates/public_res/debug:
+packageDebugResources
+./build/firebase_core/intermediates/public_res/debug/packageDebugResources:
+./build/firebase_core/intermediates/runtime_library_classes_dir:
+debug
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug:
+bundleLibRuntimeToDirDebug
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug:
+io
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io:
+flutter
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter:
+plugins
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins:
+firebase
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins/firebase:
+core
+./build/firebase_core/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins/firebase/core:
+BuildConfig.class
+FlutterFirebaseCorePlugin.class
+FlutterFirebaseCoreRegistrar.class
+FlutterFirebasePlugin.class
+FlutterFirebasePluginRegistry.class
+GeneratedAndroidFirebaseCore$CanIgnoreReturnValue.class
+GeneratedAndroidFirebaseCore$CoreFirebaseOptions$Builder.class
+GeneratedAndroidFirebaseCore$CoreFirebaseOptions.class
+GeneratedAndroidFirebaseCore$CoreInitializeResponse$Builder.class
+GeneratedAndroidFirebaseCore$CoreInitializeResponse.class
+GeneratedAndroidFirebaseCore$FirebaseAppHostApi$1.class
+GeneratedAndroidFirebaseCore$FirebaseAppHostApi$2.class
+GeneratedAndroidFirebaseCore$FirebaseAppHostApi$3.class
+GeneratedAndroidFirebaseCore$FirebaseAppHostApi.class
+GeneratedAndroidFirebaseCore$FirebaseCoreHostApi$1.class
+GeneratedAndroidFirebaseCore$FirebaseCoreHostApi$2.class
+GeneratedAndroidFirebaseCore$FirebaseCoreHostApi$3.class
+GeneratedAndroidFirebaseCore$FirebaseCoreHostApi.class
+GeneratedAndroidFirebaseCore$FlutterError.class
+GeneratedAndroidFirebaseCore$NullableResult.class
+GeneratedAndroidFirebaseCore$PigeonCodec.class
+GeneratedAndroidFirebaseCore$Result.class
+GeneratedAndroidFirebaseCore$VoidResult.class
+GeneratedAndroidFirebaseCore.class
+./build/firebase_core/intermediates/symbol_list_with_package_name:
+debug
+./build/firebase_core/intermediates/symbol_list_with_package_name/debug:
+generateDebugRFile
+./build/firebase_core/intermediates/symbol_list_with_package_name/debug/generateDebugRFile:
+package-aware-r.txt
+./build/firebase_core/outputs:
+aar     logs
+./build/firebase_core/outputs/aar:
+firebase_core-debug.aar
+./build/firebase_core/outputs/logs:
+manifest-merger-debug-report.txt
+./build/firebase_core/tmp:
+compileDebugJavaWithJavac
+./build/firebase_core/tmp/compileDebugJavaWithJavac:
+previous-compilation-data.bin
+./build/firebase_storage:
+generated       intermediates   kotlin          outputs         tmp
+./build/firebase_storage/generated:
+ap_generated_sources    res                     source
+./build/firebase_storage/generated/ap_generated_sources:
+debug
+./build/firebase_storage/generated/ap_generated_sources/debug:
+out
+./build/firebase_storage/generated/ap_generated_sources/debug/out:
+./build/firebase_storage/generated/res:
+pngs            resValues
+./build/firebase_storage/generated/res/pngs:
+debug
+./build/firebase_storage/generated/res/pngs/debug:
+./build/firebase_storage/generated/res/resValues:
+debug
+./build/firebase_storage/generated/res/resValues/debug:
+./build/firebase_storage/generated/source:
+buildConfig
+./build/firebase_storage/generated/source/buildConfig:
+debug
+./build/firebase_storage/generated/source/buildConfig/debug:
+io
+./build/firebase_storage/generated/source/buildConfig/debug/io:
+flutter
+./build/firebase_storage/generated/source/buildConfig/debug/io/flutter:
+plugins
+./build/firebase_storage/generated/source/buildConfig/debug/io/flutter/plugins:
+firebase
+./build/firebase_storage/generated/source/buildConfig/debug/io/flutter/plugins/firebase:
+storage
+./build/firebase_storage/generated/source/buildConfig/debug/io/flutter/plugins/firebase/storage:
+BuildConfig.java
+./build/firebase_storage/intermediates:
+aapt_friendly_merged_manifests          library_art_profile
+aar_libs_directory                      library_jni
+aar_main_jar                            lint_publish_jar
+aar_metadata                            local_only_symbol_list
+annotation_processor_list               manifest_merge_blame_file
+annotations_typedef_file                merged_consumer_proguard_file
+annotations_zip                         merged_java_res
+assets                                  merged_jni_libs
+compile_library_classes_jar             merged_manifest
+compile_r_class_jar                     merged_shaders
+compile_symbol_list                     navigation_json
+compiled_local_resources                navigation_json_for_aar
+data_binding_layout_info_type_package   nested_resources_validation_report
+generated_proguard_file                 packaged_res
+incremental                             public_res
+java_res                                runtime_library_classes_dir
+javac                                   symbol_list_with_package_name
+library_and_local_jars_jni
+./build/firebase_storage/intermediates/aapt_friendly_merged_manifests:
+debug
+./build/firebase_storage/intermediates/aapt_friendly_merged_manifests/debug:
+processDebugManifest
+./build/firebase_storage/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest:
+aapt
+./build/firebase_storage/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt:
+AndroidManifest.xml     output-metadata.json
+./build/firebase_storage/intermediates/aar_libs_directory:
+debug
+./build/firebase_storage/intermediates/aar_libs_directory/debug:
+syncDebugLibJars
+./build/firebase_storage/intermediates/aar_libs_directory/debug/syncDebugLibJars:
+libs
+./build/firebase_storage/intermediates/aar_libs_directory/debug/syncDebugLibJars/libs:
+./build/firebase_storage/intermediates/aar_main_jar:
+debug
+./build/firebase_storage/intermediates/aar_main_jar/debug:
+syncDebugLibJars
+./build/firebase_storage/intermediates/aar_main_jar/debug/syncDebugLibJars:
+classes.jar
+./build/firebase_storage/intermediates/aar_metadata:
+debug
+./build/firebase_storage/intermediates/aar_metadata/debug:
+writeDebugAarMetadata
+./build/firebase_storage/intermediates/aar_metadata/debug/writeDebugAarMetadata:
+aar-metadata.properties
+./build/firebase_storage/intermediates/annotation_processor_list:
+debug
+./build/firebase_storage/intermediates/annotation_processor_list/debug:
+javaPreCompileDebug
+./build/firebase_storage/intermediates/annotation_processor_list/debug/javaPreCompileDebug:
+annotationProcessors.json
+./build/firebase_storage/intermediates/annotations_typedef_file:
+debug
+./build/firebase_storage/intermediates/annotations_typedef_file/debug:
+extractDebugAnnotations
+./build/firebase_storage/intermediates/annotations_typedef_file/debug/extractDebugAnnotations:
+typedefs.txt
+./build/firebase_storage/intermediates/annotations_zip:
+debug
+./build/firebase_storage/intermediates/annotations_zip/debug:
+extractDebugAnnotations
+./build/firebase_storage/intermediates/annotations_zip/debug/extractDebugAnnotations:
+./build/firebase_storage/intermediates/assets:
+debug
+./build/firebase_storage/intermediates/assets/debug:
+mergeDebugAssets
+./build/firebase_storage/intermediates/assets/debug/mergeDebugAssets:
+./build/firebase_storage/intermediates/compile_library_classes_jar:
+debug
+./build/firebase_storage/intermediates/compile_library_classes_jar/debug:
+bundleLibCompileToJarDebug
+./build/firebase_storage/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug:
+classes.jar
+./build/firebase_storage/intermediates/compile_r_class_jar:
+debug
+./build/firebase_storage/intermediates/compile_r_class_jar/debug:
+generateDebugRFile
+./build/firebase_storage/intermediates/compile_r_class_jar/debug/generateDebugRFile:
+R.jar
+./build/firebase_storage/intermediates/compile_symbol_list:
+debug
+./build/firebase_storage/intermediates/compile_symbol_list/debug:
+generateDebugRFile
+./build/firebase_storage/intermediates/compile_symbol_list/debug/generateDebugRFile:
+R.txt
+./build/firebase_storage/intermediates/compiled_local_resources:
+debug
+./build/firebase_storage/intermediates/compiled_local_resources/debug:
+compileDebugLibraryResources
+./build/firebase_storage/intermediates/compiled_local_resources/debug/compileDebugLibraryResources:
+out
+./build/firebase_storage/intermediates/compiled_local_resources/debug/compileDebugLibraryResources/out:
+./build/firebase_storage/intermediates/data_binding_layout_info_type_package:
+debug
+./build/firebase_storage/intermediates/data_binding_layout_info_type_package/debug:
+packageDebugResources
+./build/firebase_storage/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources:
+out
+./build/firebase_storage/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out:
+./build/firebase_storage/intermediates/generated_proguard_file:
+debug
+./build/firebase_storage/intermediates/generated_proguard_file/debug:
+mergeDebugGeneratedProguardFiles
+./build/firebase_storage/intermediates/generated_proguard_file/debug/mergeDebugGeneratedProguardFiles:
+./build/firebase_storage/intermediates/incremental:
+debug                   mergeDebugAssets        mergeDebugShaders
+debug-mergeJavaRes      mergeDebugJniLibFolders
+./build/firebase_storage/intermediates/incremental/debug:
+packageDebugResources
+./build/firebase_storage/intermediates/incremental/debug/packageDebugResources:
+compile-file-map.properties     merger.xml
+merged.dir                      stripped.dir
+./build/firebase_storage/intermediates/incremental/debug/packageDebugResources/merged.dir:
+./build/firebase_storage/intermediates/incremental/debug/packageDebugResources/stripped.dir:
+./build/firebase_storage/intermediates/incremental/debug-mergeJavaRes:
+merge-state     zip-cache
+./build/firebase_storage/intermediates/incremental/debug-mergeJavaRes/zip-cache:
+./build/firebase_storage/intermediates/incremental/mergeDebugAssets:
+merger.xml
+./build/firebase_storage/intermediates/incremental/mergeDebugJniLibFolders:
+merger.xml
+./build/firebase_storage/intermediates/incremental/mergeDebugShaders:
+merger.xml
+./build/firebase_storage/intermediates/java_res:
+debug
+./build/firebase_storage/intermediates/java_res/debug:
+processDebugJavaRes
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes:
+out
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out:
+META-INF        io
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out/META-INF:
+firebase_storage_debug.kotlin_module
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out/io:
+flutter
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out/io/flutter:
+plugins
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out/io/flutter/plugins:
+firebase
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out/io/flutter/plugins/firebase:
+storage
+./build/firebase_storage/intermediates/java_res/debug/processDebugJavaRes/out/io/flutter/plugins/firebase/storage:
+./build/firebase_storage/intermediates/javac:
+debug
+./build/firebase_storage/intermediates/javac/debug:
+compileDebugJavaWithJavac
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac:
+classes
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac/classes:
+io
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io:
+flutter
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter:
+plugins
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins:
+firebase
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/firebase:
+storage
+./build/firebase_storage/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/firebase/storage:
+BuildConfig.class
+./build/firebase_storage/intermediates/library_and_local_jars_jni:
+debug
+./build/firebase_storage/intermediates/library_and_local_jars_jni/debug:
+copyDebugJniLibsProjectAndLocalJars
+./build/firebase_storage/intermediates/library_and_local_jars_jni/debug/copyDebugJniLibsProjectAndLocalJars:
+jni
+./build/firebase_storage/intermediates/library_and_local_jars_jni/debug/copyDebugJniLibsProjectAndLocalJars/jni:
+./build/firebase_storage/intermediates/library_art_profile:
+debug
+./build/firebase_storage/intermediates/library_art_profile/debug:
+prepareDebugArtProfile
+./build/firebase_storage/intermediates/library_art_profile/debug/prepareDebugArtProfile:
+./build/firebase_storage/intermediates/library_jni:
+debug
+./build/firebase_storage/intermediates/library_jni/debug:
+copyDebugJniLibsProjectOnly
+./build/firebase_storage/intermediates/library_jni/debug/copyDebugJniLibsProjectOnly:
+jni
+./build/firebase_storage/intermediates/library_jni/debug/copyDebugJniLibsProjectOnly/jni:
+./build/firebase_storage/intermediates/lint_publish_jar:
+global
+./build/firebase_storage/intermediates/lint_publish_jar/global:
+prepareLintJarForPublish
+./build/firebase_storage/intermediates/lint_publish_jar/global/prepareLintJarForPublish:
+./build/firebase_storage/intermediates/local_only_symbol_list:
+debug
+./build/firebase_storage/intermediates/local_only_symbol_list/debug:
+parseDebugLocalResources
+./build/firebase_storage/intermediates/local_only_symbol_list/debug/parseDebugLocalResources:
+R-def.txt
+./build/firebase_storage/intermediates/manifest_merge_blame_file:
+debug
+./build/firebase_storage/intermediates/manifest_merge_blame_file/debug:
+processDebugManifest
+./build/firebase_storage/intermediates/manifest_merge_blame_file/debug/processDebugManifest:
+manifest-merger-blame-debug-report.txt
+./build/firebase_storage/intermediates/merged_consumer_proguard_file:
+debug
+./build/firebase_storage/intermediates/merged_consumer_proguard_file/debug:
+mergeDebugConsumerProguardFiles
+./build/firebase_storage/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles:
+./build/firebase_storage/intermediates/merged_java_res:
+debug
+./build/firebase_storage/intermediates/merged_java_res/debug:
+mergeDebugJavaResource
+./build/firebase_storage/intermediates/merged_java_res/debug/mergeDebugJavaResource:
+feature-firebase_storage.jar
+./build/firebase_storage/intermediates/merged_jni_libs:
+debug
+./build/firebase_storage/intermediates/merged_jni_libs/debug:
+mergeDebugJniLibFolders
+./build/firebase_storage/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders:
+out
+./build/firebase_storage/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders/out:
+./build/firebase_storage/intermediates/merged_manifest:
+debug
+./build/firebase_storage/intermediates/merged_manifest/debug:
+processDebugManifest
+./build/firebase_storage/intermediates/merged_manifest/debug/processDebugManifest:
+AndroidManifest.xml
+./build/firebase_storage/intermediates/merged_shaders:
+debug
+./build/firebase_storage/intermediates/merged_shaders/debug:
+mergeDebugShaders
+./build/firebase_storage/intermediates/merged_shaders/debug/mergeDebugShaders:
+out
+./build/firebase_storage/intermediates/merged_shaders/debug/mergeDebugShaders/out:
+./build/firebase_storage/intermediates/navigation_json:
+debug
+./build/firebase_storage/intermediates/navigation_json/debug:
+extractDeepLinksDebug
+./build/firebase_storage/intermediates/navigation_json/debug/extractDeepLinksDebug:
+navigation.json
+./build/firebase_storage/intermediates/navigation_json_for_aar:
+debug
+./build/firebase_storage/intermediates/navigation_json_for_aar/debug:
+extractDeepLinksForAarDebug
+./build/firebase_storage/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug:
+./build/firebase_storage/intermediates/nested_resources_validation_report:
+debug
+./build/firebase_storage/intermediates/nested_resources_validation_report/debug:
+generateDebugResources
+./build/firebase_storage/intermediates/nested_resources_validation_report/debug/generateDebugResources:
+nestedResourcesValidationReport.txt
+./build/firebase_storage/intermediates/packaged_res:
+debug
+./build/firebase_storage/intermediates/packaged_res/debug:
+packageDebugResources
+./build/firebase_storage/intermediates/packaged_res/debug/packageDebugResources:
+./build/firebase_storage/intermediates/public_res:
+debug
+./build/firebase_storage/intermediates/public_res/debug:
+packageDebugResources
+./build/firebase_storage/intermediates/public_res/debug/packageDebugResources:
+./build/firebase_storage/intermediates/runtime_library_classes_dir:
+debug
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug:
+bundleLibRuntimeToDirDebug
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug:
+META-INF        io
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/META-INF:
+firebase_storage_debug.kotlin_module
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io:
+flutter
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter:
+plugins
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins:
+firebase
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins/firebase:
+storage
+./build/firebase_storage/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins/firebase/storage:
+BuildConfig.class
+FirebaseStorageHostApi$Companion.class
+FirebaseStorageHostApi.class
+FirebaseStorageHostApiCodec.class
+FlutterError.class
+FlutterFirebaseAppRegistrar.class
+FlutterFirebaseStorageException.class
+FlutterFirebaseStoragePlugin$Companion.class
+FlutterFirebaseStoragePlugin.class
+FlutterFirebaseStorageTask$Companion.class
+FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType.class
+FlutterFirebaseStorageTask$WhenMappings.class
+FlutterFirebaseStorageTask.class
+GeneratedAndroidFirebaseStorage_gKt.class
+PigeonFullMetaData$Companion.class
+PigeonFullMetaData.class
+PigeonListOptions$Companion.class
+PigeonListOptions.class
+PigeonListResult$Companion.class
+PigeonListResult.class
+PigeonSettableMetadata$Companion.class
+PigeonSettableMetadata.class
+PigeonStorageFirebaseApp$Companion.class
+PigeonStorageFirebaseApp.class
+PigeonStorageReference$Companion.class
+PigeonStorageReference.class
+PigeonStorageTaskState$Companion.class
+PigeonStorageTaskState.class
+TaskStateChannelStreamHandler$onListen$1.class
+TaskStateChannelStreamHandler$onListen$2.class
+TaskStateChannelStreamHandler$onListen$3.class
+TaskStateChannelStreamHandler.class
+./build/firebase_storage/intermediates/symbol_list_with_package_name:
+debug
+./build/firebase_storage/intermediates/symbol_list_with_package_name/debug:
+generateDebugRFile
+./build/firebase_storage/intermediates/symbol_list_with_package_name/debug/generateDebugRFile:
+package-aware-r.txt
+./build/firebase_storage/kotlin:
+compileDebugKotlin
+./build/firebase_storage/kotlin/compileDebugKotlin:
+cacheable               classpath-snapshot      local-state
+./build/firebase_storage/kotlin/compileDebugKotlin/cacheable:
+caches-jvm      last-build.bin
+./build/firebase_storage/kotlin/compileDebugKotlin/cacheable/caches-jvm:
+inputs  jvm     lookups
+./build/firebase_storage/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs:
+source-to-output.tab                    source-to-output.tab.values.at
+source-to-output.tab.keystream          source-to-output.tab_i
+source-to-output.tab.keystream.len      source-to-output.tab_i.len
+source-to-output.tab.len
+./build/firebase_storage/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm:
+kotlin
+./build/firebase_storage/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin:
+class-attributes.tab
+class-attributes.tab.keystream
+class-attributes.tab.keystream.len
+class-attributes.tab.len
+class-attributes.tab.values.at
+class-attributes.tab_i
+class-attributes.tab_i.len
+class-fq-name-to-source.tab
+class-fq-name-to-source.tab.keystream
+class-fq-name-to-source.tab.keystream.len
+class-fq-name-to-source.tab.len
+class-fq-name-to-source.tab.values.at
+class-fq-name-to-source.tab_i
+class-fq-name-to-source.tab_i.len
+constants.tab
+constants.tab.keystream
+constants.tab.keystream.len
+constants.tab.len
+constants.tab.values.at
+constants.tab_i
+constants.tab_i.len
+internal-name-to-source.tab
+internal-name-to-source.tab.keystream
+internal-name-to-source.tab.keystream.len
+internal-name-to-source.tab.len
+internal-name-to-source.tab.values.at
+internal-name-to-source.tab_i
+internal-name-to-source.tab_i.len
+package-parts.tab
+package-parts.tab.keystream
+package-parts.tab.keystream.len
+package-parts.tab.len
+package-parts.tab.values.at
+package-parts.tab_i
+package-parts.tab_i.len
+proto.tab
+proto.tab.keystream
+proto.tab.keystream.len
+proto.tab.len
+proto.tab.values.at
+proto.tab_i
+proto.tab_i.len
+source-to-classes.tab
+source-to-classes.tab.keystream
+source-to-classes.tab.keystream.len
+source-to-classes.tab.len
+source-to-classes.tab.values.at
+source-to-classes.tab_i
+source-to-classes.tab_i.len
+subtypes.tab
+subtypes.tab.keystream
+subtypes.tab.keystream.len
+subtypes.tab.len
+subtypes.tab.values.at
+subtypes.tab_i
+subtypes.tab_i.len
+supertypes.tab
+supertypes.tab.keystream
+supertypes.tab.keystream.len
+supertypes.tab.len
+supertypes.tab.values.at
+supertypes.tab_i
+supertypes.tab_i.len
+./build/firebase_storage/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups:
+counters.tab                    id-to-file.tab.len
+file-to-id.tab                  id-to-file.tab.values.at
+file-to-id.tab.keystream        id-to-file.tab_i
+file-to-id.tab.keystream.len    id-to-file.tab_i.len
+file-to-id.tab.len              lookups.tab
+file-to-id.tab.values.at        lookups.tab.keystream
+file-to-id.tab_i                lookups.tab.keystream.len
+file-to-id.tab_i.len            lookups.tab.len
+id-to-file.tab                  lookups.tab.values.at
+id-to-file.tab.keystream        lookups.tab_i
+id-to-file.tab.keystream.len    lookups.tab_i.len
+./build/firebase_storage/kotlin/compileDebugKotlin/classpath-snapshot:
+shrunk-classpath-snapshot.bin
+./build/firebase_storage/kotlin/compileDebugKotlin/local-state:
+build-history.bin
+./build/firebase_storage/outputs:
+aar     logs
+./build/firebase_storage/outputs/aar:
+firebase_storage-debug.aar
+./build/firebase_storage/outputs/logs:
+manifest-merger-debug-report.txt
+./build/firebase_storage/tmp:
+compileDebugJavaWithJavac       kotlin-classes
+./build/firebase_storage/tmp/compileDebugJavaWithJavac:
+previous-compilation-data.bin
+./build/firebase_storage/tmp/kotlin-classes:
+debug
+./build/firebase_storage/tmp/kotlin-classes/debug:
+META-INF        io
+./build/firebase_storage/tmp/kotlin-classes/debug/META-INF:
+firebase_storage_debug.kotlin_module
+./build/firebase_storage/tmp/kotlin-classes/debug/io:
+flutter
+./build/firebase_storage/tmp/kotlin-classes/debug/io/flutter:
+plugins
+./build/firebase_storage/tmp/kotlin-classes/debug/io/flutter/plugins:
+firebase
+./build/firebase_storage/tmp/kotlin-classes/debug/io/flutter/plugins/firebase:
+storage
+./build/firebase_storage/tmp/kotlin-classes/debug/io/flutter/plugins/firebase/storage:
+FirebaseStorageHostApi$Companion.class
+FirebaseStorageHostApi.class
+FirebaseStorageHostApiCodec.class
+FlutterError.class
+FlutterFirebaseAppRegistrar.class
+FlutterFirebaseStorageException.class
+FlutterFirebaseStoragePlugin$Companion.class
+FlutterFirebaseStoragePlugin.class
+FlutterFirebaseStorageTask$Companion.class
+FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType.class
+FlutterFirebaseStorageTask$WhenMappings.class
+FlutterFirebaseStorageTask.class
+GeneratedAndroidFirebaseStorage_gKt.class
+PigeonFullMetaData$Companion.class
+PigeonFullMetaData.class
+PigeonListOptions$Companion.class
+PigeonListOptions.class
+PigeonListResult$Companion.class
+PigeonListResult.class
+PigeonSettableMetadata$Companion.class
+PigeonSettableMetadata.class
+PigeonStorageFirebaseApp$Companion.class
+PigeonStorageFirebaseApp.class
+PigeonStorageReference$Companion.class
+PigeonStorageReference.class
+PigeonStorageTaskState$Companion.class
+PigeonStorageTaskState.class
+TaskStateChannelStreamHandler$onListen$1.class
+TaskStateChannelStreamHandler$onListen$2.class
+TaskStateChannelStreamHandler$onListen$3.class
+TaskStateChannelStreamHandler.class
+./build/flutter_plugin_android_lifecycle:
+generated       intermediates   outputs         tmp
+./build/flutter_plugin_android_lifecycle/generated:
+ap_generated_sources    res
+./build/flutter_plugin_android_lifecycle/generated/ap_generated_sources:
+debug
+./build/flutter_plugin_android_lifecycle/generated/ap_generated_sources/debug:
+out
+./build/flutter_plugin_android_lifecycle/generated/ap_generated_sources/debug/out:
+./build/flutter_plugin_android_lifecycle/generated/res:
+pngs            resValues
+./build/flutter_plugin_android_lifecycle/generated/res/pngs:
+debug
+./build/flutter_plugin_android_lifecycle/generated/res/pngs/debug:
+./build/flutter_plugin_android_lifecycle/generated/res/resValues:
+debug
+./build/flutter_plugin_android_lifecycle/generated/res/resValues/debug:
+./build/flutter_plugin_android_lifecycle/intermediates:
+aapt_friendly_merged_manifests          library_art_profile
+aar_libs_directory                      library_jni
+aar_main_jar                            lint_publish_jar
+aar_metadata                            local_only_symbol_list
+annotation_processor_list               manifest_merge_blame_file
+annotations_typedef_file                merged_consumer_proguard_file
+annotations_zip                         merged_java_res
+assets                                  merged_jni_libs
+compile_library_classes_jar             merged_manifest
+compile_r_class_jar                     merged_shaders
+compile_symbol_list                     navigation_json
+compiled_local_resources                navigation_json_for_aar
+data_binding_layout_info_type_package   nested_resources_validation_report
+generated_proguard_file                 packaged_res
+incremental                             public_res
+javac                                   runtime_library_classes_dir
+library_and_local_jars_jni              symbol_list_with_package_name
+./build/flutter_plugin_android_lifecycle/intermediates/aapt_friendly_merged_manifests:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/aapt_friendly_merged_manifests/debug:
+processDebugManifest
+./build/flutter_plugin_android_lifecycle/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest:
+aapt
+./build/flutter_plugin_android_lifecycle/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt:
+AndroidManifest.xml     output-metadata.json
+./build/flutter_plugin_android_lifecycle/intermediates/aar_libs_directory:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/aar_libs_directory/debug:
+syncDebugLibJars
+./build/flutter_plugin_android_lifecycle/intermediates/aar_libs_directory/debug/syncDebugLibJars:
+libs
+./build/flutter_plugin_android_lifecycle/intermediates/aar_libs_directory/debug/syncDebugLibJars/libs:
+./build/flutter_plugin_android_lifecycle/intermediates/aar_main_jar:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/aar_main_jar/debug:
+syncDebugLibJars
+./build/flutter_plugin_android_lifecycle/intermediates/aar_main_jar/debug/syncDebugLibJars:
+classes.jar
+./build/flutter_plugin_android_lifecycle/intermediates/aar_metadata:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/aar_metadata/debug:
+writeDebugAarMetadata
+./build/flutter_plugin_android_lifecycle/intermediates/aar_metadata/debug/writeDebugAarMetadata:
+aar-metadata.properties
+./build/flutter_plugin_android_lifecycle/intermediates/annotation_processor_list:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/annotation_processor_list/debug:
+javaPreCompileDebug
+./build/flutter_plugin_android_lifecycle/intermediates/annotation_processor_list/debug/javaPreCompileDebug:
+annotationProcessors.json
+./build/flutter_plugin_android_lifecycle/intermediates/annotations_typedef_file:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/annotations_typedef_file/debug:
+extractDebugAnnotations
+./build/flutter_plugin_android_lifecycle/intermediates/annotations_typedef_file/debug/extractDebugAnnotations:
+typedefs.txt
+./build/flutter_plugin_android_lifecycle/intermediates/annotations_zip:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/annotations_zip/debug:
+extractDebugAnnotations
+./build/flutter_plugin_android_lifecycle/intermediates/annotations_zip/debug/extractDebugAnnotations:
+./build/flutter_plugin_android_lifecycle/intermediates/assets:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/assets/debug:
+mergeDebugAssets
+./build/flutter_plugin_android_lifecycle/intermediates/assets/debug/mergeDebugAssets:
+./build/flutter_plugin_android_lifecycle/intermediates/compile_library_classes_jar:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/compile_library_classes_jar/debug:
+bundleLibCompileToJarDebug
+./build/flutter_plugin_android_lifecycle/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug:
+classes.jar
+./build/flutter_plugin_android_lifecycle/intermediates/compile_r_class_jar:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/compile_r_class_jar/debug:
+generateDebugRFile
+./build/flutter_plugin_android_lifecycle/intermediates/compile_r_class_jar/debug/generateDebugRFile:
+R.jar
+./build/flutter_plugin_android_lifecycle/intermediates/compile_symbol_list:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/compile_symbol_list/debug:
+generateDebugRFile
+./build/flutter_plugin_android_lifecycle/intermediates/compile_symbol_list/debug/generateDebugRFile:
+R.txt
+./build/flutter_plugin_android_lifecycle/intermediates/compiled_local_resources:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/compiled_local_resources/debug:
+compileDebugLibraryResources
+./build/flutter_plugin_android_lifecycle/intermediates/compiled_local_resources/debug/compileDebugLibraryResources:
+out
+./build/flutter_plugin_android_lifecycle/intermediates/compiled_local_resources/debug/compileDebugLibraryResources/out:
+./build/flutter_plugin_android_lifecycle/intermediates/data_binding_layout_info_type_package:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/data_binding_layout_info_type_package/debug:
+packageDebugResources
+./build/flutter_plugin_android_lifecycle/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources:
+out
+./build/flutter_plugin_android_lifecycle/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out:
+./build/flutter_plugin_android_lifecycle/intermediates/generated_proguard_file:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/generated_proguard_file/debug:
+mergeDebugGeneratedProguardFiles
+./build/flutter_plugin_android_lifecycle/intermediates/generated_proguard_file/debug/mergeDebugGeneratedProguardFiles:
+./build/flutter_plugin_android_lifecycle/intermediates/incremental:
+debug                   mergeDebugAssets        mergeDebugShaders
+debug-mergeJavaRes      mergeDebugJniLibFolders
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/debug:
+packageDebugResources
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/debug/packageDebugResources:
+compile-file-map.properties     merger.xml
+merged.dir                      stripped.dir
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/debug/packageDebugResources/merged.dir:
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/debug/packageDebugResources/stripped.dir:
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/debug-mergeJavaRes:
+merge-state     zip-cache
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/debug-mergeJavaRes/zip-cache:
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/mergeDebugAssets:
+merger.xml
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/mergeDebugJniLibFolders:
+merger.xml
+./build/flutter_plugin_android_lifecycle/intermediates/incremental/mergeDebugShaders:
+merger.xml
+./build/flutter_plugin_android_lifecycle/intermediates/javac:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug:
+compileDebugJavaWithJavac
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac:
+classes
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes:
+io
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io:
+flutter
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter:
+embedding       plugins
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/embedding:
+engine
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/embedding/engine:
+plugins
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/embedding/engine/plugins:
+lifecycle
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/embedding/engine/plugins/lifecycle:
+FlutterLifecycleAdapter.class
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins:
+flutter_plugin_android_lifecycle
+./build/flutter_plugin_android_lifecycle/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/flutter_plugin_android_lifecycle:
+FlutterAndroidLifecyclePlugin.class
+./build/flutter_plugin_android_lifecycle/intermediates/library_and_local_jars_jni:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/library_and_local_jars_jni/debug:
+copyDebugJniLibsProjectAndLocalJars
+./build/flutter_plugin_android_lifecycle/intermediates/library_and_local_jars_jni/debug/copyDebugJniLibsProjectAndLocalJars:
+jni
+./build/flutter_plugin_android_lifecycle/intermediates/library_and_local_jars_jni/debug/copyDebugJniLibsProjectAndLocalJars/jni:
+./build/flutter_plugin_android_lifecycle/intermediates/library_art_profile:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/library_art_profile/debug:
+prepareDebugArtProfile
+./build/flutter_plugin_android_lifecycle/intermediates/library_art_profile/debug/prepareDebugArtProfile:
+./build/flutter_plugin_android_lifecycle/intermediates/library_jni:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/library_jni/debug:
+copyDebugJniLibsProjectOnly
+./build/flutter_plugin_android_lifecycle/intermediates/library_jni/debug/copyDebugJniLibsProjectOnly:
+jni
+./build/flutter_plugin_android_lifecycle/intermediates/library_jni/debug/copyDebugJniLibsProjectOnly/jni:
+./build/flutter_plugin_android_lifecycle/intermediates/lint_publish_jar:
+global
+./build/flutter_plugin_android_lifecycle/intermediates/lint_publish_jar/global:
+prepareLintJarForPublish
+./build/flutter_plugin_android_lifecycle/intermediates/lint_publish_jar/global/prepareLintJarForPublish:
+./build/flutter_plugin_android_lifecycle/intermediates/local_only_symbol_list:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/local_only_symbol_list/debug:
+parseDebugLocalResources
+./build/flutter_plugin_android_lifecycle/intermediates/local_only_symbol_list/debug/parseDebugLocalResources:
+R-def.txt
+./build/flutter_plugin_android_lifecycle/intermediates/manifest_merge_blame_file:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/manifest_merge_blame_file/debug:
+processDebugManifest
+./build/flutter_plugin_android_lifecycle/intermediates/manifest_merge_blame_file/debug/processDebugManifest:
+manifest-merger-blame-debug-report.txt
+./build/flutter_plugin_android_lifecycle/intermediates/merged_consumer_proguard_file:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/merged_consumer_proguard_file/debug:
+mergeDebugConsumerProguardFiles
+./build/flutter_plugin_android_lifecycle/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles:
+proguard.txt
+./build/flutter_plugin_android_lifecycle/intermediates/merged_java_res:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/merged_java_res/debug:
+mergeDebugJavaResource
+./build/flutter_plugin_android_lifecycle/intermediates/merged_java_res/debug/mergeDebugJavaResource:
+feature-flutter_plugin_android_lifecycle.jar
+./build/flutter_plugin_android_lifecycle/intermediates/merged_jni_libs:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/merged_jni_libs/debug:
+mergeDebugJniLibFolders
+./build/flutter_plugin_android_lifecycle/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders:
+out
+./build/flutter_plugin_android_lifecycle/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders/out:
+./build/flutter_plugin_android_lifecycle/intermediates/merged_manifest:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug:
+processDebugManifest
+./build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/processDebugManifest:
+AndroidManifest.xml
+./build/flutter_plugin_android_lifecycle/intermediates/merged_shaders:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/merged_shaders/debug:
+mergeDebugShaders
+./build/flutter_plugin_android_lifecycle/intermediates/merged_shaders/debug/mergeDebugShaders:
+out
+./build/flutter_plugin_android_lifecycle/intermediates/merged_shaders/debug/mergeDebugShaders/out:
+./build/flutter_plugin_android_lifecycle/intermediates/navigation_json:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/navigation_json/debug:
+extractDeepLinksDebug
+./build/flutter_plugin_android_lifecycle/intermediates/navigation_json/debug/extractDeepLinksDebug:
+navigation.json
+./build/flutter_plugin_android_lifecycle/intermediates/navigation_json_for_aar:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/navigation_json_for_aar/debug:
+extractDeepLinksForAarDebug
+./build/flutter_plugin_android_lifecycle/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug:
+./build/flutter_plugin_android_lifecycle/intermediates/nested_resources_validation_report:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/nested_resources_validation_report/debug:
+generateDebugResources
+./build/flutter_plugin_android_lifecycle/intermediates/nested_resources_validation_report/debug/generateDebugResources:
+nestedResourcesValidationReport.txt
+./build/flutter_plugin_android_lifecycle/intermediates/packaged_res:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/packaged_res/debug:
+packageDebugResources
+./build/flutter_plugin_android_lifecycle/intermediates/packaged_res/debug/packageDebugResources:
+./build/flutter_plugin_android_lifecycle/intermediates/public_res:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/public_res/debug:
+packageDebugResources
+./build/flutter_plugin_android_lifecycle/intermediates/public_res/debug/packageDebugResources:
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug:
+bundleLibRuntimeToDirDebug
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug:
+io
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io:
+flutter
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter:
+embedding       plugins
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/embedding:
+engine
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/embedding/engine:
+plugins
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/embedding/engine/plugins:
+lifecycle
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/embedding/engine/plugins/lifecycle:
+FlutterLifecycleAdapter.class
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins:
+flutter_plugin_android_lifecycle
+./build/flutter_plugin_android_lifecycle/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins/flutter_plugin_android_lifecycle:
+FlutterAndroidLifecyclePlugin.class
+./build/flutter_plugin_android_lifecycle/intermediates/symbol_list_with_package_name:
+debug
+./build/flutter_plugin_android_lifecycle/intermediates/symbol_list_with_package_name/debug:
+generateDebugRFile
+./build/flutter_plugin_android_lifecycle/intermediates/symbol_list_with_package_name/debug/generateDebugRFile:
+package-aware-r.txt
+./build/flutter_plugin_android_lifecycle/outputs:
+aar     logs
+./build/flutter_plugin_android_lifecycle/outputs/aar:
+flutter_plugin_android_lifecycle-debug.aar
+./build/flutter_plugin_android_lifecycle/outputs/logs:
+manifest-merger-debug-report.txt
+./build/flutter_plugin_android_lifecycle/tmp:
+compileDebugJavaWithJavac
+./build/flutter_plugin_android_lifecycle/tmp/compileDebugJavaWithJavac:
+previous-compilation-data.bin
+./build/image_picker_android:
+generated       intermediates   outputs         tmp
+./build/image_picker_android/generated:
+ap_generated_sources    res
+./build/image_picker_android/generated/ap_generated_sources:
+debug
+./build/image_picker_android/generated/ap_generated_sources/debug:
+out
+./build/image_picker_android/generated/ap_generated_sources/debug/out:
+./build/image_picker_android/generated/res:
+pngs            resValues
+./build/image_picker_android/generated/res/pngs:
+debug
+./build/image_picker_android/generated/res/pngs/debug:
+./build/image_picker_android/generated/res/resValues:
+debug
+./build/image_picker_android/generated/res/resValues/debug:
+./build/image_picker_android/intermediates:
+aapt_friendly_merged_manifests          library_art_profile
+aar_libs_directory                      library_jni
+aar_main_jar                            lint_publish_jar
+aar_metadata                            local_only_symbol_list
+annotation_processor_list               manifest_merge_blame_file
+annotations_typedef_file                merged_consumer_proguard_file
+annotations_zip                         merged_java_res
+assets                                  merged_jni_libs
+compile_library_classes_jar             merged_manifest
+compile_r_class_jar                     merged_shaders
+compile_symbol_list                     navigation_json
+compiled_local_resources                navigation_json_for_aar
+data_binding_layout_info_type_package   nested_resources_validation_report
+generated_proguard_file                 packaged_res
+incremental                             public_res
+javac                                   runtime_library_classes_dir
+library_and_local_jars_jni              symbol_list_with_package_name
+./build/image_picker_android/intermediates/aapt_friendly_merged_manifests:
+debug
+./build/image_picker_android/intermediates/aapt_friendly_merged_manifests/debug:
+processDebugManifest
+./build/image_picker_android/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest:
+aapt
+./build/image_picker_android/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt:
+AndroidManifest.xml     output-metadata.json
+./build/image_picker_android/intermediates/aar_libs_directory:
+debug
+./build/image_picker_android/intermediates/aar_libs_directory/debug:
+syncDebugLibJars
+./build/image_picker_android/intermediates/aar_libs_directory/debug/syncDebugLibJars:
+libs
+./build/image_picker_android/intermediates/aar_libs_directory/debug/syncDebugLibJars/libs:
+./build/image_picker_android/intermediates/aar_main_jar:
+debug
+./build/image_picker_android/intermediates/aar_main_jar/debug:
+syncDebugLibJars
+./build/image_picker_android/intermediates/aar_main_jar/debug/syncDebugLibJars:
+classes.jar
+./build/image_picker_android/intermediates/aar_metadata:
+debug
+./build/image_picker_android/intermediates/aar_metadata/debug:
+writeDebugAarMetadata
+./build/image_picker_android/intermediates/aar_metadata/debug/writeDebugAarMetadata:
+aar-metadata.properties
+./build/image_picker_android/intermediates/annotation_processor_list:
+debug
+./build/image_picker_android/intermediates/annotation_processor_list/debug:
+javaPreCompileDebug
+./build/image_picker_android/intermediates/annotation_processor_list/debug/javaPreCompileDebug:
+annotationProcessors.json
+./build/image_picker_android/intermediates/annotations_typedef_file:
+debug
+./build/image_picker_android/intermediates/annotations_typedef_file/debug:
+extractDebugAnnotations
+./build/image_picker_android/intermediates/annotations_typedef_file/debug/extractDebugAnnotations:
+typedefs.txt
+./build/image_picker_android/intermediates/annotations_zip:
+debug
+./build/image_picker_android/intermediates/annotations_zip/debug:
+extractDebugAnnotations
+./build/image_picker_android/intermediates/annotations_zip/debug/extractDebugAnnotations:
+./build/image_picker_android/intermediates/assets:
+debug
+./build/image_picker_android/intermediates/assets/debug:
+mergeDebugAssets
+./build/image_picker_android/intermediates/assets/debug/mergeDebugAssets:
+./build/image_picker_android/intermediates/compile_library_classes_jar:
+debug
+./build/image_picker_android/intermediates/compile_library_classes_jar/debug:
+bundleLibCompileToJarDebug
+./build/image_picker_android/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug:
+classes.jar
+./build/image_picker_android/intermediates/compile_r_class_jar:
+debug
+./build/image_picker_android/intermediates/compile_r_class_jar/debug:
+generateDebugRFile
+./build/image_picker_android/intermediates/compile_r_class_jar/debug/generateDebugRFile:
+R.jar
+./build/image_picker_android/intermediates/compile_symbol_list:
+debug
+./build/image_picker_android/intermediates/compile_symbol_list/debug:
+generateDebugRFile
+./build/image_picker_android/intermediates/compile_symbol_list/debug/generateDebugRFile:
+R.txt
+./build/image_picker_android/intermediates/compiled_local_resources:
+debug
+./build/image_picker_android/intermediates/compiled_local_resources/debug:
+compileDebugLibraryResources
+./build/image_picker_android/intermediates/compiled_local_resources/debug/compileDebugLibraryResources:
+out
+./build/image_picker_android/intermediates/compiled_local_resources/debug/compileDebugLibraryResources/out:
+xml_flutter_image_picker_file_paths.xml.flat
+./build/image_picker_android/intermediates/data_binding_layout_info_type_package:
+debug
+./build/image_picker_android/intermediates/data_binding_layout_info_type_package/debug:
+packageDebugResources
+./build/image_picker_android/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources:
+out
+./build/image_picker_android/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out:
+./build/image_picker_android/intermediates/generated_proguard_file:
+debug
+./build/image_picker_android/intermediates/generated_proguard_file/debug:
+mergeDebugGeneratedProguardFiles
+./build/image_picker_android/intermediates/generated_proguard_file/debug/mergeDebugGeneratedProguardFiles:
+./build/image_picker_android/intermediates/incremental:
+debug                   mergeDebugAssets        mergeDebugShaders
+debug-mergeJavaRes      mergeDebugJniLibFolders
+./build/image_picker_android/intermediates/incremental/debug:
+packageDebugResources
+./build/image_picker_android/intermediates/incremental/debug/packageDebugResources:
+compile-file-map.properties     merger.xml
+merged.dir                      stripped.dir
+./build/image_picker_android/intermediates/incremental/debug/packageDebugResources/merged.dir:
+./build/image_picker_android/intermediates/incremental/debug/packageDebugResources/stripped.dir:
+./build/image_picker_android/intermediates/incremental/debug-mergeJavaRes:
+merge-state     zip-cache
+./build/image_picker_android/intermediates/incremental/debug-mergeJavaRes/zip-cache:
+./build/image_picker_android/intermediates/incremental/mergeDebugAssets:
+merger.xml
+./build/image_picker_android/intermediates/incremental/mergeDebugJniLibFolders:
+merger.xml
+./build/image_picker_android/intermediates/incremental/mergeDebugShaders:
+merger.xml
+./build/image_picker_android/intermediates/javac:
+debug
+./build/image_picker_android/intermediates/javac/debug:
+compileDebugJavaWithJavac
+./build/image_picker_android/intermediates/javac/debug/compileDebugJavaWithJavac:
+classes
+./build/image_picker_android/intermediates/javac/debug/compileDebugJavaWithJavac/classes:
+io
+./build/image_picker_android/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io:
+flutter
+./build/image_picker_android/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter:
+plugins
+./build/image_picker_android/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins:
+imagepicker
+./build/image_picker_android/intermediates/javac/debug/compileDebugJavaWithJavac/classes/io/flutter/plugins/imagepicker:
+ExifDataCopier.class
+FileUtils.class
+ImagePickerCache$CacheType.class
+ImagePickerCache.class
+ImagePickerDelegate$1.class
+ImagePickerDelegate$2.class
+ImagePickerDelegate$CameraDevice.class
+ImagePickerDelegate$FileUriResolver.class
+ImagePickerDelegate$MediaPath.class
+ImagePickerDelegate$OnPathReadyListener.class
+ImagePickerDelegate$PendingCallState.class
+ImagePickerDelegate$PermissionManager.class
+ImagePickerDelegate.class
+ImagePickerFileProvider.class
+ImagePickerPlugin$1.class
+ImagePickerPlugin$ActivityState.class
+ImagePickerPlugin$LifeCycleObserver.class
+ImagePickerPlugin.class
+ImagePickerUtils.class
+ImageResizer.class
+Messages$CacheRetrievalError$Builder.class
+Messages$CacheRetrievalError.class
+Messages$CacheRetrievalResult$Builder.class
+Messages$CacheRetrievalResult.class
+Messages$CacheRetrievalType.class
+Messages$CanIgnoreReturnValue.class
+Messages$FlutterError.class
+Messages$GeneralOptions$Builder.class
+Messages$GeneralOptions.class
+Messages$ImagePickerApi$1.class
+Messages$ImagePickerApi$2.class
+Messages$ImagePickerApi$3.class
+Messages$ImagePickerApi.class
+Messages$ImageSelectionOptions$Builder.class
+Messages$ImageSelectionOptions.class
+Messages$MediaSelectionOptions$Builder.class
+Messages$MediaSelectionOptions.class
+Messages$NullableResult.class
+Messages$PigeonCodec.class
+Messages$Result.class
+Messages$SourceCamera.class
+Messages$SourceSpecification$Builder.class
+Messages$SourceSpecification.class
+Messages$SourceType.class
+Messages$VideoSelectionOptions$Builder.class
+Messages$VideoSelectionOptions.class
+Messages$VoidResult.class
+Messages.class
+./build/image_picker_android/intermediates/library_and_local_jars_jni:
+debug
+./build/image_picker_android/intermediates/library_and_local_jars_jni/debug:
+copyDebugJniLibsProjectAndLocalJars
+./build/image_picker_android/intermediates/library_and_local_jars_jni/debug/copyDebugJniLibsProjectAndLocalJars:
+jni
+./build/image_picker_android/intermediates/library_and_local_jars_jni/debug/copyDebugJniLibsProjectAndLocalJars/jni:
+./build/image_picker_android/intermediates/library_art_profile:
+debug
+./build/image_picker_android/intermediates/library_art_profile/debug:
+prepareDebugArtProfile
+./build/image_picker_android/intermediates/library_art_profile/debug/prepareDebugArtProfile:
+./build/image_picker_android/intermediates/library_jni:
+debug
+./build/image_picker_android/intermediates/library_jni/debug:
+copyDebugJniLibsProjectOnly
+./build/image_picker_android/intermediates/library_jni/debug/copyDebugJniLibsProjectOnly:
+jni
+./build/image_picker_android/intermediates/library_jni/debug/copyDebugJniLibsProjectOnly/jni:
+./build/image_picker_android/intermediates/lint_publish_jar:
+global
+./build/image_picker_android/intermediates/lint_publish_jar/global:
+prepareLintJarForPublish
+./build/image_picker_android/intermediates/lint_publish_jar/global/prepareLintJarForPublish:
+./build/image_picker_android/intermediates/local_only_symbol_list:
+debug
+./build/image_picker_android/intermediates/local_only_symbol_list/debug:
+parseDebugLocalResources
+./build/image_picker_android/intermediates/local_only_symbol_list/debug/parseDebugLocalResources:
+R-def.txt
+./build/image_picker_android/intermediates/manifest_merge_blame_file:
+debug
+./build/image_picker_android/intermediates/manifest_merge_blame_file/debug:
+processDebugManifest
+./build/image_picker_android/intermediates/manifest_merge_blame_file/debug/processDebugManifest:
+manifest-merger-blame-debug-report.txt
+./build/image_picker_android/intermediates/merged_consumer_proguard_file:
+debug
+./build/image_picker_android/intermediates/merged_consumer_proguard_file/debug:
+mergeDebugConsumerProguardFiles
+./build/image_picker_android/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles:
+./build/image_picker_android/intermediates/merged_java_res:
+debug
+./build/image_picker_android/intermediates/merged_java_res/debug:
+mergeDebugJavaResource
+./build/image_picker_android/intermediates/merged_java_res/debug/mergeDebugJavaResource:
+feature-image_picker_android.jar
+./build/image_picker_android/intermediates/merged_jni_libs:
+debug
+./build/image_picker_android/intermediates/merged_jni_libs/debug:
+mergeDebugJniLibFolders
+./build/image_picker_android/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders:
+out
+./build/image_picker_android/intermediates/merged_jni_libs/debug/mergeDebugJniLibFolders/out:
+./build/image_picker_android/intermediates/merged_manifest:
+debug
+./build/image_picker_android/intermediates/merged_manifest/debug:
+processDebugManifest
+./build/image_picker_android/intermediates/merged_manifest/debug/processDebugManifest:
+AndroidManifest.xml
+./build/image_picker_android/intermediates/merged_shaders:
+debug
+./build/image_picker_android/intermediates/merged_shaders/debug:
+mergeDebugShaders
+./build/image_picker_android/intermediates/merged_shaders/debug/mergeDebugShaders:
+out
+./build/image_picker_android/intermediates/merged_shaders/debug/mergeDebugShaders/out:
+./build/image_picker_android/intermediates/navigation_json:
+debug
+./build/image_picker_android/intermediates/navigation_json/debug:
+extractDeepLinksDebug
+./build/image_picker_android/intermediates/navigation_json/debug/extractDeepLinksDebug:
+navigation.json
+./build/image_picker_android/intermediates/navigation_json_for_aar:
+debug
+./build/image_picker_android/intermediates/navigation_json_for_aar/debug:
+extractDeepLinksForAarDebug
+./build/image_picker_android/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug:
+./build/image_picker_android/intermediates/nested_resources_validation_report:
+debug
+./build/image_picker_android/intermediates/nested_resources_validation_report/debug:
+generateDebugResources
+./build/image_picker_android/intermediates/nested_resources_validation_report/debug/generateDebugResources:
+nestedResourcesValidationReport.txt
+./build/image_picker_android/intermediates/packaged_res:
+debug
+./build/image_picker_android/intermediates/packaged_res/debug:
+packageDebugResources
+./build/image_picker_android/intermediates/packaged_res/debug/packageDebugResources:
+xml
+./build/image_picker_android/intermediates/packaged_res/debug/packageDebugResources/xml:
+flutter_image_picker_file_paths.xml
+./build/image_picker_android/intermediates/public_res:
+debug
+./build/image_picker_android/intermediates/public_res/debug:
+packageDebugResources
+./build/image_picker_android/intermediates/public_res/debug/packageDebugResources:
+./build/image_picker_android/intermediates/runtime_library_classes_dir:
+debug
+./build/image_picker_android/intermediates/runtime_library_classes_dir/debug:
+bundleLibRuntimeToDirDebug
+./build/image_picker_android/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug:
+io
+./build/image_picker_android/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io:
+flutter
+./build/image_picker_android/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter:
+plugins
+./build/image_picker_android/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins:
+imagepicker
+./build/image_picker_android/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/io/flutter/plugins/imagepicker:
+ExifDataCopier.class
+FileUtils.class
+ImagePickerCache$CacheType.class
+ImagePickerCache.class
+ImagePickerDelegate$1.class
+ImagePickerDelegate$2.class
+ImagePickerDelegate$CameraDevice.class
+ImagePickerDelegate$FileUriResolver.class
+ImagePickerDelegate$MediaPath.class
+ImagePickerDelegate$OnPathReadyListener.class
+ImagePickerDelegate$PendingCallState.class
+ImagePickerDelegate$PermissionManager.class
+ImagePickerDelegate.class
+ImagePickerFileProvider.class
+ImagePickerPlugin$1.class
+ImagePickerPlugin$ActivityState.class
+ImagePickerPlugin$LifeCycleObserver.class
+ImagePickerPlugin.class
+ImagePickerUtils.class
+ImageResizer.class
+Messages$CacheRetrievalError$Builder.class
+Messages$CacheRetrievalError.class
+Messages$CacheRetrievalResult$Builder.class
+Messages$CacheRetrievalResult.class
+Messages$CacheRetrievalType.class
+Messages$CanIgnoreReturnValue.class
+Messages$FlutterError.class
+Messages$GeneralOptions$Builder.class
+Messages$GeneralOptions.class
+Messages$ImagePickerApi$1.class
+Messages$ImagePickerApi$2.class
+Messages$ImagePickerApi$3.class
+Messages$ImagePickerApi.class
+Messages$ImageSelectionOptions$Builder.class
+Messages$ImageSelectionOptions.class
+Messages$MediaSelectionOptions$Builder.class
+Messages$MediaSelectionOptions.class
+Messages$NullableResult.class
+Messages$PigeonCodec.class
+Messages$Result.class
+Messages$SourceCamera.class
+Messages$SourceSpecification$Builder.class
+Messages$SourceSpecification.class
+Messages$SourceType.class
+Messages$VideoSelectionOptions$Builder.class
+Messages$VideoSelectionOptions.class
+Messages$VoidResult.class
+Messages.class
+./build/image_picker_android/intermediates/symbol_list_with_package_name:
+debug
+./build/image_picker_android/intermediates/symbol_list_with_package_name/debug:
+generateDebugRFile
+./build/image_picker_android/intermediates/symbol_list_with_package_name/debug/generateDebugRFile:
+package-aware-r.txt
+./build/image_picker_android/outputs:
+aar     logs
+./build/image_picker_android/outputs/aar:
+image_picker_android-debug.aar
+./build/image_picker_android/outputs/logs:
+manifest-merger-debug-report.txt
+./build/image_picker_android/tmp:
+compileDebugJavaWithJavac
+./build/image_picker_android/tmp/compileDebugJavaWithJavac:
+previous-compilation-data.bin
+./build/ios:
+Debug-iphoneos          app-delta               pod_inputs.fingerprint
+XCBuildData             iphoneos
+./build/ios/Debug-iphoneos:
+App.framework                   GoogleUtilities
+BoringSSL-GRPC                  Pods_Runner.framework
+Firebase                        RecaptchaInterop
+FirebaseAppCheckInterop         Runner.app
+FirebaseAuth                    Runner.swiftmodule
+FirebaseAuthInterop             abseil
+FirebaseCore                    cloud_firestore
+FirebaseCoreExtension           firebase_auth
+FirebaseCoreInternal            firebase_core
+FirebaseFirestore               firebase_storage
+FirebaseFirestoreInternal       gRPC-C++
+FirebaseSharedSwift             gRPC-Core
+FirebaseStorage                 image_picker_ios
+Flutter                         leveldb-library
+Flutter.framework               nanopb
+GTMSessionFetcher               path_provider_foundation
+./build/ios/Debug-iphoneos/App.framework:
+App             Info.plist      _CodeSignature  flutter_assets
+./build/ios/Debug-iphoneos/App.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/App.framework/flutter_assets:
+AssetManifest.bin               isolate_snapshot_data
+FontManifest.json               kernel_blob.bin
+NOTICES.Z                       packages
+NativeAssetsManifest.json       shaders
+fonts                           vm_snapshot_data
+./build/ios/Debug-iphoneos/App.framework/flutter_assets/fonts:
+MaterialIcons-Regular.otf
+./build/ios/Debug-iphoneos/App.framework/flutter_assets/packages:
+cupertino_icons
+./build/ios/Debug-iphoneos/App.framework/flutter_assets/packages/cupertino_icons:
+assets
+./build/ios/Debug-iphoneos/App.framework/flutter_assets/packages/cupertino_icons/assets:
+CupertinoIcons.ttf
+./build/ios/Debug-iphoneos/App.framework/flutter_assets/shaders:
+ink_sparkle.frag        stretch_effect.frag
+./build/ios/Debug-iphoneos/BoringSSL-GRPC:
+openssl_grpc.bundle     openssl_grpc.framework
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework:
+Headers                 Modules                 openssl_grpc
+Info.plist              PrivateHeaders          openssl_grpc.bundle
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers:
+BoringSSL-GRPC-umbrella.h       hrss.h
+aead.h                          is_boringssl.h
+aes.h                           kdf.h
+arm_arch.h                      lhash.h
+asm_base.h                      md4.h
+asn1.h                          md5.h
+asn1_mac.h                      mem.h
+asn1t.h                         mldsa.h
+base.h                          mlkem.h
+base64.h                        nid.h
+bio.h                           obj.h
+blake2.h                        obj_mac.h
+blowfish.h                      objects.h
+bn.h                            opensslconf.h
+boringssl_prefix_symbols.h      opensslv.h
+buf.h                           ossl_typ.h
+buffer.h                        pem.h
+bytestring.h                    pkcs12.h
+cast.h                          pkcs7.h
+chacha.h                        pkcs8.h
+cipher.h                        pki
+cmac.h                          poly1305.h
+conf.h                          pool.h
+cpu.h                           posix_time.h
+crypto                          rand.h
+crypto.h                        rc4.h
+ctrdrbg.h                       ripemd.h
+curve25519.h                    rsa.h
+des.h                           safestack.h
+dh.h                            service_indicator.h
+digest.h                        sha.h
+dsa.h                           siphash.h
+dtls1.h                         span.h
+e_os2.h                         srtp.h
+ec.h                            ssl.h
+ec_key.h                        ssl3.h
+ecdh.h                          stack.h
+ecdsa.h                         target.h
+engine.h                        thread.h
+err.h                           tls1.h
+evp.h                           trust_token.h
+evp_errors.h                    type_check.h
+ex_data.h                       x509.h
+experimental                    x509_vfy.h
+hkdf.h                          x509v3.h
+hmac.h                          x509v3_errors.h
+hpke.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto:
+fipsmodule
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule:
+aes                     ec                      modes
+bn                      ecdh                    rand
+cipher                  ecdsa                   rsa
+cmac                    hkdf                    self_check
+dh                      hmac                    service_indicator
+digest                  md4                     sha
+digestsign              md5                     tls
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/aes:
+aes.c.inc               key_wrap.c.inc
+aes_nohw.c.inc          mode_wrappers.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/bn:
+add.c.inc               div_extra.c.inc         montgomery_inv.c.inc
+asm                     exponentiation.c.inc    mul.c.inc
+bn.c.inc                gcd.c.inc               prime.c.inc
+bytes.c.inc             gcd_extra.c.inc         random.c.inc
+cmp.c.inc               generic.c.inc           rsaz_exp.c.inc
+ctx.c.inc               jacobi.c.inc            shift.c.inc
+div.c.inc               montgomery.c.inc        sqrt.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/bn/asm:
+x86_64-gcc.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/cipher:
+aead.c.inc      cipher.c.inc    e_aes.c.inc     e_aesccm.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/cmac:
+cmac.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/dh:
+check.c.inc     dh.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/digest:
+digest.c.inc    digests.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/digestsign:
+digestsign.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/ec:
+ec.c.inc                p224-64.c.inc           simple_mul.c.inc
+ec_key.c.inc            p256-nistz.c.inc        util.c.inc
+ec_montgomery.c.inc     p256.c.inc              wnaf.c.inc
+felem.c.inc             scalar.c.inc
+oct.c.inc               simple.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/ecdh:
+ecdh.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/ecdsa:
+ecdsa.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/hkdf:
+hkdf.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/hmac:
+hmac.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/md4:
+md4.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/md5:
+md5.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/modes:
+cbc.c.inc       ctr.c.inc       gcm_nohw.c.inc  polyval.c.inc
+cfb.c.inc       gcm.c.inc       ofb.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/rand:
+ctrdrbg.c.inc   rand.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/rsa:
+blinding.c.inc  padding.c.inc   rsa.c.inc       rsa_impl.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/self_check:
+fips.c.inc              self_check.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/service_indicator:
+service_indicator.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/sha:
+sha1.c.inc      sha256.c.inc    sha512.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto/fipsmodule/tls:
+kdf.c.inc
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/experimental:
+dilithium.h     kyber.h         spx.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/pki:
+certificate.h                   verify.h
+signature_verify_cache.h        verify_error.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders:
+crypto          ssl             third_party     time.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto:
+asn1            cpu_arm_linux.h evp             mldsa           rand_extra
+bcm_support.h   curve25519      fipsmodule      mlkem           rsa_extra
+bio             des             hrss            obj             spx
+bytestring      dilithium       internal.h      pkcs7           trust_token
+chacha          dsa             keccak          pkcs8           x509
+cipher_extra    ec_extra        kyber           poly1305
+conf            err             lhash           pool
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/asn1:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/bio:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/bytestring:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/chacha:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/cipher_extra:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/conf:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/curve25519:
+curve25519_tables.h     internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/des:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/dilithium:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/dsa:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/ec_extra:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/err:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/evp:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule:
+aes                     digest                  rsa
+bcm_interface.h         ec                      service_indicator
+bn                      ecdsa                   sha
+cipher                  md5                     tls
+delocate.h              modes
+dh                      rand
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/aes:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/bn:
+internal.h      rsaz_exp.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/cipher:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/dh:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/digest:
+internal.h      md32_common.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/ec:
+builtin_curves.h        p256-nistz-table.h      p256_table.h
+internal.h              p256-nistz.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/ecdsa:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/md5:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/modes:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/rand:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/rsa:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/service_indicator:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/sha:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/fipsmodule/tls:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/hrss:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/keccak:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/kyber:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/lhash:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/mldsa:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/mlkem:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/obj:
+obj_dat.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/pkcs7:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/pkcs8:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/poly1305:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/pool:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/rand_extra:
+getrandom_fillin.h      sysrand_internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/rsa_extra:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/spx:
+address.h       merkle.h        spx_util.h      wots.h
+fors.h          params.h        thash.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/trust_token:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/crypto/x509:
+ext_dat.h       internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/ssl:
+internal.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/third_party:
+fiat
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/PrivateHeaders/third_party/fiat:
+curve25519_32.h         curve25519_64_msvc.h    p256_64_msvc.h
+curve25519_64.h         p256_32.h
+curve25519_64_adx.h     p256_64.h
+./build/ios/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/openssl_grpc.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Firebase:
+./build/ios/Debug-iphoneos/FirebaseAppCheckInterop:
+FirebaseAppCheckInterop.framework
+./build/ios/Debug-iphoneos/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework:
+FirebaseAppCheckInterop Info.plist
+Headers                 Modules
+./build/ios/Debug-iphoneos/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/Headers:
+FIRAppCheckInterop.h                    FirebaseAppCheckInterop-umbrella.h
+FIRAppCheckTokenResultInterop.h         FirebaseAppCheckInterop.h
+./build/ios/Debug-iphoneos/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/FirebaseAuth:
+FirebaseAuth.framework          FirebaseAuth_Privacy.bundle
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework:
+FirebaseAuth                    Info.plist
+FirebaseAuth_Privacy.bundle     Modules
+Headers
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/FirebaseAuth_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers:
+FIRAuth.h                       FIRMultiFactor.h
+FIRAuthErrors.h                 FIRPhoneAuthProvider.h
+FIREmailAuthProvider.h          FIRTwitterAuthProvider.h
+FIRFacebookAuthProvider.h       FIRUser.h
+FIRFederatedAuthProvider.h      FirebaseAuth-Swift.h
+FIRGameCenterAuthProvider.h     FirebaseAuth-umbrella.h
+FIRGitHubAuthProvider.h         FirebaseAuth.h
+FIRGoogleAuthProvider.h
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules:
+FirebaseAuth.swiftmodule        module.modulemap
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules/FirebaseAuth.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules/FirebaseAuth.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/FirebaseAuth/FirebaseAuth_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseAuthInterop:
+FirebaseAuthInterop.framework
+./build/ios/Debug-iphoneos/FirebaseAuthInterop/FirebaseAuthInterop.framework:
+FirebaseAuthInterop     Info.plist
+Headers                 Modules
+./build/ios/Debug-iphoneos/FirebaseAuthInterop/FirebaseAuthInterop.framework/Headers:
+FIRAuthInterop.h                FirebaseAuthInterop-umbrella.h
+./build/ios/Debug-iphoneos/FirebaseAuthInterop/FirebaseAuthInterop.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/FirebaseCore:
+FirebaseCore.framework          FirebaseCore_Privacy.bundle
+./build/ios/Debug-iphoneos/FirebaseCore/FirebaseCore.framework:
+FirebaseCore                    Info.plist
+FirebaseCore_Privacy.bundle     Modules
+Headers
+./build/ios/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/FirebaseCore_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers:
+FIRApp.h                FIROptions.h            FirebaseCore-umbrella.h
+FIRConfiguration.h      FIRTimestamp.h          FirebaseCore.h
+FIRLoggerLevel.h        FIRVersion.h
+./build/ios/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/FirebaseCore/FirebaseCore_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseCoreExtension:
+FirebaseCoreExtension.framework         FirebaseCoreExtension_Privacy.bundle
+./build/ios/Debug-iphoneos/FirebaseCoreExtension/FirebaseCoreExtension.framework:
+FirebaseCoreExtension                   Info.plist
+FirebaseCoreExtension_Privacy.bundle    Modules
+Headers
+./build/ios/Debug-iphoneos/FirebaseCoreExtension/FirebaseCoreExtension.framework/FirebaseCoreExtension_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseCoreExtension/FirebaseCoreExtension.framework/Headers:
+FIRAppInternal.h                        FIRLibrary.h
+FIRComponent.h                          FIRLogger.h
+FIRComponentContainer.h                 FirebaseCoreExtension-umbrella.h
+FIRComponentType.h                      FirebaseCoreInternal.h
+FIRHeartbeatLogger.h
+./build/ios/Debug-iphoneos/FirebaseCoreExtension/FirebaseCoreExtension.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/FirebaseCoreExtension/FirebaseCoreExtension_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseCoreInternal:
+FirebaseCoreInternal.framework          FirebaseCoreInternal_Privacy.bundle
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal.framework:
+FirebaseCoreInternal                    Info.plist
+FirebaseCoreInternal_Privacy.bundle     Modules
+Headers
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal.framework/FirebaseCoreInternal_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers:
+FirebaseCoreInternal-Swift.h    FirebaseCoreInternal-umbrella.h
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules:
+FirebaseCoreInternal.swiftmodule        module.modulemap
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules/FirebaseCoreInternal.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules/FirebaseCoreInternal.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/FirebaseCoreInternal/FirebaseCoreInternal_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseFirestore:
+FirebaseFirestore.framework             FirebaseFirestore_Privacy.bundle
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework:
+FirebaseFirestore                       Info.plist
+FirebaseFirestore_Privacy.bundle        Modules
+Headers
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/FirebaseFirestore_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers:
+FIRAggregateField.h                     FIRListenerRegistration.h
+FIRAggregateQuery.h                     FIRLoadBundleTask.h
+FIRAggregateQuerySnapshot.h             FIRLocalCacheSettings.h
+FIRAggregateSource.h                    FIRPersistentCacheIndexManager.h
+FIRCollectionReference.h                FIRQuery.h
+FIRDocumentChange.h                     FIRQuerySnapshot.h
+FIRDocumentReference.h                  FIRSnapshotListenOptions.h
+FIRDocumentSnapshot.h                   FIRSnapshotMetadata.h
+FIRFieldPath.h                          FIRTransaction.h
+FIRFieldValue.h                         FIRTransactionOptions.h
+FIRFilter.h                             FIRVectorValue.h
+FIRFirestore.h                          FIRWriteBatch.h
+FIRFirestoreErrors.h                    FirebaseFirestore-Swift.h
+FIRFirestoreSettings.h                  FirebaseFirestore-umbrella.h
+FIRFirestoreSource.h                    FirebaseFirestore.h
+FIRGeoPoint.h
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules:
+FirebaseFirestore.swiftmodule   module.modulemap
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules/FirebaseFirestore.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules/FirebaseFirestore.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseFirestoreInternal:
+FirebaseFirestoreInternal.framework
+FirebaseFirestoreInternal_Privacy.bundle
+./build/ios/Debug-iphoneos/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework:
+FirebaseFirestoreInternal
+FirebaseFirestoreInternal_Privacy.bundle
+Headers
+Info.plist
+Modules
+./build/ios/Debug-iphoneos/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/Headers:
+FIRAggregateField.h                     FIRGeoPoint.h
+FIRAggregateQuery.h                     FIRListenerRegistration.h
+FIRAggregateQuerySnapshot.h             FIRLoadBundleTask.h
+FIRAggregateSource.h                    FIRLocalCacheSettings.h
+FIRCollectionReference.h                FIRPersistentCacheIndexManager.h
+FIRDocumentChange.h                     FIRQuery.h
+FIRDocumentReference.h                  FIRQuerySnapshot.h
+FIRDocumentSnapshot.h                   FIRSnapshotListenOptions.h
+FIRFieldPath.h                          FIRSnapshotMetadata.h
+FIRFieldValue.h                         FIRTransaction.h
+FIRFilter.h                             FIRTransactionOptions.h
+FIRFirestore.h                          FIRVectorValue.h
+FIRFirestoreErrors.h                    FIRWriteBatch.h
+FIRFirestoreSettings.h                  FirebaseFirestore.h
+FIRFirestoreSource.h                    FirebaseFirestoreInternal-umbrella.h
+./build/ios/Debug-iphoneos/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/FirebaseFirestoreInternal/FirebaseFirestoreInternal_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/FirebaseSharedSwift:
+FirebaseSharedSwift.framework
+./build/ios/Debug-iphoneos/FirebaseSharedSwift/FirebaseSharedSwift.framework:
+FirebaseSharedSwift     Info.plist
+Headers                 Modules
+./build/ios/Debug-iphoneos/FirebaseSharedSwift/FirebaseSharedSwift.framework/Headers:
+FirebaseSharedSwift-Swift.h     FirebaseSharedSwift-umbrella.h
+./build/ios/Debug-iphoneos/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules:
+FirebaseSharedSwift.swiftmodule module.modulemap
+./build/ios/Debug-iphoneos/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules/FirebaseSharedSwift.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules/FirebaseSharedSwift.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/FirebaseStorage:
+FirebaseStorage.framework
+./build/ios/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework:
+FirebaseStorage Headers         Info.plist      Modules
+./build/ios/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers:
+FIRStorageTypedefs.h            FirebaseStorage-umbrella.h
+FirebaseStorage-Swift.h
+./build/ios/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules:
+FirebaseStorage.swiftmodule     module.modulemap
+./build/ios/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules/FirebaseStorage.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules/FirebaseStorage.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/Flutter:
+./build/ios/Debug-iphoneos/Flutter.framework:
+Flutter                 Modules                 icudtl.dat
+Headers                 PrivacyInfo.xcprivacy
+Info.plist              _CodeSignature
+./build/ios/Debug-iphoneos/Flutter.framework/Headers:
+Flutter.h                               FlutterHourFormat.h
+FlutterAppDelegate.h                    FlutterMacros.h
+FlutterBinaryMessenger.h                FlutterPlatformViews.h
+FlutterCallbackCache.h                  FlutterPlugin.h
+FlutterChannels.h                       FlutterPluginAppLifeCycleDelegate.h
+FlutterCodecs.h                         FlutterSceneDelegate.h
+FlutterDartProject.h                    FlutterSceneLifeCycle.h
+FlutterEngine.h                         FlutterTexture.h
+FlutterEngineGroup.h                    FlutterViewController.h
+FlutterHeadlessDartRunner.h
+./build/ios/Debug-iphoneos/Flutter.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/Flutter.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/GTMSessionFetcher:
+GTMSessionFetcher.framework             GTMSessionFetcher_Core_Privacy.bundle
+./build/ios/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework:
+GTMSessionFetcher                       Info.plist
+GTMSessionFetcher_Core_Privacy.bundle   Modules
+Headers
+./build/ios/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/GTMSessionFetcher_Core_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers:
+GTMSessionFetcher-umbrella.h    GTMSessionFetcherService.h
+GTMSessionFetcher.h             GTMSessionUploadFetcher.h
+GTMSessionFetcherLogging.h
+./build/ios/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher_Core_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/GoogleUtilities:
+GoogleUtilities.framework       GoogleUtilities_Privacy.bundle
+./build/ios/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework:
+GoogleUtilities                 Info.plist
+GoogleUtilities_Privacy.bundle  Modules
+Headers
+./build/ios/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/GoogleUtilities_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/Headers:
+GULAppDelegateSwizzler.h        GULNetwork.h
+GULAppEnvironmentUtil.h         GULNetworkConstants.h
+GULApplication.h                GULNetworkInfo.h
+GULKeychainStorage.h            GULNetworkLoggerProtocol.h
+GULKeychainUtils.h              GULNetworkMessageCode.h
+GULLogger.h                     GULNetworkURLSession.h
+GULLoggerLevel.h                GULReachabilityChecker.h
+GULMutableDictionary.h          GULSceneDelegateSwizzler.h
+GULNSData+zlib.h                GoogleUtilities-umbrella.h
+./build/ios/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/GoogleUtilities/GoogleUtilities_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Pods_Runner.framework:
+Headers         Info.plist      Modules         Pods_Runner
+./build/ios/Debug-iphoneos/Pods_Runner.framework/Headers:
+Pods-Runner-umbrella.h
+./build/ios/Debug-iphoneos/Pods_Runner.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/RecaptchaInterop:
+RecaptchaInterop.framework
+./build/ios/Debug-iphoneos/RecaptchaInterop/RecaptchaInterop.framework:
+Headers                 Modules
+Info.plist              RecaptchaInterop
+./build/ios/Debug-iphoneos/RecaptchaInterop/RecaptchaInterop.framework/Headers:
+RCAActionProtocol.h             RecaptchaInterop-umbrella.h
+RCARecaptchaClientProtocol.h    RecaptchaInterop.h
+RCARecaptchaProtocol.h
+./build/ios/Debug-iphoneos/RecaptchaInterop/RecaptchaInterop.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/Runner.app:
+AppFrameworkInfo.plist          Info.plist
+AppIcon60x60@2x.png             PkgInfo
+AppIcon76x76@2x~ipad.png        Runner
+Assets.car                      Runner.debug.dylib
+Base.lproj                      _CodeSignature
+Frameworks                      __preview.dylib
+GoogleService-Info.plist        embedded.mobileprovision
+./build/ios/Debug-iphoneos/Runner.app/Base.lproj:
+LaunchScreen.storyboardc        Main.storyboardc
+./build/ios/Debug-iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc:
+01J-lp-oVM-view-Ze5-6b-2t3.nib  UIViewController-01J-lp-oVM.nib
+Info.plist
+./build/ios/Debug-iphoneos/Runner.app/Base.lproj/Main.storyboardc:
+BYZ-38-t0r-view-8bC-Xf-vdC.nib  UIViewController-BYZ-38-t0r.nib
+Info.plist
+./build/ios/Debug-iphoneos/Runner.app/Frameworks:
+App.framework                           GTMSessionFetcher.framework
+FirebaseAppCheckInterop.framework       GoogleUtilities.framework
+FirebaseAuth.framework                  RecaptchaInterop.framework
+FirebaseAuthInterop.framework           absl.framework
+FirebaseCore.framework                  grpc.framework
+FirebaseCoreExtension.framework         grpcpp.framework
+FirebaseCoreInternal.framework          image_picker_ios.framework
+FirebaseFirestore.framework             leveldb.framework
+FirebaseFirestoreInternal.framework     nanopb.framework
+FirebaseSharedSwift.framework           openssl_grpc.framework
+FirebaseStorage.framework               path_provider_foundation.framework
+Flutter.framework
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework:
+App             Info.plist      _CodeSignature  flutter_assets
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/flutter_assets:
+AssetManifest.bin               isolate_snapshot_data
+FontManifest.json               kernel_blob.bin
+NOTICES.Z                       packages
+NativeAssetsManifest.json       shaders
+fonts                           vm_snapshot_data
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/flutter_assets/fonts:
+MaterialIcons-Regular.otf
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/flutter_assets/packages:
+cupertino_icons
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/flutter_assets/packages/cupertino_icons:
+assets
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets:
+CupertinoIcons.ttf
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/App.framework/flutter_assets/shaders:
+ink_sparkle.frag        stretch_effect.frag
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAppCheckInterop.framework:
+FirebaseAppCheckInterop Info.plist              _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAppCheckInterop.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAuth.framework:
+FirebaseAuth                    Info.plist
+FirebaseAuth_Privacy.bundle     _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAuth.framework/FirebaseAuth_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAuth.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAuthInterop.framework:
+FirebaseAuthInterop     Info.plist              _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseAuthInterop.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCore.framework:
+FirebaseCore                    Info.plist
+FirebaseCore_Privacy.bundle     _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCore.framework/FirebaseCore_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCore.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCoreExtension.framework:
+FirebaseCoreExtension                   Info.plist
+FirebaseCoreExtension_Privacy.bundle    _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCoreExtension.framework/FirebaseCoreExtension_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCoreExtension.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCoreInternal.framework:
+FirebaseCoreInternal                    Info.plist
+FirebaseCoreInternal_Privacy.bundle     _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseCoreInternal.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseFirestore.framework:
+FirebaseFirestore                       Info.plist
+FirebaseFirestore_Privacy.bundle        _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseFirestore.framework/FirebaseFirestore_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseFirestore.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseFirestoreInternal.framework:
+FirebaseFirestoreInternal
+FirebaseFirestoreInternal_Privacy.bundle
+Info.plist
+_CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseFirestoreInternal.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseSharedSwift.framework:
+FirebaseSharedSwift     Info.plist              _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseSharedSwift.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseStorage.framework:
+FirebaseStorage Info.plist      _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/FirebaseStorage.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/Flutter.framework:
+Flutter                 Modules                 icudtl.dat
+Headers                 PrivacyInfo.xcprivacy
+Info.plist              _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/Flutter.framework/Headers:
+Flutter.h                               FlutterHourFormat.h
+FlutterAppDelegate.h                    FlutterMacros.h
+FlutterBinaryMessenger.h                FlutterPlatformViews.h
+FlutterCallbackCache.h                  FlutterPlugin.h
+FlutterChannels.h                       FlutterPluginAppLifeCycleDelegate.h
+FlutterCodecs.h                         FlutterSceneDelegate.h
+FlutterDartProject.h                    FlutterSceneLifeCycle.h
+FlutterEngine.h                         FlutterTexture.h
+FlutterEngineGroup.h                    FlutterViewController.h
+FlutterHeadlessDartRunner.h
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/Flutter.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/Flutter.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework:
+GTMSessionFetcher                       Info.plist
+GTMSessionFetcher_Core_Privacy.bundle   _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher_Core_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/GoogleUtilities.framework:
+GoogleUtilities                 Info.plist
+GoogleUtilities_Privacy.bundle  _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/GoogleUtilities.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/RecaptchaInterop.framework:
+Info.plist              RecaptchaInterop        _CodeSignature
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/RecaptchaInterop.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/absl.framework:
+Info.plist              absl
+_CodeSignature          xcprivacy.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/absl.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/absl.framework/xcprivacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpc.framework:
+Info.plist      _CodeSignature  grpc            grpc.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpc.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpc.framework/grpc.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpcpp.framework:
+Info.plist                      grpcpp
+_CodeSignature                  grpcpp.bundle
+gRPCCertificates-Cpp.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpcpp.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpcpp.framework/gRPCCertificates-Cpp.bundle:
+Info.plist      roots.pem
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/grpcpp.framework/grpcpp.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/image_picker_ios.framework:
+Info.plist                      image_picker_ios
+_CodeSignature                  image_picker_ios_privacy.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/image_picker_ios.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/leveldb.framework:
+Info.plist              leveldb
+_CodeSignature          leveldb_Privacy.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/leveldb.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/leveldb.framework/leveldb_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/nanopb.framework:
+Info.plist              nanopb
+_CodeSignature          nanopb_Privacy.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/nanopb.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/nanopb.framework/nanopb_Privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/openssl_grpc.framework:
+Info.plist              openssl_grpc
+_CodeSignature          openssl_grpc.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/openssl_grpc.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/openssl_grpc.framework/openssl_grpc.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/path_provider_foundation.framework:
+Info.plist                              path_provider_foundation
+_CodeSignature                          path_provider_foundation_privacy.bundle
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/path_provider_foundation.framework/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.app/Frameworks/path_provider_foundation.framework/path_provider_foundation_privacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/Runner.app/_CodeSignature:
+CodeResources
+./build/ios/Debug-iphoneos/Runner.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/Runner.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/abseil:
+absl.framework          xcprivacy.bundle
+./build/ios/Debug-iphoneos/abseil/absl.framework:
+Headers                 Modules                 xcprivacy.bundle
+Info.plist              absl
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers:
+abseil-umbrella.h       functional              status
+algorithm               hash                    strings
+base                    log                     synchronization
+cleanup                 memory                  time
+container               meta                    types
+crc                     numeric                 utility
+debugging               profiling
+flags                   random
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/algorithm:
+algorithm.h     container.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/base:
+attributes.h            internal                options.h
+call_once.h             log_severity.h          policy_checks.h
+casts.h                 macros.h                port.h
+config.h                no_destructor.h         prefetch.h
+const_init.h            nullability.h           thread_annotations.h
+dynamic_annotations.h   optimization.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/base/internal:
+atomic_hook.h                   pretty_function.h
+cycleclock.h                    raw_logging.h
+cycleclock_config.h             scheduling_mode.h
+direct_mmap.h                   spinlock.h
+dynamic_annotations.h           spinlock_akaros.inc
+endian.h                        spinlock_linux.inc
+errno_saver.h                   spinlock_posix.inc
+fast_type_id.h                  spinlock_wait.h
+hide_ptr.h                      spinlock_win32.inc
+identity.h                      strerror.h
+inline_variable.h               sysinfo.h
+invoke.h                        thread_identity.h
+low_level_alloc.h               throw_delegate.h
+low_level_scheduling.h          tsan_mutex_interface.h
+nullability_impl.h              unaligned_access.h
+per_thread_tls.h                unscaledcycleclock.h
+poison.h                        unscaledcycleclock_config.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/cleanup:
+cleanup.h       internal
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/cleanup/internal:
+cleanup.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/container:
+fixed_array.h                   hash_container_defaults.h
+flat_hash_map.h                 inlined_vector.h
+flat_hash_set.h                 internal
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/container/internal:
+common.h                        hashtable_debug_hooks.h
+common_policy_traits.h          hashtablez_sampler.h
+compressed_tuple.h              inlined_vector.h
+container_memory.h              layout.h
+hash_function_defaults.h        raw_hash_map.h
+hash_policy_traits.h            raw_hash_set.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/crc:
+crc32c.h        internal
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/crc/internal:
+cpu_detect.h                    crc_cord_state.h
+crc.h                           crc_internal.h
+crc32_x86_arm_combined_simd.h   crc_memcpy.h
+crc32c.h                        non_temporal_arm_intrinsics.h
+crc32c_inline.h                 non_temporal_memcpy.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/debugging:
+internal                        symbolize_elf.inc
+stacktrace.h                    symbolize_emscripten.inc
+symbolize.h                     symbolize_unimplemented.inc
+symbolize_darwin.inc            symbolize_win32.inc
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/debugging/internal:
+address_is_readable.h                   stacktrace_emscripten-inl.inc
+bounded_utf8_length_sequence.h          stacktrace_generic-inl.inc
+decode_rust_punycode.h                  stacktrace_powerpc-inl.inc
+demangle.h                              stacktrace_riscv-inl.inc
+demangle_rust.h                         stacktrace_unimplemented-inl.inc
+elf_mem_image.h                         stacktrace_win32-inl.inc
+examine_stack.h                         stacktrace_x86-inl.inc
+stacktrace_aarch64-inl.inc              symbolize.h
+stacktrace_arm-inl.inc                  utf8_for_code_point.h
+stacktrace_config.h                     vdso_support.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/flags:
+commandlineflag.h       flag.h                  reflection.h
+config.h                internal                usage_config.h
+declare.h               marshalling.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/flags/internal:
+commandlineflag.h               program_name.h
+flag.h                          registry.h
+path_util.h                     sequence_lock.h
+private_handle_accessor.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/functional:
+any_invocable.h bind_front.h    function_ref.h  internal
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/functional/internal:
+any_invocable.h front_binder.h  function_ref.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/hash:
+hash.h          internal
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/hash/internal:
+city.h                  hash.h                  low_level_hash.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/log:
+absl_check.h            globals.h               log_sink.h
+absl_log.h              internal                log_sink_registry.h
+absl_vlog_is_on.h       log.h                   vlog_is_on.h
+check.h                 log_entry.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/log/internal:
+append_truncated.h      globals.h               nullstream.h
+check_impl.h            log_format.h            proto.h
+check_op.h              log_impl.h              strip.h
+conditions.h            log_message.h           vlog_config.h
+config.h                log_sink_set.h          voidify.h
+fnmatch.h               nullguard.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/memory:
+memory.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/meta:
+type_traits.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/numeric:
+bits.h                          int128_no_intrinsic.inc
+int128.h                        internal
+int128_have_intrinsic.inc
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/numeric/internal:
+bits.h                  representation.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/profiling:
+internal
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/profiling/internal:
+exponential_biased.h    sample_recorder.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/random:
+bernoulli_distribution.h        log_uniform_int_distribution.h
+beta_distribution.h             poisson_distribution.h
+bit_gen_ref.h                   random.h
+discrete_distribution.h         seed_gen_exception.h
+distributions.h                 seed_sequences.h
+exponential_distribution.h      uniform_int_distribution.h
+gaussian_distribution.h         uniform_real_distribution.h
+internal                        zipf_distribution.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/random/internal:
+distribution_caller.h   platform.h              randen_traits.h
+fast_uniform_bits.h     pool_urbg.h             salted_seed_seq.h
+fastmath.h              randen.h                seed_material.h
+generate_real.h         randen_detect.h         traits.h
+iostream_state_saver.h  randen_engine.h         uniform_helper.h
+nonsecure_base.h        randen_hwaes.h          wide_multiply.h
+pcg_engine.h            randen_slow.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/status:
+internal                        status_payload_printer.h
+status.h                        statusor.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/status/internal:
+status_internal.h       statusor_internal.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/strings:
+ascii.h                 has_absl_stringify.h    str_join.h
+charconv.h              has_ostream_operator.h  str_replace.h
+charset.h               internal                str_split.h
+cord.h                  match.h                 string_view.h
+cord_analysis.h         numbers.h               strip.h
+cord_buffer.h           str_cat.h               substitute.h
+escaping.h              str_format.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/strings/internal:
+charconv_bigint.h               cordz_update_scope.h
+charconv_parse.h                cordz_update_tracker.h
+cord_data_edge.h                damerau_levenshtein_distance.h
+cord_internal.h                 escaping.h
+cord_rep_btree.h                memutil.h
+cord_rep_btree_navigator.h      ostringstream.h
+cord_rep_btree_reader.h         resize_uninitialized.h
+cord_rep_consume.h              stl_type_traits.h
+cord_rep_crc.h                  str_format
+cord_rep_flat.h                 str_join_internal.h
+cordz_functions.h               str_split_internal.h
+cordz_handle.h                  string_constant.h
+cordz_info.h                    stringify_sink.h
+cordz_statistics.h              utf8.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/strings/internal/str_format:
+arg.h                   constexpr_parser.h      output.h
+bind.h                  extension.h             parser.h
+checker.h               float_conversion.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/synchronization:
+barrier.h               internal                notification.h
+blocking_counter.h      mutex.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/synchronization/internal:
+create_thread_identity.h        pthread_waiter.h
+futex.h                         sem_waiter.h
+futex_waiter.h                  stdcpp_waiter.h
+graphcycles.h                   waiter.h
+kernel_timeout.h                waiter_base.h
+per_thread_sem.h                win32_waiter.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/time:
+civil_time.h    clock.h         internal        time.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/time/internal:
+cctz                            get_current_time_posix.inc
+get_current_time_chrono.inc
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/time/internal/cctz:
+include src
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/time/internal/cctz/include:
+cctz
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/time/internal/cctz/include/cctz:
+civil_time.h            time_zone.h
+civil_time_detail.h     zone_info_source.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/time/internal/cctz/src:
+time_zone_fixed.h       time_zone_info.h        tzfile.h
+time_zone_if.h          time_zone_libc.h
+time_zone_impl.h        time_zone_posix.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/types:
+any.h                   bad_variant_access.h    optional.h
+bad_any_cast.h          compare.h               span.h
+bad_optional_access.h   internal                variant.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/types/internal:
+optional.h      span.h          variant.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Headers/utility:
+utility.h
+./build/ios/Debug-iphoneos/abseil/absl.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/abseil/absl.framework/xcprivacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/abseil/xcprivacy.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/cloud_firestore:
+cloud_firestore.framework
+./build/ios/Debug-iphoneos/cloud_firestore/cloud_firestore.framework:
+Headers         Info.plist      Modules         cloud_firestore
+./build/ios/Debug-iphoneos/cloud_firestore/cloud_firestore.framework/Headers:
+CustomPigeonHeaderFirestore.h           FLTLoadBundleStreamHandler.h
+FLTDocumentSnapshotStreamHandler.h      FLTQuerySnapshotStreamHandler.h
+FLTFirebaseFirestoreExtension.h         FLTSnapshotsInSyncStreamHandler.h
+FLTFirebaseFirestorePlugin.h            FLTTransactionStreamHandler.h
+FLTFirebaseFirestoreReader.h            FirestoreMessages.g.h
+FLTFirebaseFirestoreUtils.h             FirestorePigeonParser.h
+FLTFirebaseFirestoreWriter.h            cloud_firestore-umbrella.h
+./build/ios/Debug-iphoneos/cloud_firestore/cloud_firestore.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/firebase_auth:
+firebase_auth.framework
+./build/ios/Debug-iphoneos/firebase_auth/firebase_auth.framework:
+Headers         Info.plist      Modules         PrivateHeaders  firebase_auth
+./build/ios/Debug-iphoneos/firebase_auth/firebase_auth.framework/Headers:
+CustomPigeonHeader.h            firebase_auth-umbrella.h
+FLTFirebaseAuthPlugin.h         firebase_auth_messages.g.h
+./build/ios/Debug-iphoneos/firebase_auth/firebase_auth.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/firebase_auth/firebase_auth.framework/PrivateHeaders:
+FLTAuthStateChannelStreamHandler.h
+FLTIdTokenChannelStreamHandler.h
+FLTPhoneNumberVerificationStreamHandler.h
+PigeonParser.h
+./build/ios/Debug-iphoneos/firebase_core:
+firebase_core.framework
+./build/ios/Debug-iphoneos/firebase_core/firebase_core.framework:
+Headers         Info.plist      Modules         firebase_core
+./build/ios/Debug-iphoneos/firebase_core/firebase_core.framework/Headers:
+FLTFirebaseCorePlugin.h         dummy.h
+FLTFirebasePlugin.h             firebase_core-umbrella.h
+FLTFirebasePluginRegistry.h     messages.g.h
+./build/ios/Debug-iphoneos/firebase_core/firebase_core.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/firebase_storage:
+firebase_storage.framework
+./build/ios/Debug-iphoneos/firebase_storage/firebase_storage.framework:
+Headers                 Modules
+Info.plist              firebase_storage
+./build/ios/Debug-iphoneos/firebase_storage/firebase_storage.framework/Headers:
+firebase_storage-Swift.h        firebase_storage-umbrella.h
+./build/ios/Debug-iphoneos/firebase_storage/firebase_storage.framework/Modules:
+firebase_storage.swiftmodule    module.modulemap
+./build/ios/Debug-iphoneos/firebase_storage/firebase_storage.framework/Modules/firebase_storage.swiftmodule:
+Project                         arm64-apple-ios.swiftdoc
+arm64-apple-ios.abi.json        arm64-apple-ios.swiftmodule
+./build/ios/Debug-iphoneos/firebase_storage/firebase_storage.framework/Modules/firebase_storage.swiftmodule/Project:
+arm64-apple-ios.swiftsourceinfo
+./build/ios/Debug-iphoneos/gRPC-C++:
+gRPCCertificates-Cpp.bundle     grpcpp.framework
+grpcpp.bundle
+./build/ios/Debug-iphoneos/gRPC-C++/gRPCCertificates-Cpp.bundle:
+Info.plist      roots.pem
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.bundle:
+Info.plist              PrivacyInfo.xcprivacy
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework:
+Headers                         gRPCCertificates-Cpp.bundle
+Info.plist                      grpcpp
+Modules                         grpcpp.bundle
+PrivateHeaders
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers:
+alarm.h                                 passive_listener.h
+channel.h                               resource_quota.h
+client_context.h                        security
+completion_queue.h                      server.h
+create_channel.h                        server_builder.h
+create_channel_posix.h                  server_context.h
+ext                                     server_interface.h
+gRPC-C++-umbrella.h                     server_posix.h
+generic                                 support
+grpcpp.h                                version_info.h
+health_check_service_interface.h        xds_server_builder.h
+impl
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/ext:
+call_metric_recorder.h
+health_check_service_server_builder_option.h
+server_metric_recorder.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/generic:
+async_generic_service.h         generic_stub.h
+callback_generic_service.h      generic_stub_callback.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/impl:
+call.h                          interceptor_common.h
+call_hook.h                     metadata_map.h
+call_op_set.h                   method_handler_impl.h
+call_op_set_interface.h         proto_utils.h
+channel_argument_option.h       rpc_method.h
+channel_interface.h             rpc_service_method.h
+client_unary_call.h             serialization_traits.h
+codegen                         server_builder_option.h
+completion_queue_tag.h          server_builder_plugin.h
+create_auth_context.h           server_callback_handlers.h
+delegating_channel.h            server_initializer.h
+generic_serialize.h             service_type.h
+generic_stub_internal.h         status.h
+grpc_library.h                  sync.h
+intercepted_channel.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/impl/codegen:
+async_generic_service.h         message_allocator.h
+async_stream.h                  metadata_map.h
+async_unary_call.h              method_handler.h
+byte_buffer.h                   method_handler_impl.h
+call.h                          rpc_method.h
+call_hook.h                     rpc_service_method.h
+call_op_set.h                   security
+call_op_set_interface.h         serialization_traits.h
+callback_common.h               server_callback.h
+channel_interface.h             server_callback_handlers.h
+client_callback.h               server_context.h
+client_context.h                server_interceptor.h
+client_interceptor.h            server_interface.h
+client_unary_call.h             service_type.h
+completion_queue.h              slice.h
+completion_queue_tag.h          status.h
+config.h                        status_code_enum.h
+create_auth_context.h           string_ref.h
+delegating_channel.h            stub_options.h
+intercepted_channel.h           sync.h
+interceptor.h                   sync_stream.h
+interceptor_common.h            time.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/impl/codegen/security:
+auth_context.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/security:
+audit_logging.h                 server_credentials.h
+auth_context.h                  tls_certificate_provider.h
+auth_metadata_processor.h       tls_certificate_verifier.h
+authorization_policy_provider.h tls_credentials_options.h
+credentials.h                   tls_crl_provider.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/support:
+async_stream.h                  proto_buffer_reader.h
+async_unary_call.h              proto_buffer_writer.h
+byte_buffer.h                   server_callback.h
+callback_common.h               server_interceptor.h
+channel_arguments.h             slice.h
+client_callback.h               status.h
+client_interceptor.h            status_code_enum.h
+config.h                        string_ref.h
+global_callback_hook.h          stub_options.h
+interceptor.h                   sync_stream.h
+message_allocator.h             time.h
+method_handler.h                validate_service_config.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/Modules:
+module.modulemap
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders:
+src             third_party
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src:
+core    cpp
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core:
+channelz        ext             lib             server          tsi
+client_channel  filter          load_balancing  service_config  util
+config          handshaker      resolver        telemetry       xds
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/channelz:
+channel_trace.h         channelz.h              channelz_registry.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/client_channel:
+backup_poller.h                         lb_metadata.h
+client_channel.h                        load_balanced_call_destination.h
+client_channel_factory.h                local_subchannel_pool.h
+client_channel_filter.h                 retry_filter.h
+client_channel_internal.h               retry_filter_legacy_call_data.h
+client_channel_service_config.h         retry_service_config.h
+config_selector.h                       retry_throttle.h
+connector.h                             subchannel.h
+direct_channel.h                        subchannel_interface_internal.h
+dynamic_filters.h                       subchannel_pool_interface.h
+global_subchannel_pool.h                subchannel_stream_client.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/config:
+config_vars.h           core_configuration.h    load_config.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext:
+filters         transport       upb-gen         upbdefs-gen
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters:
+backend_metrics         gcp_authentication      rbac
+channel_idle            http                    stateful_session
+fault_injection         message_size
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/backend_metrics:
+backend_metric_filter.h         backend_metric_provider.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/channel_idle:
+idle_filter_state.h             legacy_channel_idle_filter.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/fault_injection:
+fault_injection_filter.h                fault_injection_service_config_parser.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/gcp_authentication:
+gcp_authentication_filter.h
+gcp_authentication_service_config_parser.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/http:
+client                          message_compress
+client_authority_filter.h       server
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/http/client:
+http_client_filter.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/http/message_compress:
+compression_filter.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/http/server:
+http_server_filter.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/message_size:
+message_size_filter.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/rbac:
+rbac_filter.h                   rbac_service_config_parser.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/filters/stateful_session:
+stateful_session_filter.h
+stateful_session_service_config_parser.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport:
+chttp2  inproc
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport/chttp2:
+alpn            client          server          transport
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport/chttp2/alpn:
+alpn.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport/chttp2/client:
+chttp2_connector.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport/chttp2/server:
+chttp2_server.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport/chttp2/transport:
+bin_decoder.h           frame_rst_stream.h      huffsyms.h
+bin_encoder.h           frame_security.h        internal.h
+call_tracer_wrapper.h   frame_settings.h        legacy_frame.h
+chttp2_transport.h      frame_window_update.h   ping_abuse_policy.h
+context_list_entry.h    hpack_constants.h       ping_callbacks.h
+decode_huff.h           hpack_encoder.h         ping_rate_policy.h
+flow_control.h          hpack_encoder_table.h   stream_lists.h
+frame.h                 hpack_parse_result.h    varint.h
+frame_data.h            hpack_parser.h          write_size_policy.h
+frame_goaway.h          hpack_parser_table.h
+frame_ping.h            http2_settings.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/transport/inproc:
+inproc_transport.h              legacy_inproc_transport.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen:
+envoy           opencensus      udpa            xds
+google          src             validate
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy:
+admin           config          extensions      type
+annotations     data            service
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/admin:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/admin/v3:
+certs.upb.h                             listeners.upb_minitable.h
+certs.upb_minitable.h                   memory.upb.h
+clusters.upb.h                          memory.upb_minitable.h
+clusters.upb_minitable.h                metrics.upb.h
+config_dump.upb.h                       metrics.upb_minitable.h
+config_dump.upb_minitable.h             mutex_stats.upb.h
+config_dump_shared.upb.h                mutex_stats.upb_minitable.h
+config_dump_shared.upb_minitable.h      server_info.upb.h
+init_dump.upb.h                         server_info.upb_minitable.h
+init_dump.upb_minitable.h               tap.upb.h
+listeners.upb.h                         tap.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/annotations:
+deprecation.upb.h               resource.upb.h
+deprecation.upb_minitable.h     resource.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config:
+accesslog       common          listener        rbac            trace
+bootstrap       core            metrics         route
+cluster         endpoint        overload        tap
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/accesslog:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/accesslog/v3:
+accesslog.upb.h                 accesslog.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/bootstrap:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/bootstrap/v3:
+bootstrap.upb.h                 bootstrap.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/cluster:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/cluster/v3:
+circuit_breaker.upb.h                   filter.upb.h
+circuit_breaker.upb_minitable.h         filter.upb_minitable.h
+cluster.upb.h                           outlier_detection.upb.h
+cluster.upb_minitable.h                 outlier_detection.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/common:
+matcher
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/common/matcher:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/common/matcher/v3:
+matcher.upb.h           matcher.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/core:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/core/v3:
+address.upb.h
+address.upb_minitable.h
+backoff.upb.h
+backoff.upb_minitable.h
+base.upb.h
+base.upb_minitable.h
+config_source.upb.h
+config_source.upb_minitable.h
+event_service_config.upb.h
+event_service_config.upb_minitable.h
+extension.upb.h
+extension.upb_minitable.h
+grpc_method_list.upb.h
+grpc_method_list.upb_minitable.h
+grpc_service.upb.h
+grpc_service.upb_minitable.h
+health_check.upb.h
+health_check.upb_minitable.h
+http_service.upb.h
+http_service.upb_minitable.h
+http_uri.upb.h
+http_uri.upb_minitable.h
+protocol.upb.h
+protocol.upb_minitable.h
+proxy_protocol.upb.h
+proxy_protocol.upb_minitable.h
+resolver.upb.h
+resolver.upb_minitable.h
+socket_option.upb.h
+socket_option.upb_minitable.h
+substitution_format_string.upb.h
+substitution_format_string.upb_minitable.h
+udp_socket_config.upb.h
+udp_socket_config.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/endpoint:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/endpoint/v3:
+endpoint.upb.h                          endpoint_components.upb_minitable.h
+endpoint.upb_minitable.h                load_report.upb.h
+endpoint_components.upb.h               load_report.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/listener:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/listener/v3:
+api_listener.upb.h                      listener_components.upb_minitable.h
+api_listener.upb_minitable.h            quic_config.upb.h
+listener.upb.h                          quic_config.upb_minitable.h
+listener.upb_minitable.h                udp_listener_config.upb.h
+listener_components.upb.h               udp_listener_config.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/metrics:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/metrics/v3:
+metrics_service.upb.h           stats.upb.h
+metrics_service.upb_minitable.h stats.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/overload:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/overload/v3:
+overload.upb.h                  overload.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/rbac:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/rbac/v3:
+rbac.upb.h              rbac.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/route:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/route/v3:
+route.upb.h                             route_components.upb_minitable.h
+route.upb_minitable.h                   scoped_route.upb.h
+route_components.upb.h                  scoped_route.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/tap:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/tap/v3:
+common.upb.h            common.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/trace:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/config/trace/v3:
+datadog.upb.h                   opentelemetry.upb_minitable.h
+datadog.upb_minitable.h         service.upb.h
+dynamic_ot.upb.h                service.upb_minitable.h
+dynamic_ot.upb_minitable.h      skywalking.upb.h
+http_tracer.upb.h               skywalking.upb_minitable.h
+http_tracer.upb_minitable.h     trace.upb.h
+lightstep.upb.h                 trace.upb_minitable.h
+lightstep.upb_minitable.h       xray.upb.h
+opencensus.upb.h                xray.upb_minitable.h
+opencensus.upb_minitable.h      zipkin.upb.h
+opentelemetry.upb.h             zipkin.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/data:
+accesslog
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/data/accesslog:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/data/accesslog/v3:
+accesslog.upb.h                 accesslog.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions:
+clusters                http                    transport_sockets
+filters                 load_balancing_policies upstreams
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/clusters:
+aggregate
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/clusters/aggregate:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/clusters/aggregate/v3:
+cluster.upb.h           cluster.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters:
+common  http    network
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/common:
+fault
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/common/fault:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/common/fault/v3:
+fault.upb.h             fault.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http:
+fault                   rbac                    stateful_session
+gcp_authn               router
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/fault:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/fault/v3:
+fault.upb.h             fault.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/gcp_authn:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/gcp_authn/v3:
+gcp_authn.upb.h                 gcp_authn.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/rbac:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/rbac/v3:
+rbac.upb.h              rbac.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/router:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/router/v3:
+router.upb.h            router.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/stateful_session:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/http/stateful_session/v3:
+stateful_session.upb.h                  stateful_session.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/network:
+http_connection_manager
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/network/http_connection_manager:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/filters/network/http_connection_manager/v3:
+http_connection_manager.upb.h           http_connection_manager.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/http:
+stateful_session
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/http/stateful_session:
+cookie
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/http/stateful_session/cookie:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/http/stateful_session/cookie/v3:
+cookie.upb.h            cookie.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies:
+client_side_weighted_round_robin        ring_hash
+common                                  wrr_locality
+pick_first
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/client_side_weighted_round_robin:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/client_side_weighted_round_robin/v3:
+client_side_weighted_round_robin.upb.h
+client_side_weighted_round_robin.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/common:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/common/v3:
+common.upb.h            common.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/pick_first:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/pick_first/v3:
+pick_first.upb.h                pick_first.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/ring_hash:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/ring_hash/v3:
+ring_hash.upb.h                 ring_hash.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/wrr_locality:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/load_balancing_policies/wrr_locality/v3:
+wrr_locality.upb.h              wrr_locality.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/transport_sockets:
+http_11_proxy   tls
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/transport_sockets/http_11_proxy:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/transport_sockets/http_11_proxy/v3:
+upstream_http_11_connect.upb.h
+upstream_http_11_connect.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/transport_sockets/tls:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/transport_sockets/tls/v3:
+cert.upb.h
+cert.upb_minitable.h
+common.upb.h
+common.upb_minitable.h
+secret.upb.h
+secret.upb_minitable.h
+tls.upb.h
+tls.upb_minitable.h
+tls_spiffe_validator_config.upb.h
+tls_spiffe_validator_config.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/upstreams:
+http
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/upstreams/http:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/extensions/upstreams/http/v3:
+http_protocol_options.upb.h             http_protocol_options.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service:
+discovery       load_stats      status
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service/discovery:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service/discovery/v3:
+ads.upb.h                       discovery.upb.h
+ads.upb_minitable.h             discovery.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service/load_stats:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service/load_stats/v3:
+lrs.upb.h               lrs.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service/status:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/service/status/v3:
+csds.upb.h              csds.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type:
+http            matcher         metadata        tracing         v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/http:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/http/v3:
+cookie.upb.h                            path_transformation.upb.h
+cookie.upb_minitable.h                  path_transformation.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/matcher:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/matcher/v3:
+filter_state.upb.h                      path.upb_minitable.h
+filter_state.upb_minitable.h            regex.upb.h
+http_inputs.upb.h                       regex.upb_minitable.h
+http_inputs.upb_minitable.h             status_code_input.upb.h
+metadata.upb.h                          status_code_input.upb_minitable.h
+metadata.upb_minitable.h                string.upb.h
+node.upb.h                              string.upb_minitable.h
+node.upb_minitable.h                    struct.upb.h
+number.upb.h                            struct.upb_minitable.h
+number.upb_minitable.h                  value.upb.h
+path.upb.h                              value.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/metadata:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/metadata/v3:
+metadata.upb.h                  metadata.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/tracing:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/tracing/v3:
+custom_tag.upb.h                custom_tag.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/envoy/type/v3:
+hash_policy.upb.h                       range.upb_minitable.h
+hash_policy.upb_minitable.h             ratelimit_strategy.upb.h
+http.upb.h                              ratelimit_strategy.upb_minitable.h
+http.upb_minitable.h                    ratelimit_unit.upb.h
+http_status.upb.h                       ratelimit_unit.upb_minitable.h
+http_status.upb_minitable.h             semantic_version.upb.h
+percent.upb.h                           semantic_version.upb_minitable.h
+percent.upb_minitable.h                 token_bucket.upb.h
+range.upb.h                             token_bucket.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/google:
+api             protobuf        rpc
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/google/api:
+annotations.upb.h               http.upb_minitable.h
+annotations.upb_minitable.h     httpbody.upb.h
+expr                            httpbody.upb_minitable.h
+http.upb.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/google/api/expr:
+v1alpha1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/google/api/expr/v1alpha1:
+checked.upb.h           syntax.upb.h
+checked.upb_minitable.h syntax.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/google/protobuf:
+any.upb.h                       empty.upb_minitable.h
+any.upb_minitable.h             struct.upb.h
+descriptor.upb.h                struct.upb_minitable.h
+descriptor.upb_minitable.h      timestamp.upb.h
+duration.upb.h                  timestamp.upb_minitable.h
+duration.upb_minitable.h        wrappers.upb.h
+empty.upb.h                     wrappers.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/google/rpc:
+status.upb.h            status.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/opencensus:
+proto
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/opencensus/proto:
+trace
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/opencensus/proto/trace:
+v1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/opencensus/proto/trace/v1:
+trace_config.upb.h              trace_config.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src:
+proto
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto:
+grpc
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc:
+gcp     health  lb      lookup
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/gcp:
+altscontext.upb.h
+altscontext.upb_minitable.h
+handshaker.upb.h
+handshaker.upb_minitable.h
+transport_security_common.upb.h
+transport_security_common.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/health:
+v1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/health/v1:
+health.upb.h            health.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/lb:
+v1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/lb/v1:
+load_balancer.upb.h             load_balancer.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/lookup:
+v1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/src/proto/grpc/lookup/v1:
+rls.upb.h                       rls_config.upb.h
+rls.upb_minitable.h             rls_config.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/udpa:
+annotations
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/udpa/annotations:
+migrate.upb.h                   sensitive.upb_minitable.h
+migrate.upb_minitable.h         status.upb.h
+security.upb.h                  status.upb_minitable.h
+security.upb_minitable.h        versioning.upb.h
+sensitive.upb.h                 versioning.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/validate:
+validate.upb.h                  validate.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds:
+annotations     core            data            service         type
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/annotations:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/annotations/v3:
+migrate.upb.h                   sensitive.upb_minitable.h
+migrate.upb_minitable.h         status.upb.h
+security.upb.h                  status.upb_minitable.h
+security.upb_minitable.h        versioning.upb.h
+sensitive.upb.h                 versioning.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/core:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/core/v3:
+authority.upb.h                         extension.upb.h
+authority.upb_minitable.h               extension.upb_minitable.h
+cidr.upb.h                              resource.upb.h
+cidr.upb_minitable.h                    resource.upb_minitable.h
+collection_entry.upb.h                  resource_locator.upb.h
+collection_entry.upb_minitable.h        resource_locator.upb_minitable.h
+context_params.upb.h                    resource_name.upb.h
+context_params.upb_minitable.h          resource_name.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/data:
+orca
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/data/orca:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/data/orca/v3:
+orca_load_report.upb.h                  orca_load_report.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/service:
+orca
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/service/orca:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/service/orca/v3:
+orca.upb.h              orca.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/type:
+matcher v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/type/matcher:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/type/matcher/v3:
+cel.upb.h                       matcher.upb.h
+cel.upb_minitable.h             matcher.upb_minitable.h
+domain.upb.h                    range.upb.h
+domain.upb_minitable.h          range.upb_minitable.h
+http_inputs.upb.h               regex.upb.h
+http_inputs.upb_minitable.h     regex.upb_minitable.h
+ip.upb.h                        string.upb.h
+ip.upb_minitable.h              string.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upb-gen/xds/type/v3:
+cel.upb.h                       range.upb_minitable.h
+cel.upb_minitable.h             typed_struct.upb.h
+range.upb.h                     typed_struct.upb_minitable.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen:
+envoy           opencensus      udpa            xds
+google          src             validate
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy:
+admin           config          extensions      type
+annotations     data            service
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/admin:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/admin/v3:
+certs.upbdefs.h                 memory.upbdefs.h
+clusters.upbdefs.h              metrics.upbdefs.h
+config_dump.upbdefs.h           mutex_stats.upbdefs.h
+config_dump_shared.upbdefs.h    server_info.upbdefs.h
+init_dump.upbdefs.h             tap.upbdefs.h
+listeners.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/annotations:
+deprecation.upbdefs.h   resource.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config:
+accesslog       common          listener        rbac            trace
+bootstrap       core            metrics         route
+cluster         endpoint        overload        tap
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/accesslog:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/accesslog/v3:
+accesslog.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/bootstrap:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/bootstrap/v3:
+bootstrap.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/cluster:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/cluster/v3:
+circuit_breaker.upbdefs.h       filter.upbdefs.h
+cluster.upbdefs.h               outlier_detection.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/common:
+matcher
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/common/matcher:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/common/matcher/v3:
+matcher.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/core:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/core/v3:
+address.upbdefs.h                       http_service.upbdefs.h
+backoff.upbdefs.h                       http_uri.upbdefs.h
+base.upbdefs.h                          protocol.upbdefs.h
+config_source.upbdefs.h                 proxy_protocol.upbdefs.h
+event_service_config.upbdefs.h          resolver.upbdefs.h
+extension.upbdefs.h                     socket_option.upbdefs.h
+grpc_method_list.upbdefs.h              substitution_format_string.upbdefs.h
+grpc_service.upbdefs.h                  udp_socket_config.upbdefs.h
+health_check.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/endpoint:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/endpoint/v3:
+endpoint.upbdefs.h              load_report.upbdefs.h
+endpoint_components.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/listener:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/listener/v3:
+api_listener.upbdefs.h          quic_config.upbdefs.h
+listener.upbdefs.h              udp_listener_config.upbdefs.h
+listener_components.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/metrics:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/metrics/v3:
+metrics_service.upbdefs.h       stats.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/overload:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/overload/v3:
+overload.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/rbac:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/rbac/v3:
+rbac.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/route:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/route/v3:
+route.upbdefs.h                 scoped_route.upbdefs.h
+route_components.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/tap:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/tap/v3:
+common.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/trace:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/config/trace/v3:
+datadog.upbdefs.h       opencensus.upbdefs.h    trace.upbdefs.h
+dynamic_ot.upbdefs.h    opentelemetry.upbdefs.h xray.upbdefs.h
+http_tracer.upbdefs.h   service.upbdefs.h       zipkin.upbdefs.h
+lightstep.upbdefs.h     skywalking.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/data:
+accesslog
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/data/accesslog:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/data/accesslog/v3:
+accesslog.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions:
+clusters                http                    upstreams
+filters                 transport_sockets
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/clusters:
+aggregate
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/clusters/aggregate:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/clusters/aggregate/v3:
+cluster.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters:
+common  http    network
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/common:
+fault
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/common/fault:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/common/fault/v3:
+fault.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http:
+fault                   rbac                    stateful_session
+gcp_authn               router
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/fault:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/fault/v3:
+fault.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/gcp_authn:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/gcp_authn/v3:
+gcp_authn.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/rbac:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/rbac/v3:
+rbac.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/router:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/router/v3:
+router.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/stateful_session:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/http/stateful_session/v3:
+stateful_session.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/network:
+http_connection_manager
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/network/http_connection_manager:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/filters/network/http_connection_manager/v3:
+http_connection_manager.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/http:
+stateful_session
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/http/stateful_session:
+cookie
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/http/stateful_session/cookie:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/http/stateful_session/cookie/v3:
+cookie.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/transport_sockets:
+http_11_proxy   tls
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/transport_sockets/http_11_proxy:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/transport_sockets/http_11_proxy/v3:
+upstream_http_11_connect.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/transport_sockets/tls:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/transport_sockets/tls/v3:
+cert.upbdefs.h                          tls.upbdefs.h
+common.upbdefs.h                        tls_spiffe_validator_config.upbdefs.h
+secret.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/upstreams:
+http
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/upstreams/http:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/extensions/upstreams/http/v3:
+http_protocol_options.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service:
+discovery       load_stats      status
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service/discovery:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service/discovery/v3:
+ads.upbdefs.h           discovery.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service/load_stats:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service/load_stats/v3:
+lrs.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service/status:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/service/status/v3:
+csds.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type:
+http            matcher         metadata        tracing         v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/http:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/http/v3:
+cookie.upbdefs.h                path_transformation.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/matcher:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/matcher/v3:
+filter_state.upbdefs.h          regex.upbdefs.h
+http_inputs.upbdefs.h           status_code_input.upbdefs.h
+metadata.upbdefs.h              string.upbdefs.h
+node.upbdefs.h                  struct.upbdefs.h
+number.upbdefs.h                value.upbdefs.h
+path.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/metadata:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/metadata/v3:
+metadata.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/tracing:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/tracing/v3:
+custom_tag.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/envoy/type/v3:
+hash_policy.upbdefs.h           ratelimit_strategy.upbdefs.h
+http.upbdefs.h                  ratelimit_unit.upbdefs.h
+http_status.upbdefs.h           semantic_version.upbdefs.h
+percent.upbdefs.h               token_bucket.upbdefs.h
+range.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/google:
+api             protobuf        rpc
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/google/api:
+annotations.upbdefs.h   http.upbdefs.h
+expr                    httpbody.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/google/api/expr:
+v1alpha1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/google/api/expr/v1alpha1:
+checked.upbdefs.h       syntax.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/google/protobuf:
+any.upbdefs.h           empty.upbdefs.h         wrappers.upbdefs.h
+descriptor.upbdefs.h    struct.upbdefs.h
+duration.upbdefs.h      timestamp.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/google/rpc:
+status.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/opencensus:
+proto
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/opencensus/proto:
+trace
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/opencensus/proto/trace:
+v1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/opencensus/proto/trace/v1:
+trace_config.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/src:
+proto
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/src/proto:
+grpc
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/src/proto/grpc:
+lookup
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/src/proto/grpc/lookup:
+v1
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/src/proto/grpc/lookup/v1:
+rls_config.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/udpa:
+annotations
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/udpa/annotations:
+migrate.upbdefs.h       sensitive.upbdefs.h     versioning.upbdefs.h
+security.upbdefs.h      status.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/validate:
+validate.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds:
+annotations     core            type
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/annotations:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/annotations/v3:
+migrate.upbdefs.h       sensitive.upbdefs.h     versioning.upbdefs.h
+security.upbdefs.h      status.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/core:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/core/v3:
+authority.upbdefs.h             extension.upbdefs.h
+cidr.upbdefs.h                  resource.upbdefs.h
+collection_entry.upbdefs.h      resource_locator.upbdefs.h
+context_params.upbdefs.h        resource_name.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/type:
+matcher v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/type/matcher:
+v3
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/type/matcher/v3:
+cel.upbdefs.h           ip.upbdefs.h            regex.upbdefs.h
+domain.upbdefs.h        matcher.upbdefs.h       string.upbdefs.h
+http_inputs.upbdefs.h   range.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/ext/upbdefs-gen/xds/type/v3:
+cel.upbdefs.h           range.upbdefs.h         typed_struct.upbdefs.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/filter:
+blackboard.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/handshaker:
+endpoint_info           handshaker_registry.h   proxy_mapper_registry.h
+handshaker.h            http_connect            security
+handshaker_factory.h    proxy_mapper.h          tcp_connect
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/handshaker/endpoint_info:
+endpoint_info_handshaker.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/handshaker/http_connect:
+http_connect_handshaker.h       xds_http_proxy_mapper.h
+http_proxy_mapper.h
+./build/ios/Debug-iphoneos/gRPC-C++/grpcpp.framework/PrivateHeaders/src/core/handshaker/security:
+LINE LIMIT EXCEEDED
